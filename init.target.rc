@@ -278,6 +278,13 @@ service imsdatadaemon /system/bin/imsdatadaemon
 #service gnss-detect /system/vendor/bin/gnss.qca1530.sh detect
 #   class core
 #   oneshot
+
+service energy-awareness /system/bin/energy-awareness
+    class main
+    user root
+    group system
+    oneshot
+
 service pd_mapper /system/vendor/bin/pd-mapper
      class core
 

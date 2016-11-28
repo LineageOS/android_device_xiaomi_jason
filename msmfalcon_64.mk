@@ -9,6 +9,10 @@ PRODUCT_COPY_FILES += device/qcom/msmfalcon_32/media_profiles.xml:system/etc/med
                       device/qcom/msmfalcon_32/media_codecs.xml:system/etc/media_codecs.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
+PRODUCT_COPY_FILES += device/qcom/msmfalcon_64/whitelistedapps.xml:system/vendor/etc/whitelistedapps.xml \
+                      device/qcom/msmfalcon_64/gamedwhitelist.xml:system/vendor/etc/gamedwhitelist.xml \
+                      device/qcom/msmfalcon_64/appboosts.xml:system/vendor/etc/appboosts.xml
+
 $(call inherit-product, device/qcom/common/common64.mk)
 
 PRODUCT_NAME := msmfalcon_64

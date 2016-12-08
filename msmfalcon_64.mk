@@ -5,8 +5,9 @@ TARGET_USES_QTIC := false # bring-up hack
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msmfalcon_32/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/msmfalcon_32/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/qcom/msmfalcon_64/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/qcom/msmfalcon_64/media_codecs.xml:system/etc/media_codecs.xml
+                      device/qcom/msmfalcon_64/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 $(call inherit-product, device/qcom/common/common64.mk)

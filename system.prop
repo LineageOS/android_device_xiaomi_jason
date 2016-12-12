@@ -46,8 +46,7 @@ persist.mm.enable.prefetch=true
 
 #property to enable narrow search range for video encoding
 vidc.enc.disable_bframes=1
-vidc.dec.downscalar_width=1920
-vidc.dec.downscalar_height=1088
+vidc.dec.enable.downscalar=1
 
 # enable PQ feature by default
 vidc.enc.disable.pq=false

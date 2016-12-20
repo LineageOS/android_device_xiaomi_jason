@@ -62,6 +62,7 @@ BOARD_KERNEL_CMDLINE += boot_cpus=0-3 androidboot.hardware=qcom user_debug=31 ms
 endif
 
 BOARD_EGL_CFG := device/qcom/msmfalcon_64/egl.cfg
+BOARD_SECCOMP_POLICY := device/qcom/msmfalcon_32/seccomp
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096

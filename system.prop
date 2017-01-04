@@ -16,8 +16,11 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-# Start in cdma mode
-ro.telephony.default_network=5
+
+#
+# Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
+#
+ro.telephony.default_network=22,20
 
 debug.sf.hw=1
 debug.gralloc.enable_fb_ubwc=1
@@ -131,7 +134,6 @@ ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
 
 #config for bringup
-config.disable_telephony=true
 config.disable_networktime=true
 config.disable_atlas=true
 debug.sf.nobootanimation=1

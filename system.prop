@@ -1,5 +1,5 @@
 #
-# system.prop for falcon
+# system.prop for sdm660
 #
 
 #rild.libpath=/system/lib/libreference-ril.so
@@ -143,3 +143,9 @@ qemu.hw.mainkeys=0
 
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60
+
+#low power mode for camera
+camera.lowpower.record.enable=1
+
+# Create zram disk
+ro.config.zram=true

@@ -1,23 +1,23 @@
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msmfalcon_64/overlay
+DEVICE_PACKAGE_OVERLAYS := device/qcom/sdm660_64/overlay
 TARGET_KERNEL_VERSION := 4.4
 BOARD_HAVE_QCOM_FM := true
 TARGET_USES_QTIC := false # bring-up hack
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msmfalcon_64/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/msmfalcon_64/media_codecs.xml:system/etc/media_codecs.xml
-                      device/qcom/msmfalcon_64/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += device/qcom/sdm660_64/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/qcom/sdm660_64/media_codecs.xml:system/etc/media_codecs.xml
+                      device/qcom/sdm660_64/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
-PRODUCT_COPY_FILES += device/qcom/msmfalcon_64/whitelistedapps.xml:system/vendor/etc/whitelistedapps.xml \
-                      device/qcom/msmfalcon_64/gamedwhitelist.xml:system/vendor/etc/gamedwhitelist.xml \
-                      device/qcom/msmfalcon_64/appboosts.xml:system/vendor/etc/appboosts.xml
+PRODUCT_COPY_FILES += device/qcom/sdm660_64/whitelistedapps.xml:system/vendor/etc/whitelistedapps.xml \
+                      device/qcom/sdm660_64/gamedwhitelist.xml:system/vendor/etc/gamedwhitelist.xml \
+                      device/qcom/sdm660_64/appboosts.xml:system/vendor/etc/appboosts.xml
 
 $(call inherit-product, device/qcom/common/common64.mk)
 
-PRODUCT_NAME := msmfalcon_64
-PRODUCT_DEVICE := msmfalcon_64
+PRODUCT_NAME := sdm660_64
+PRODUCT_DEVICE := sdm660_64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Falcon for arm64
 
@@ -45,15 +45,15 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 endif #BOARD_HAVE_QCOM_FM
 
 # Audio configuration file
--include $(TOPDIR)hardware/qcom/audio/configs/msmfalcon/msmfalcon.mk
+-include $(TOPDIR)hardware/qcom/audio/configs/sdm660/sdm660.mk
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    device/qcom/msmfalcon_64/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/qcom/sdm660_64/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # WLAN driver configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msmfalcon_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+    device/qcom/sdm660_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
@@ -81,8 +81,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:system/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
+# FBE support
+PRODUCT_COPY_FILES += \
+    device/qcom/sdm660_64/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh
+
 # MSM IRQ Balancer configuration file
-PRODUCT_COPY_FILES += device/qcom/msmfalcon_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+PRODUCT_COPY_FILES += device/qcom/sdm660_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \

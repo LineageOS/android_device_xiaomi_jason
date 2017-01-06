@@ -3,9 +3,9 @@
 # Product-specific compile-time definitions.
 #
 
-TARGET_BOARD_PLATFORM := msmfalcon
+TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOARD_SUFFIX := _64
-TARGET_BOOTLOADER_BOARD_NAME := msmfalcon
+TARGET_BOOTLOADER_BOARD_NAME :=sdm660
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -26,7 +26,7 @@ TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
 BOARD_PRESIL_BUILD := true
--include $(QCPATH)/common/msmfalcon_64/BoardConfigVendor.mk
+-include $(QCPATH)/common/sdm660_64/BoardConfigVendor.mk
 MINIMAL_FONT_FOOTPRINT := true
 
 # Some framework code requires this to enable BT
@@ -61,8 +61,8 @@ endif
 BOARD_KERNEL_CMDLINE += boot_cpus=0-3 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 androidboot.selinux=permissive service_locator.enable=1
 endif
 
-BOARD_EGL_CFG := device/qcom/msmfalcon_64/egl.cfg
-BOARD_SECCOMP_POLICY := device/qcom/msmfalcon_32/seccomp
+BOARD_EGL_CFG := device/qcom/sdm660_64/egl.cfg
+BOARD_SECCOMP_POLICY := device/qcom/sdm660_32/seccomp
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -117,3 +117,7 @@ TARGET_USES_SSC := true
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
+
+#Enable CPUSets
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true

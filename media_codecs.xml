@@ -82,7 +82,7 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <!--
-  Decoder capabilities for msmfalcon
+  Decoder capabilities for sdm660
    __________ _________________________________________ ___________________
   | Codec    | W       H       fps     Mbps    MB/s    | Encode Secure-dec |
   |__________|_________________________________________|___________________|
@@ -101,7 +101,7 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <!--
-  Encoder capabilities for msmfalcon
+  Encoder capabilities for sdm660
    ____________________________________________________
   | Codec    | W       H       fps     Mbps    MB/s    |
   |__________|_________________________________________|

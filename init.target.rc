@@ -73,6 +73,7 @@ on post-fs-data
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/misc/hbtp 0750 system system
+    mkdir /data/misc/seemp 0700 system system
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
@@ -373,3 +374,9 @@ on property:init.svc.zygote=restarting
 #    socket vqtss stream 0660 system system
 #    user system
 #    group system
+
+service seempd /system/bin/seempd
+class late_start
+user system
+group system sdcard_rw
+socket seempdw dgram 0666 system system

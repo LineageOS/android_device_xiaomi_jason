@@ -121,3 +121,6 @@ USE_SENSOR_MULTI_HAL := true
 #Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
+
+#Enabling IMS Feature
+TARGET_USES_IMS := true

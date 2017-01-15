@@ -111,6 +111,8 @@ persist.data.df.dev_name=rmnet_usb0
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
+#Enable stm-events
+persist.debug.coresight.config=stm-events
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 

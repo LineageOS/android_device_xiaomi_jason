@@ -91,10 +91,10 @@ on boot
     write /dev/cpuset/system-background/cpus 0-2
 
 #start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
+#service qcamerasvr /system/bin/mm-qcamera-daemon
+#    class late_start
+#    user camera
+#    group camera system inet input graphics
 
 ## import cne init file
 #on post-fs

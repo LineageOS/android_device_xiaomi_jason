@@ -111,10 +111,10 @@ on property:sys.shutdown.requested=*
     stop per_proxy
 
 #start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
+#service qcamerasvr /system/bin/mm-qcamera-daemon
+#    class late_start
+#    user camera
+#    group camera system inet input graphics
 
 ## import cne init file
 #on post-fs

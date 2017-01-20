@@ -137,7 +137,6 @@ ro.hwui.text_large_cache_height=1024
 #config for bringup
 config.disable_networktime=true
 config.disable_atlas=true
-debug.sf.nobootanimation=1
 debug.batt.no_battery=true
 
 # enable navigation bar

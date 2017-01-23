@@ -112,6 +112,9 @@ ifeq ($(HOST_OS),linux)
     endif
 endif
 
+#Enable peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 #Enable SSC Feature
 TARGET_USES_SSC := true
 
@@ -121,3 +124,6 @@ USE_SENSOR_MULTI_HAL := true
 #Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
+
+#Enabling IMS Feature
+TARGET_USES_IMS := true

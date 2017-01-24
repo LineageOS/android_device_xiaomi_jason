@@ -75,4 +75,9 @@
         <AppAttributes
             PackageName="com.tencent.mm" />
     </NetTriggerApps>
+    <AppTriggerApps>
+        <AppAttributes PackageName="com.autonavi.xmgd.navigator" />
+        <AppAttributes PackageName="com.tencent.qqpimsecure" />
+        <AppAttributes PackageName="com.ludashi.benchmark" />
+    </AppTriggerApps>
 </AppCatalog>

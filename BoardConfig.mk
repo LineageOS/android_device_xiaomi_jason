@@ -127,3 +127,6 @@ ENABLE_SCHEDBOOST := true
 
 #Enabling IMS Feature
 TARGET_USES_IMS := true
+
+#Add NON-HLOS files for ota upgrade
+ADD_RADIO_FILES := true

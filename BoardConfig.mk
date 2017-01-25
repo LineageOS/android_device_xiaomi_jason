@@ -25,7 +25,6 @@ SDCLANG := true
 TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
-BOARD_PRESIL_BUILD := true
 -include $(QCPATH)/common/sdm660_64/BoardConfigVendor.mk
 MINIMAL_FONT_FOOTPRINT := true
 

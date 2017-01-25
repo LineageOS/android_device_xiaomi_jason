@@ -121,6 +121,9 @@ persist.sys.wfd.virtual=0
 # system prop for NFC DT
 ro.nfc.port=I2C
 
+#property for vendor specific library
+ro.vendor.at_library=libqti-at.so
+
 #hwui properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
@@ -137,11 +140,13 @@ ro.hwui.text_large_cache_height=1024
 #config for bringup
 config.disable_networktime=true
 config.disable_atlas=true
-debug.sf.nobootanimation=1
 debug.batt.no_battery=true
 
 # enable navigation bar
 qemu.hw.mainkeys=0
+
+#property to enable VDS WFD solution
+persist.hwc.enable_vds=1
 
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60

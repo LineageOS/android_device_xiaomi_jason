@@ -148,6 +148,9 @@ debug.batt.no_battery=true
 # enable navigation bar
 qemu.hw.mainkeys=0
 
+#property to enable VDS WFD solution
+persist.hwc.enable_vds=1
+
 #Increase cached app limit
 ro.sys.fw.bg_apps_limit=60
 

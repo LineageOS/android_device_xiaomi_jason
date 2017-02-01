@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += device/qcom/sdm660_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
+# dm-verity configuration
+PRODUCT_SUPPORTS_VERITY := true
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files

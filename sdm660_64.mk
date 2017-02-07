@@ -8,7 +8,9 @@ ifeq ($(TARGET_USES_NQ_NFC),true)
 NQ3XX_PRESENT := true
 endif
 
-TARGET_USES_QTIC := false # bring-up hack
+#QTIC flag
+-include $(QCPATH)/common/config/qtic-config.mk
+
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
@@ -30,6 +32,14 @@ PRODUCT_MODEL := sdm660 for arm64
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# When can normal compile this module,  need module owner enable below commands
+# font rendering engine feature switch
+-include $(QCPATH)/common/config/rendering-engine.mk
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
+    MULTI_LANG_ENGINE := REVERIE
+#    MULTI_LANG_ZAWGYI := REVERIE
+endif
 
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
@@ -110,6 +120,11 @@ PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# Add the overlay path
+PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
+        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
+        $(PRODUCT_PACKAGE_OVERLAYS)
 
 # Enable logdumpd service only for non-perf bootimage
 ifeq ($(findstring perf,$(KERNEL_DEFCONFIG)),)

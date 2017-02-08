@@ -43,8 +43,8 @@ media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
-#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE
-mm.enable.qcom_parser=1048575
+#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD
+mm.enable.qcom_parser=13631487
 persist.mm.enable.prefetch=true
 
 #property to enable narrow search range for video encoding
@@ -139,11 +139,6 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
 
-#config for bringup
-config.disable_networktime=true
-config.disable_atlas=true
-debug.batt.no_battery=true
-
 # enable navigation bar
 qemu.hw.mainkeys=0
 
@@ -155,6 +150,9 @@ ro.sys.fw.bg_apps_limit=60
 
 #low power mode for camera
 camera.lowpower.record.enable=1
+
+#Expose aux camera for below packages
+camera.aux.packagelist=org.codeaurora.snapcam
 
 # Create zram disk
 ro.config.zram=true

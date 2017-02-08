@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2016, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -186,10 +186,10 @@ service hbtp /system/vendor/bin/hbtp_daemon
     group system
     disabled
 
-#service audiod /system/bin/audiod
-#   class late_start
-#   user system
-#   group system
+service audiod /system/bin/audiod
+   class late_start
+   user system
+   group system
 #
 #service usf_tester /system/bin/usf_tester
 #    user system

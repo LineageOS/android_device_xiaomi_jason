@@ -189,10 +189,10 @@ service hbtp /system/vendor/bin/hbtp_daemon
     group system
     disabled
 
-#service audiod /system/bin/audiod
-#   class late_start
-#   user system
-#   group system
+service audiod /system/bin/audiod
+   class late_start
+   user system
+   group system
 #
 #service usf_tester /system/bin/usf_tester
 #    user system

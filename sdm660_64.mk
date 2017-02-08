@@ -124,3 +124,12 @@ else
     PRODUCT_DEFAULT_PROPERTY_OVERRIDES+= \
         ro.logdumpd.enabled=0
 endif
+
+#A/B related packages
+PRODUCT_PACKAGES += update_engine \
+                    update_engine_client \
+                    update_verifier \
+                    bootctrl.sdm660 \
+                    brillo_update_payload
+#Boot control HAL test app
+PRODUCT_PACKAGES_DEBUG += bootctl

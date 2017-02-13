@@ -15,7 +15,7 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/sdm660_64/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/sdm660_64/media_codecs.xml:system/etc/media_codecs.xml
+                      device/qcom/sdm660_64/media_codecs.xml:system/etc/media_codecs.xml \
                       device/qcom/sdm660_64/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 

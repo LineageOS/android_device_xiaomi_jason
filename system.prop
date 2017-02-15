@@ -112,6 +112,13 @@ persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
+#
+# system property determining camera HAL to be used for a Video call
+#
+# 1 is camera1
+# 2 or anything else is camera2
+persist.radio.VT_CAM_INTERFACE=2
+
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
 #Enable stm-events

@@ -48,6 +48,7 @@ mm.enable.qcom_parser=13631487
 persist.mm.enable.prefetch=true
 
 #property to enable narrow search range for video encoding
+vidc.enc.target_support_bframe=1
 vidc.enc.disable_bframes=1
 vidc.dec.enable.downscalar=1
 video.disable.ubwc=1
@@ -92,10 +93,8 @@ persist.fuse_sdcard=true
 #system prop for Bluetooth SOC type
 qcom.bluetooth.soc=cherokee
 
-#system prop for A4WP profile support
-ro.bluetooth.a4wp=false
-
 #system prop for wipower support
+ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 #
@@ -112,6 +111,13 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
+
+#
+# system property determining camera HAL to be used for a Video call
+#
+# 1 is camera1
+# 2 or anything else is camera2
+persist.radio.VT_CAM_INTERFACE=2
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1

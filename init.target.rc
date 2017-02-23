@@ -311,7 +311,7 @@ service imsdatadaemon /system/bin/imsdatadaemon
 
 service energy-awareness /system/bin/energy-awareness
     class main
-    user root
+    user system
     group system
     oneshot
 

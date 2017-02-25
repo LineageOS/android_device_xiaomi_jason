@@ -406,3 +406,8 @@ service tlocd /system/bin/tloc_daemon
     class late_start
     user system
     group drmrpc
+
+service hvdcp_opti /system/bin/hvdcp_opti
+     class main
+     user root
+     group system wakelock

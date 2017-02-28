@@ -138,3 +138,5 @@ TARGET_USES_IMS := true
 
 #Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES := true
+
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm

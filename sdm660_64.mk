@@ -149,3 +149,7 @@ PRODUCT_PACKAGES += update_engine \
                     brillo_update_payload
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
+
+#FEATURE_OPENGLES_EXTENSION_PACK support string config file
+PRODUCT_COPY_FILES += \
+        frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml

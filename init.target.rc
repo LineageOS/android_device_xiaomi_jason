@@ -40,8 +40,7 @@ on init
     write /dev/stune/top-app/schedtune.colocate 1
 
 on fs
-    wait /dev/block/platform/soc/1da4000.ufshc
-    symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
+    wait /dev/block/bootdevice
     mount_all fstab.qcom
     swapon_all fstab.qcom
 
@@ -55,8 +54,8 @@ on fs
     mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
 
-    wait /dev/block/bootdevice/by-name/dsp
     mount ext4 /dev/block/bootdevice/by-name/dsp /dsp ro nosuid nodev barrier=1
+    mount ext4 /dev/block/bootdevice/by-name/dsp_a /dsp ro nosuid nodev barrier=1
 
 on post-fs
     start qseecomd

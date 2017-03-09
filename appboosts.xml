@@ -48,5 +48,15 @@
             Target="sdm660"
             Resolution="any"
             Mappings="0, 1, 1" />
+        <BoostAttributes
+            MapType="freq"
+            Target="sdm630"
+            Resolution="1080p"
+            Mappings="787, 1344, 1670, 1881, 2300" />
+        <BoostAttributes
+            MapType="cluster"
+            Target="sdm630"
+            Resolution="any"
+            Mappings="0, 1, 1" />
     </BoostParamsMappings>
 </PerfBoosts>

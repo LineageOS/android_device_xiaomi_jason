@@ -393,6 +393,9 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
+on charger
+    start hvdcp_opti
+
 #
 #service nqs /system/bin/nqs
 #    class late_start

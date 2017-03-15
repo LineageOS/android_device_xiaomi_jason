@@ -116,6 +116,24 @@
         <item>0x40800000</item> <!-- SCALING_MIN_FREQ big cluster resource opcode -->
         <item>0x4A6</item>      <!-- SCALING_MIN_FREQ of 1190 MHz big cluster resource value -->
    </integer-array>
+
+   <!-- Params for mtp file copy boost -->
+   <bool name="config_enableBoostForMtp">true</bool>
+   <integer-array name="mtpboost_param_value">
+        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>0x1</item>        <!-- SCHEDBOOST resource value-->
+        <item>0x40804000</item> <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode-->
+        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
+        <item>0x40804100</item> <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode-->
+        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
+        <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode-->
+        <item>3</item>          <!-- CPUBOOST MIN_FREQ resource value-->
+        <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode-->
+        <item>2</item>          <!-- CPUBOOST MIN_FREQ resource value-->
+        <item>0x42C10000</item> <!-- STORAGE CLK SCALING resource opcode-->
+        <item>0x1</item>        <!-- STORAGE CLK SCALING resource value-->
+   </integer-array>
+
    <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->
    <integer name="config_sms_authorization_timeout_ms">15000</integer>
    <!-- Enable SMS authorization support -->

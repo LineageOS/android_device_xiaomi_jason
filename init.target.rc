@@ -54,9 +54,6 @@ on fs
     mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
 
-    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp ro nosuid nodev barrier=1
-    mount ext4 /dev/block/bootdevice/by-name/dsp_a /dsp ro nosuid nodev barrier=1
-
 on post-fs
     start qseecomd
     exec - root root root -- /system/bin/init.qti.qseecomd.sh
@@ -331,6 +328,11 @@ service energy-awareness /system/bin/energy-awareness
     group system
     oneshot
 
+service mdtpd /system/vendor/bin/mdtpd
+    class late_start
+    user root
+    group system radio drmrpc
+
 service pd_mapper /system/vendor/bin/pd-mapper
      class core
 
@@ -394,6 +396,8 @@ on property:init.svc.zygote=restarting
     stop ppd
 
 on charger
+    load_system_props
+    start qcom-post-boot
     start hvdcp_opti
 
 #

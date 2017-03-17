@@ -328,6 +328,11 @@ service energy-awareness /system/bin/energy-awareness
     group system
     oneshot
 
+service mdtpd /system/vendor/bin/mdtpd
+    class late_start
+    user root
+    group system radio drmrpc
+
 service pd_mapper /system/vendor/bin/pd-mapper
      class core
 
@@ -390,6 +395,11 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
+on charger
+    load_system_props
+    start qcom-post-boot
+    start hvdcp_opti
+
 #
 #service nqs /system/bin/nqs
 #    class late_start
@@ -424,3 +434,9 @@ service hvdcp_opti /system/bin/hvdcp_opti
      class main
      user root
      group system wakelock
+
+service smcinvoked /system/vendor/bin/smcinvoked
+   class main
+   user system
+   group system
+

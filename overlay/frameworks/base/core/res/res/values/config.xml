@@ -59,6 +59,25 @@
         <item>50</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
     </integer-array>
 
+    <!-- config for pre-fling. -->
+    <bool name="config_enableCpuBoostForPreFling">true</bool>
+    <integer name="preflingboost_timeout_param">80</integer>
+    <integer-array name="preflingboost_param_value">
+        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>0x2</item>        <!-- SCHEDBOOST resource value-->
+        <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode -->
+        <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
+        <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode -->
+        <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
+        <item>0x41800000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
+        <item>0x31</item>       <!-- CPUBW_MIN_FREQ resource value-->
+        <item>0x41400000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
+        <item>1</item>          <!-- ABOVE_HISPEED_DELAY_BIG resource value-->
+        <item>0x41418000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
+        <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
+        <item>0x40C5C000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
+        <item>40</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
+    </integer-array>
 
    <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
    <integer-array name="flingboost_param_value">

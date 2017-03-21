@@ -57,6 +57,10 @@
    <integer-array name="lboostv2_param_value">
         <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
         <item>2</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x40C58000</item> <!-- SCHED GROUP DOWNMIGRATE resource opcode-->
+        <item>95</item>         <!-- SCHED GROUP DOWNMIGRATE resource value-->
+        <item>0x40C54000</item> <!-- SCHED GROUP UPMIGRATE resource opcode-->
+        <item>100</item>        <!-- SCHED GROUP UPMIGRATE resource value-->
     </integer-array>
 
     <!-- config for pre-fling. -->

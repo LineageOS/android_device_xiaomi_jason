@@ -32,16 +32,16 @@
     <bool name="config_enableCpuBoostForAppLaunch">true</bool>
     <integer name="launchboost_timeout_param">2000</integer>
     <integer-array name="launchboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x1</item>        <!-- SCHEDBOOST resource value-->
-        <item>0x40804000</item> <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode-->
-        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
-        <item>0x40804100</item> <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode-->
-        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
+        <item>0x40C02000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>1</item>          <!-- SCHEDBOOST resource value-->
         <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode-->
         <item>3</item>          <!-- CPUBOOST MIN_FREQ resource value-->
         <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode-->
         <item>2</item>          <!-- CPUBOOST MIN_FREQ resource value-->
+        <item>0x40C2E000</item> <!-- SCHED_SPILL_NR_RUN resource opcode -->
+        <item>1</item>          <!-- SCHED_SPILL_NR_RUN resource value -->
+        <item>0x40C36000</item> <!-- SCHED_RESTRICT_CLUSTER_SPILL resource opcode -->
+        <item>0</item>          <!-- SCHED_RESTRICT_CLUSTER_SPILL resource value -->
     </integer-array>
     <!-- Whether packing disable is enabled.  -->
     <bool name="config_disablePacking">true</bool>
@@ -49,52 +49,52 @@
     <integer-array name="launchboost_packing_param_value">
         <item>0x40400000</item> <!-- POWER COLLAPSE resource opcode-->
         <item>0x1</item>        <!-- POWER COLLAPSE resource value-->
-        <item>0x42C10000</item> <!-- STORAGE CLK SCALING resource opcode-->
-        <item>0x1</item>        <!-- STORAGE CLK SCALING resource value-->
+        <item>0x42C12000</item> <!-- STORAGE CLK SCALING resource opcode-->
+        <item>1</item>          <!-- STORAGE CLK SCALING resource value-->
     </integer-array>
    <bool name="config_enableLaunchBoostv2">true</bool>
    <integer name="lboostv2_timeout_param">15000</integer>
    <integer-array name="lboostv2_param_value">
-        <item>0x40C5C000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
-        <item>50</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
+        <item>2</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
     </integer-array>
 
     <!-- config for pre-fling. -->
     <bool name="config_enableCpuBoostForPreFling">true</bool>
     <integer name="preflingboost_timeout_param">80</integer>
     <integer-array name="preflingboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x2</item>        <!-- SCHEDBOOST resource value-->
+        <item>0x40C02000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>2</item>          <!-- SCHEDBOOST resource value-->
         <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode -->
         <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
         <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode -->
-        <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
-        <item>0x41800000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
-        <item>0x31</item>       <!-- CPUBW_MIN_FREQ resource value-->
-        <item>0x41400000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
+        <item>0</item>          <!-- CPUBOOST MIN_FREQ resource value -->
+        <item>0x41802000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
+        <item>1</item>          <!-- CPUBW_MIN_FREQ resource value-->
+        <item>0x41402000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
         <item>1</item>          <!-- ABOVE_HISPEED_DELAY_BIG resource value-->
-        <item>0x41418000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
+        <item>0x4141A000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
         <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
-        <item>0x40C5C000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
-        <item>40</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
+        <item>1</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
     </integer-array>
 
    <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
    <integer-array name="flingboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x2</item>        <!-- SCHEDBOOST resource value-->
+        <item>0x40C02000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>2</item>          <!-- SCHEDBOOST resource value-->
         <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode -->
         <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
         <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode -->
-        <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
-        <item>0x41800000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
-        <item>0x31</item>       <!-- CPUBW_MIN_FREQ resource value-->
-        <item>0x41400000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
+        <item>0</item>          <!-- CPUBOOST MIN_FREQ resource value -->
+        <item>0x41802000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
+        <item>1</item>          <!-- CPUBW_MIN_FREQ resource value-->
+        <item>0x41402000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
         <item>1</item>          <!-- ABOVE_HISPEED_DELAY_BIG resource value-->
-        <item>0x41418000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
+        <item>0x4141A000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
         <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
-        <item>0x40C5C000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
-        <item>40</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
+        <item>1</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
    </integer-array>
 
    <!-- Operating volatage for bluetooth controller. 0 by default-->
@@ -102,20 +102,20 @@
 
    <bool name="config_enableCpuBoostForScroller">true</bool>
    <integer-array name="scrollboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x2</item>        <!-- SCHEDBOOST resource value-->
+        <item>0x40C02000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>2</item>          <!-- SCHEDBOOST resource value-->
         <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode -->
         <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
         <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode -->
-        <item>1</item>          <!-- CPUBOOST MIN_FREQ resource value -->
-        <item>0x41800000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
-        <item>0x31</item>       <!-- CPUBW_MIN_FREQ resource value-->
-        <item>0x41400000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
+        <item>0</item>          <!-- CPUBOOST MIN_FREQ resource value -->
+        <item>0x41802000</item> <!-- CPUBW_MIN_FREQ resource opcode-->
+        <item>1</item>          <!-- CPUBW_MIN_FREQ resource value-->
+        <item>0x41402000</item> <!-- ABOVE_HISPEED_DELAY_BIG resource opcode-->
         <item>1</item>          <!-- ABOVE_HISPEED_DELAY_BIG resource value-->
-        <item>0x41418000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
+        <item>0x4141A000</item> <!-- IO_IS_BUSY_BIG resource opcode-->
         <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
-        <item>0x40C5C000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
-        <item>40</item>         <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
+        <item>1</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
    </integer-array>
 
    <bool name="config_debugBoost">true</bool>
@@ -139,18 +139,18 @@
    <!-- Params for mtp file copy boost -->
    <bool name="config_enableBoostForMtp">true</bool>
    <integer-array name="mtpboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x1</item>        <!-- SCHEDBOOST resource value-->
-        <item>0x40804000</item> <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode-->
-        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
-        <item>0x40804100</item> <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode-->
-        <item>0xFFF</item>      <!-- CPUBOOST MAX_FREQ resource value-->
+        <item>0x40C02000</item> <!-- SCHEDBOOST resource opcode-->
+        <item>1</item>          <!-- SCHEDBOOST resource value-->
         <item>0x40802000</item> <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode-->
         <item>3</item>          <!-- CPUBOOST MIN_FREQ resource value-->
         <item>0x40802100</item> <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode-->
         <item>2</item>          <!-- CPUBOOST MIN_FREQ resource value-->
-        <item>0x42C10000</item> <!-- STORAGE CLK SCALING resource opcode-->
-        <item>0x1</item>        <!-- STORAGE CLK SCALING resource value-->
+        <item>0x40C2E000</item> <!-- SCHED_SPILL_NR_RUN resource opcode -->
+        <item>1</item>          <!-- SCHED_SPILL_NR_RUN resource value -->
+        <item>0x40C36000</item> <!-- SCHED_RESTRICT_CLUSTER_SPILL resource opcode -->
+        <item>0</item>          <!-- SCHED_RESTRICT_CLUSTER_SPILL resource value -->
+        <item>0x42C12000</item> <!-- STORAGE CLK SCALING resource opcode-->
+        <item>1</item>          <!-- STORAGE CLK SCALING resource value-->
    </integer-array>
 
    <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->

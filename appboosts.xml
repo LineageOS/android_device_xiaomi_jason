@@ -37,12 +37,12 @@
             MapType="freq"
             Target="sdm660"
             Resolution="1080p"
-            Mappings="890, 1100, 1400, 1700, 2400" />
+            Mappings="1100, 1100, 1400, 1700, 2400" />
         <BoostAttributes
             MapType="freq"
             Target="sdm660"
             Resolution="2560"
-            Mappings="890, 1100, 1400, 1700, 2400" />
+            Mappings="1100, 1100, 1400, 1700, 2400" />
         <BoostAttributes
             MapType="cluster"
             Target="sdm660"
@@ -52,7 +52,7 @@
             MapType="freq"
             Target="sdm630"
             Resolution="1080p"
-            Mappings="787, 1344, 1670, 1881, 2300" />
+            Mappings="600, 1344, 1536, 1670, 2300" />
         <BoostAttributes
             MapType="cluster"
             Target="sdm630"

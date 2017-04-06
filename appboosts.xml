@@ -52,7 +52,7 @@
             MapType="freq"
             Target="sdm630"
             Resolution="1080p"
-            Mappings="600, 1344, 1536, 1670, 2300" />
+            Mappings="600, 1344, 1720, 1880, 2300" />
         <BoostAttributes
             MapType="cluster"
             Target="sdm630"

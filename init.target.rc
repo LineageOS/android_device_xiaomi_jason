@@ -183,6 +183,10 @@ service thermal-engine /system/vendor/bin/thermal-engine
 #    class core
 #    oneshot
 #
+service adsprpcd_root /system/bin/adsprpcd
+   class main
+   user media
+   group media
 
 service adsprpcd /system/bin/adsprpcd audiopd
    class main

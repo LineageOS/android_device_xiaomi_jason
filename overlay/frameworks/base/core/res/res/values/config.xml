@@ -99,6 +99,8 @@
         <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
         <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
         <item>1</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x4280E000</item> <!-- GPU_MIN_FREQ resource opcode-->
+        <item>1</item>          <!-- GPU_MIN_FREQ resource value-->
    </integer-array>
 
    <!-- Operating volatage for bluetooth controller. 0 by default-->
@@ -120,6 +122,8 @@
         <item>1</item>          <!-- IO_IS_BUSY_BIG resource value-->
         <item>0x40C5E000</item> <!-- SCHED FREQ_AGGR_THRH resource opcode-->
         <item>1</item>          <!-- SCHED FREQ_AGGR_THRH resource value-->
+        <item>0x4280E000</item> <!-- GPU_MIN_FREQ resource opcode-->
+        <item>1</item>          <!-- GPU_MIN_FREQ resource value-->
    </integer-array>
 
    <bool name="config_debugBoost">true</bool>

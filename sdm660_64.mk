@@ -111,6 +111,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:system/etc/permissions/android.hardware.sensor.hifi_sensors.xml
 
+# Fingerprint feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+PRODUCT_PACKAGES += \
+    fingerprintd
+
 # FBE support
 PRODUCT_COPY_FILES += \
     device/qcom/sdm660_64/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh

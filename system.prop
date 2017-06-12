@@ -191,3 +191,6 @@ ro.cutoff_voltage_mv=3200
 #Memperf properties
 ro.memperf.enable=true
 ro.memperf.lib=libmemperf.so
+
+#set maximum supported adapter voltage
+persist.charger.max_voltage_mv=9000

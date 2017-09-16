@@ -79,7 +79,7 @@ bt.max.hfpclient.connections=1
 persist.bt.a2dp.aac_disable=true
 
 # System property for cabl
-ro.qualcomm.cabl=2
+ro.qualcomm.cabl=0
 
 #
 # System props for telephony
@@ -94,8 +94,8 @@ persist.fuse_sdcard=true
 qcom.bluetooth.soc=cherokee
 
 #system prop for wipower support
-ro.bluetooth.emb_wp_mode=true
-ro.bluetooth.wipower=true
+ro.bluetooth.emb_wp_mode=false
+ro.bluetooth.wipower=false
 
 #
 #snapdragon value add features
@@ -149,9 +149,6 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
-# enable navigation bar
-qemu.hw.mainkeys=0
-
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
 
@@ -160,7 +157,7 @@ ro.sys.fw.bg_apps_limit=60
 
 #Settings to enable sensors
 #Device Orientation sensor
-ro.qti.sensors.dev_ori=true
+ro.qti.sensors.dev_ori=false
 #Persistent Motion Detector
 ro.qti.sensors.pmd=true
 #Stationary Detector
@@ -181,14 +178,34 @@ camera.aux.packagelist=org.codeaurora.snapcam
 persist.camera.preview.ubwc=0
 
 # Create zram disk
-ro.config.zram=true
+ro.config.zram=false
+
+#Enable for IMS feature
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.radio.VT_HYBRID_ENABLE=1
+
+#For RIJL netwrok video call
+persist.radio.NO_STAPA=1
+
+# Enable manual network selection function and distinguish 2G/3G/4G
+persist.radio.rat_on=combine
+
+#Expose tele camera for below packages
+camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit
+
+#Limit camera for below packages
+camera.limit.packagelist=android.camera.cts
 
 #Set cutoff voltage to 3200mV
-ro.cutoff_voltage_mv=3200
+ro.cutoff_voltage_mv=3400
 
 #Memperf properties
 ro.memperf.enable=true
 ro.memperf.lib=libmemperf.so
+
+#adjust voice call volume steps
+ro.config.vc_call_vol_steps=11
 
 #set maximum supported adapter voltage
 persist.charger.max_voltage_mv=9000

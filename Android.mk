@@ -30,6 +30,15 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
+GPS_CONF_SYMLINK := $(TARGET_OUT_ETC)/gps.conf
+$(GPS_CONF_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "GPS conf link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/vendor/etc/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(GPS_CONF_SYMLINKS)
+
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

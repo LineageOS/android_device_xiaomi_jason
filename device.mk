@@ -134,6 +134,43 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1 \
+    audio_hal.period_size=192 \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    tunnel.audio.encode=false \
+    persist.audio.ras.enabled=false \
+    audio.offload.buffer.size.kb=64 \
+    audio.offload.min.duration.secs=30 \
+    audio.offload.video=true \
+    audio.offload.pcm.16bit.enable=true \
+    audio.offload.pcm.24bit.enable=true \
+    audio.offload.track.enable=true \
+    audio.deep_buffer.media=true \
+    audio.heap.size.multiplier=7 \
+    use.voice.path.for.pcm.voip=true \
+    audio.offload.multiaac.enable=true \
+    audio.dolby.ds2.enabled=false \
+    audio.dolby.ds2.hardbypass=false \
+    audio.offload.multiple.enabled=false \
+    audio.offload.passthrough=false \
+    ro.qc.sdk.audio.ssr=false \
+    audio.offload.gapless.enabled=true \
+    audio.safx.pbe.enabled=true \
+    audio.parser.ip.buffer.size=262144 \
+    flac.sw.decoder.24bit.support=true \
+    persist.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
+    use.qti.sw.alac.decoder=true \
+    use.qti.sw.ape.decoder=true \
+    qcom.hw.aac.encoder=true \
+    fm.a2dp.conc.disabled=true \
+    audio.noisy.broadcast.delay=600 \
+    persist.audio.hifi.int_codec=true \
+    audio.offload.pstimeout.secs=3
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \

@@ -186,7 +186,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 
 # RIL
 TARGET_RIL_VARIANT := caf

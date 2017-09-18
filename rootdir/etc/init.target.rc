@@ -466,3 +466,7 @@ service smcinvoked /system/vendor/bin/smcinvoked
    user system
    group system
 
+service panel-info-sh /system/bin/sh /system/etc/init.panel_info.sh
+    class core
+    user root
+    oneshot

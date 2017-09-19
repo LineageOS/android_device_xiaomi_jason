@@ -1554,6 +1554,7 @@ lib64/hw/fingerprint.goodix.so
 lib64/libgoodixfingerprintd_binder.so
 lib64/libgf_ca.so
 lib64/libgf_hal.so
+vendor/lib64/libqti_performance.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.sdm660.so

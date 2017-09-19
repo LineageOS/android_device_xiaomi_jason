@@ -105,6 +105,7 @@ vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
 vendor/lib/libedge_smooth_hvx_stub.so
 vendor/lib/libFaceGrade.so
@@ -267,6 +268,7 @@ vendor/lib/libSonyIMX386PdafLibrary.so
 vendor/lib/libStereoRectification.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
+vendor/lib/libVDClearShot.so
 
 # Camera actuators
 vendor/lib/libactuator_achilles_imx386_ak7374_primax.so
@@ -1871,6 +1873,9 @@ etc/firmware/a512_zap.b01
 etc/firmware/a512_zap.b02
 etc/firmware/a512_zap.elf
 etc/firmware/a512_zap.mdt
+etc/firmware/a530_gpmu.fw2
+etc/firmware/a530_pfp.fw
+etc/firmware/a530_pm4.fw
 
 # Thermal
 etc/thermal-engine.conf

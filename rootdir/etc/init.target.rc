@@ -119,6 +119,11 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
+    # LED full scale current is 8mA and limit it to 2mA
+    write /sys/class/leds/button-backlight/max_brightness 64
+    write /sys/class/leds/button-backlight1/max_brightness 64
+    write /sys/class/leds/white/max_brightness 64
+
 #Peripheral manager
 service per_mgr /system/bin/pm-service
     class core

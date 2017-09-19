@@ -170,6 +170,10 @@ on boot
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
     chmod 0600 /data/misc/fpc/calibration_image.pndat
 
+    # Touchscreen
+    chown system system /sys/bus/i2c/devices/4-0020/input/input1/wake_gesture
+    chmod 660 /sys/bus/i2c/devices/4-0020/input/input1/wake_gesture
+
 #Peripheral manager
 service per_mgr /system/bin/pm-service
     class core

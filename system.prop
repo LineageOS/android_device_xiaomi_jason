@@ -192,7 +192,7 @@ persist.radio.NO_STAPA=1
 persist.radio.rat_on=combine
 
 #Expose tele camera for below packages
-camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit
+camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,org.cyanogenmod.snap
 
 #Limit camera for below packages
 camera.limit.packagelist=android.camera.cts

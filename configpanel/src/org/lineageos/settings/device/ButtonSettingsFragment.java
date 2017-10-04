@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.lineageos.settings.device;
 
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
@@ -25,8 +25,8 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.text.TextUtils;
 
-import org.cyanogenmod.internal.util.FileUtils;
-import org.cyanogenmod.internal.util.PackageManagerUtils;
+import org.lineageos.internal.util.FileUtils;
+import org.lineageos.internal.util.PackageManagerUtils;
 
 public class ButtonSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener {

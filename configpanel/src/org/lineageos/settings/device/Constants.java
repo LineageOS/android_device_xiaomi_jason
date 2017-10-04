@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.lineageos.settings.device;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class Constants {
     public static final String BUTTON_SWAP_NODE = "/sys/bus/i2c/devices/4-0020/input/input1/reversed_keys";
 
     // Intents
-    public static final String CUST_INTENT = "com.cyanogenmod.settings.device.CUST_UPDATE";
+    public static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";
     public static final String CUST_INTENT_EXTRA = "pocketmode_service";
 
     // Holds <preference_key> -> <proc_node> mapping

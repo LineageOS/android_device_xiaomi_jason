@@ -214,9 +214,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.fingerprint=goodix
-
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files

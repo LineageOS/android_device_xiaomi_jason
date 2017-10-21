@@ -1,0 +1,2 @@
+type fingerprintd_prop, property_type;
+type thermal_prop, property_type;

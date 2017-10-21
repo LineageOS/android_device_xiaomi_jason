@@ -1,0 +1,5 @@
+allow init goodixfp_device:chr_file setattr;
+allow init ir_spi_device:chr_file setattr;
+
+# Allow init to write to /proc/sys/vm/overcommit_memory
+allow init proc_overcommit_memory:file { write };

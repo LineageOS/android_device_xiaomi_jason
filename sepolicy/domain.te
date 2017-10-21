@@ -1,0 +1,2 @@
+# jemalloc needs to read /proc/sys/vm/overcommit_memory
+allow domain proc_overcommit_memory:file r_file_perms;

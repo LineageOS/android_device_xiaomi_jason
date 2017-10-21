@@ -1,0 +1,5 @@
+#For configfs permission
+allow qti_init_shell configfs:dir r_dir_perms;
+allow qti_init_shell configfs:file rw_file_perms;
+
+allow qti_init_shell sensors_data_file:dir setattr;

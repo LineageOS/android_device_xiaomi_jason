@@ -133,6 +133,9 @@ on boot
     write /sys/class/leds/white/max_brightness 64
 
     # LED
+    chown system system /sys/class/leds/white/brightness
+    chmod 660 /sys/class/leds/white/brightness
+
     chown system system /sys/class/leds/white/pause_lo
     chmod 660 /sys/class/leds/white/pause_lo
 

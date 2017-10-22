@@ -40,9 +40,14 @@ on init
     write /dev/stune/system-background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
+
     chown system system /dev/goodix_fp
+
     # chmod node /dev/gpio_rf
     chmod 0644 /dev/gpio_rf
+
+    chown system system /dev/lirc0
+    chmod 0660 /dev/lirc0
 
 on fs
     wait /dev/block/bootdevice

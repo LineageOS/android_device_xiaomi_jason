@@ -1,6 +1,8 @@
 # Allow fingerprintd to open firmware images
 r_dir_file(fingerprintd, firmware_file)
 
+allow fingerprintd fingerprint_service:service_manager find;
+
 allow fingerprintd goodix_data_file:dir rw_dir_perms;
 allow fingerprintd goodix_data_file:file create_file_perms;
 allow fingerprintd goodixfp_device:chr_file rw_file_perms;

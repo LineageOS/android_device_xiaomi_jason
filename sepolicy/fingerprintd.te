@@ -11,6 +11,11 @@ allow fingerprintd fpc_cali_data:dir rw_dir_perms;
 allow fingerprintd fpc_cali_data:file create_file_perms;
 allow fingerprintd fpc_cali_data:sock_file { create unlink };
 
+# fpc speficic
+allow fingerprintd sysfs:file rw_file_perms;
+allow fingerprintd uhid_device:chr_file rw_file_perms;
+allow fingerprintd persist_file:dir r_dir_perms;
+
 allow fingerprintd mpctl_socket:sock_file rw_file_perms;
 allow fingerprintd perfd:unix_stream_socket connectto;
 

@@ -161,7 +161,7 @@
     <ctl name="HDMI Mixer MultiMedia4" value="0" />
     <ctl name="INT4_MI2S_RX_VI_FB_MONO_CH_MUX" value="ZERO" />
     <ctl name="INT4_MI2S_RX_VI_FB_STEREO_CH_MUX" value="ZERO" />
-    <ctl name="VI_FEED_TX Channels" value="One" />
+    <ctl name="VI_FEED_TX Channels" value="Two" />
     <ctl name="AIF1_VI_SDW Mixer SPKR_VI_1" value="0" />
     <ctl name="AIF1_VI_SDW Mixer SPKR_VI_2" value="0" />
     <ctl name="INT5 MI2S VI MONO" value="Left" />
@@ -1613,6 +1613,14 @@
         <ctl name="DEC1 MUX" value="DMIC4" />
     </path>
 
+    <path name="main-mic">
+        <path name="adc1" />
+    </path>
+
+    <path name="top-mic">
+        <path name="adc3" />
+    </path>
+
     <path name="speaker">
         <ctl name="INT4_MI2S_RX Channels" value="Two" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
@@ -1685,7 +1693,7 @@
         <path name="sidetone-iir" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="RX2 MIX2 INP1" value="IIR1" />
-        <ctl name="IIR1 INP1 Volume" value="53" />
+        <ctl name="IIR1 INP1 Volume" value="0" />
     </path>
 
     <path name="sidetone-handset">
@@ -1787,8 +1795,8 @@
         <ctl name="RX2 MIX1 INP1" value="RX2" />
         <ctl name="RDAC2 MUX" value="RX2" />
         <ctl name="RX HPH Mode" value="HD2" />
-        <ctl name="COMP0 RX1" value="1" />
-        <ctl name="COMP0 RX2" value="1" />
+        <ctl name="COMP0 RX1" value="0" />
+        <ctl name="COMP0 RX2" value="0" />
         <ctl name="HPHL" value="Switch" />
         <ctl name="HPHR" value="Switch" />
     </path>
@@ -1815,6 +1823,8 @@
 
     <path name="voice-handset">
         <path name="handset" />
+        <ctl name="RX4 Digital Volume" value="75" />
+        <ctl name="COMP1 Switch" value="0" />
     </path>
 
     <path name="voice-handset-tmus">
@@ -1973,15 +1983,33 @@
 
     <!-- Dual MIC devices -->
     <path name="handset-dmic-endfire">
-        <ctl name="DEC1 MUX" value="DMIC3" />
-        <ctl name="DEC2 MUX" value="DMIC4" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
         <ctl name="INT3_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="speaker-dmic-endfire">
-        <ctl name="DEC1 MUX" value="DMIC2" />
-        <ctl name="DEC2 MUX" value="DMIC4" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
         <ctl name="INT3_MI2S_TX Channels" value="Two" />
+    </path>
+
+    <path name="handset-dmic-music">
+        <path name="handset-dmic-endfire" />
+    </path>
+
+    <path name="handset-dmic-voice">
+        <path name="handset-dmic-endfire" />
+    </path>
+
+    <path name="handset-dmic-interview">
+        <path name="handset-dmic-endfire" />
+    </path>
+
+    <path name="handset-dmic-hd">
+        <path name="handset-dmic-endfire" />
     </path>
 
     <path name="dmic-endfire">

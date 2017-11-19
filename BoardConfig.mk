@@ -242,9 +242,6 @@ include device/qcom/sepolicy/sepolicy.mk
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
-# Timeservice
-BOARD_USES_QC_TIME_SERVICES := true
-
 # Treble
 #PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true

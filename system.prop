@@ -177,6 +177,13 @@ camera.aux.packagelist=org.codeaurora.snapcam
 #disable UBWC for camera
 persist.camera.preview.ubwc=0
 
+#enable CAC
+persist.camera.feature.cac=0
+
+
+persist.camera.mobicat=2
+persist.camera.stats.debugexif=2555904
+
 # Create zram disk
 ro.config.zram=false
 
@@ -209,3 +216,30 @@ ro.config.vc_call_vol_steps=11
 
 #set maximum supported adapter voltage
 persist.charger.max_voltage_mv=9000
+
+ro.qti.sensors.multitap=true
+#enable pickup gesture
+persist.sys.sensors.pug=true
+#For camera
+#enable dual cam low power mode
+persist.dualcam.lpm.enable=1
+#sat enable default
+persist.camera.sat.enable=1
+#defer cmd disable,
+#preview speed optimized
+#Re-enable defer mode,
+#since multiframe component set to master priority mode already
+persist.dualcam.defer.enable=1
+#enable aggressive aec
+persist.camera.instant.aec=1
+#big enough ae bound
+persist.camera.ae.instant.bound=20
+#set antibanding auto to 50Hz auto,
+#then 50Hz power country is priority
+persist.camera.set.afd=4
+#DXO branch enable DXO
+persist.camera.dxo=1
+#DXO enable cac
+persist.camera.feature.cac=1
+#DXO enable fovc for the video mode
+persist.camera.fovc.enable=1

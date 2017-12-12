@@ -35,7 +35,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="jason" \
     PRODUCT_NAME="jason" \
-    BUILD_FINGERPRINT="Xiaomi/jason/jason:7.1.1/NMF26X/7.9.14:user/release-keys" \
-    PRIVATE_BUILD_DESC="jason-user 7.1.1 NMF26X 7.9.14 release-keys"
+    BUILD_FINGERPRINT="Xiaomi/jason/jason:7.1.1/NMF26X/7.11.30:user/release-keys" \
+    PRIVATE_BUILD_DESC="jason-user 7.1.1 NMF26X 7.11.30 release-keys"
 
 TARGET_VENDOR := Xiaomi

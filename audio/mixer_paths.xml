@@ -1764,8 +1764,10 @@
     </path>
 
     <path name="handset-mic">
-        <path name="adc1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="INT3_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="handset-mic-db">

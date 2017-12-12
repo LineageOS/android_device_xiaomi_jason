@@ -917,6 +917,7 @@ vendor/lib/libchromatix_jason_imx386_semco_snapshot_hdr.so
 vendor/lib/libchromatix_jason_imx386_semco_snapshot.so
 vendor/lib/libchromatix_jason_imx386_semco_video_hdr.so
 vendor/lib/libchromatix_jason_imx386_semco_video.so
+vendor/lib/libchromatix_jason_imx386_semco_zsl_hdr_preview.so
 vendor/lib/libchromatix_jason_imx386_semco_zsl_preview.so
 vendor/lib/libchromatix_jason_imx386_semco_zsl_video.so
 vendor/lib/libchromatix_jason_s5k3m3_ofilm_1080p_preview_ad5816g.so
@@ -961,6 +962,8 @@ vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_hfr_90.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_liveshot.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_preview.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_snapshot_downscale.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_snapshot_hdr.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_snapshot_hht.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_snapshot_upscale.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_snapshot.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_cpp_video_4k.so
@@ -977,8 +980,12 @@ vendor/lib/libchromatix_jason_s5k3m3_semco_hfr_90.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_liveshot.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_postproc.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_preview.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_snapshot_hdr.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_snapshot_hht.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_snapshot.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_video_4k.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_zsl_hdr_preview_ad5816g.so
+vendor/lib/libchromatix_jason_s5k3m3_semco_zsl_hht_preview_ad5816g.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_zsl_preview_ad5816g.so
 vendor/lib/libchromatix_jason_s5k3m3_semco_zsl_video_ad5816g.so
 vendor/lib/libchromatix_jason_s5k3p8sp_sunny_a3_default_preview.so
@@ -1959,6 +1966,7 @@ etc/thermal-engine.conf
 etc/thermal-engine-sdm660.conf
 etc/thermal-engine-sdm660-high.conf
 etc/thermal-engine-sdm660-map.conf
+etc/thermal-engine-sdm660-nolimits.conf
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so

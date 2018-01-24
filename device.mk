@@ -467,6 +467,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# TextClassifier smart selection model files
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
+
 # USB
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-service

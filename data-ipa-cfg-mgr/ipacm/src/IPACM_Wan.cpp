@@ -738,7 +738,10 @@ void IPACM_Wan::event_callback(ipa_cm_event_id event, void *param)
 #else
 						IPACMDBG_H("adding routing table(upstream), dev (%s) ip-type(%d)\n", dev_name,data->iptype);
 #endif
-						handle_route_add_evt(data->iptype);
+						if (active_v4 == false)
+						{
+							handle_route_add_evt(data->iptype); //sky
+						}
 					}
 #ifdef FEATURE_IPA_ANDROID
 					/* using ipa_if_index, not netdev_index */
@@ -767,7 +770,10 @@ void IPACM_Wan::event_callback(ipa_cm_event_id event, void *param)
 						/* Check & construct STA header */
 						handle_sta_header_add_evt();
 #endif
-						handle_route_add_evt(data->iptype);
+						if (active_v6 == false)
+						{
+							handle_route_add_evt(data->iptype);
+						}
 					}
 #ifdef FEATURE_IPA_ANDROID
 					/* using ipa_if_index, not netdev_index */

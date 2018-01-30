@@ -16,6 +16,9 @@ typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
 allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
 allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
 
+# Ignore all logging requests
+dontaudit hal_fingerprint_default storage_file:dir search;
+
 allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 binder_call(hal_fingerprint_default, hal_perf_default)
 

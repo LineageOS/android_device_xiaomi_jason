@@ -93,6 +93,7 @@ etc/firmware/rampatch_tlv.img
 bin/mm-qcamera-daemon
 lib/hw/camera.sdm660.so
 lib/libMiCameraHal.so
+lib/libmicamera.ic.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libmorpho_groupshot.so
@@ -108,11 +109,11 @@ vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libcaffe.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
 vendor/lib/libedge_smooth_hvx_stub.so
 vendor/lib/libFaceGrade.so
-vendor/lib/libFaceProc.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
@@ -195,7 +196,6 @@ vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
-vendor/lib/libRecoFace.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libsac.so
 vendor/lib/libseemore.so
@@ -204,6 +204,7 @@ vendor/lib/libStereoRectification.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
 vendor/lib/libVDClearShot.so
+vendor/lib/libXMFD_AgeGender.so
 
 # Camera actuators
 vendor/lib/libactuator_jason_imx386_ak7372_semco.so
@@ -368,6 +369,7 @@ etc/camera/jason_imx386_semco_chromatix.xml
 etc/camera/jason_s5k3m3_ofilm_chromatix.xml
 etc/camera/jason_s5k3m3_semco_chromatix.xml
 etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
+etc/morpho_lowlight4.0.xml
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw

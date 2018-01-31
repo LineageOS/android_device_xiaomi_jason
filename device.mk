@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -93,7 +93,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sib16_support=1 \
     persist.radio.multisim.config=dsds \
     sys.shutdown.waittime=500 \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp \
+    ro.sys.sdcardfs=true
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard

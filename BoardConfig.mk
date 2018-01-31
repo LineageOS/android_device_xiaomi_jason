@@ -126,7 +126,8 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
+    hardware/cyanogen/cmhw \
+    $(DEVICE_PATH)/cmhw
 BOARD_USES_CYANOGEN_HARDWARE := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/4-0020/input/input1/wake_gesture"
 

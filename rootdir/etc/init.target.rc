@@ -180,7 +180,7 @@ on boot
 
     # Touchscreen
     chown system system /sys/bus/i2c/devices/4-0020/input/input1/wake_gesture
-    chmod 660 /sys/bus/i2c/devices/4-0020/input/input1/wake_gesture
+    chown system system /sys/bus/i2c/devices/4-0020/input/input1/0dbutton
 
 #Peripheral manager
 service per_mgr /system/bin/pm-service

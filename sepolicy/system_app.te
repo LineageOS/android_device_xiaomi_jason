@@ -1,0 +1,5 @@
+# Allow ConfigPanel to work
+allow system_app sysfs_touchpanel:file rw_file_perms;
+
+# Allow PocketMode to work
+allow system_app sysfs_fps_proximity:file rw_file_perms;

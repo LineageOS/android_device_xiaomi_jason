@@ -36,3 +36,6 @@ type fpc_cali_data, file_type;
 
 type goodixfp_device, file_type;
 type ir_spi_device, file_type;
+
+type sysfs_fps_proximity, sysfs_type, fs_type;
+type sysfs_touchpanel, sysfs_type, fs_type;

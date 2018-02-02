@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# ConfigPanel
+PRODUCT_PACKAGES += \
+    ConfigPanel
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \

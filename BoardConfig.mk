@@ -233,9 +233,6 @@ include device/qcom/sepolicy/sepolicy.mk
 
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Sensors
-USE_SENSOR_MULTI_HAL := true
-
 # Treble
 #PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true

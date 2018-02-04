@@ -402,7 +402,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
     init.panel_info.sh \
-    init.qcom.bt.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \

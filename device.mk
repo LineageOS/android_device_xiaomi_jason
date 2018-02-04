@@ -369,9 +369,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.sdm660 \
-    android.hardware.power@1.0-service \
-    android.hardware.power@1.0-impl
+    android.hardware.power@1.0-service-qti
 
 PRODUCT_PACKAGES += \
     $(LOCAL_PATH)/configs/appboosts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/appboosts.xml

@@ -407,13 +407,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sdk.sensors.gestures=false
 
-# Soter
-PRODUCT_PACKAGES += \
-    soter
-
-PRODUCT_BOOT_JARS += \
-    soter
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \

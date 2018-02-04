@@ -125,4 +125,5 @@ LOCAL_MODULE       := init.panel_info.sh
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.panel_info.sh
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)

@@ -187,7 +187,10 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbthost_if
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
+    libbthost_if \
+    libbt-vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee

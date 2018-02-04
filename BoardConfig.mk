@@ -125,13 +125,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(DEVICE_PATH)/cmhw
-BOARD_USES_CYANOGEN_HARDWARE := true
-TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/4-0020/input/input1/wake_gesture"
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -171,6 +164,11 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    hardware/lineage/lineagehw \
+    $(DEVICE_PATH)/lineagehw
+
 # Mainfest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 
@@ -196,6 +194,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/4-0020/input/input1/wake_gesture"
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab

@@ -90,12 +90,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.custom_ecc=1 \
-    persist.radio.sib16_support=1 \
-    persist.radio.multisim.config=dsds \
-    sys.shutdown.waittime=500 \
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.rat_on=combine \
+    persist.radio.schd.cache=3500 \
+    sys.vendor.shutdown.waittime=500 \
+    ro.build.shutdown_timeout=0 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
-    ro.sys.sdcardfs=true
+    persist.radio.multisim.config=dsds
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard

@@ -472,6 +472,17 @@ on charger
     setprop sys.usb.configfs 1
     start power_off_alarm
 
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    wait /dev/block/bootdevice/by-name/persist
+    mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev noatime barrier=1
+    mkdir /persist/subsys 0770 system system
+
+    mount tmpfs tmpfs /data
+
+    start thermal-engine
+
 #
 #service nqs /system/bin/nqs
 #    class late_start

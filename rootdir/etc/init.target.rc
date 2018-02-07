@@ -472,6 +472,9 @@ on charger
     setprop sys.usb.configfs 1
     start power_off_alarm
 
+    mount tmpfs tmpfs /data
+    start thermal-engine
+
 #
 #service nqs /system/bin/nqs
 #    class late_start

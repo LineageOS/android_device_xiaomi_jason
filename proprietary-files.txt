@@ -964,6 +964,6 @@ etc/thermal-engine-sdm660-nolimits.conf:vendor/etc/thermal-engine-sdm660-nolimit
 vendor/bin/time_daemon|6a7583983a82fc2c9eb41bc10f1b728538c3631d
 vendor/lib64/libtime_genoff.so|23f4cd551463e160162fc7c44b6691516aab8836
 
-# Wifi - from R11sROM_11_OTA_2590_all_201801030346
-vendor/bin/cnss_diag|82409251fa47a297f459071ac9a430d095a6d396
-vendor/bin/cnss-daemon|10c7760bfa71f7b4305820f322697bacc4d22691
+# Wifi - sagit miui_MI6_8.2.1_18957a2b22_8.0
+vendor/bin/cnss_diag|a9c3a5d91d9e63b93b20d1bac5532a99cd8af1c7
+vendor/bin/cnss-daemon|25df76d167e64ed611cb59b7b7042794200165f1

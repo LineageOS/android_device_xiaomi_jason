@@ -163,19 +163,20 @@ ro.vendor.sensors.pmd=true
 ro.vendor.sensors.sta_detect=true
 #Motion Detector
 ro.vendor.sensors.mot_detect=true
+#xiaomi non-ui
+ro.vendor.sensors.noneui=true
+#xiaomi multi-tap
+ro.vendor.sensors.multitap=true
+#xiaomi pick up gusture
+persist.sys.sensors.pug=true
 
 #Expose aux camera for below packages
-camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,org.lineageos.snap
+camera.aux.packagelist=org.codeaurora.snapcam
 
 #disable UBWC for camera
 persist.camera.preview.ubwc=0
-
-#enable CAC
-persist.camera.feature.cac=0
-
-
-persist.camera.mobicat=2
-persist.camera.stats.debugexif=2555904
+persist.camera.hist.high=20
+persist.camera.hist.drc=1.2
 
 # Create zram disk
 ro.vendor.qti.config.zram=false
@@ -194,9 +195,9 @@ persist.vendor.overlay.izat.optin=rro
 #Disable Skip Validate
 sdm.debug.disable_skip_validate=1
 
-ro.qti.sensors.multitap=true
-#enable pickup gesture
-persist.sys.sensors.pug=true
+#adjust voice call volume steps
+ro.config.vc_call_vol_steps=11
+
 #For camera
 #enable dual cam low power mode
 persist.dualcam.lpm.enable=1
@@ -220,3 +221,8 @@ persist.camera.dxo=1
 persist.camera.feature.cac=1
 #DXO enable fovc for the video mode
 persist.camera.fovc.enable=1
+
+# AD and sensor config
+ro.qcom.ad=1
+ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
+ro.qcom.ad.sensortype=2

@@ -50,6 +50,7 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
+    # Goodix fingerprint
     chown system system /dev/goodix_fp
 
     # chmod node /dev/gpio_rf
@@ -93,10 +94,10 @@ on post-fs-data
     mkdir /data/misc/seemp 0700 system system
     mkdir /data/misc/tloc 0700 system drmrpc
 
-    mkdir /data/misc/fpc 0770 system system
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
     mkdir /data/misc/goodix 0770 system system
-    mkdir /persist/fpc 0770 system system
-    mkdir /data/misc/gf_data 0770 system system
+    mkdir /data/vendor/gf_data 0770 system system
 
 on boot
     start rmt_storage
@@ -171,13 +172,11 @@ on boot
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/proximity_state
     chown system system /sys/bus/platform/devices/soc:fingerprint_goodix/proximity_state
-    chown system system /data/misc/fpc/calibration_image.pndat
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/irq
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/hw_reset
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
-    chmod 0600 /data/misc/fpc/calibration_image.pndat
 
     # Touchscreen
     chown system system /sys/bus/i2c/devices/4-0020/input/input1/wake_gesture

@@ -1,6 +1,7 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2012-2013,2016 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013,2016,2018 The Linux Foundation.
+# All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -225,7 +226,7 @@ case "$target" in
         # 196609 is decimal for 0x30001 to report version 3.1
         # 196610 is decimal for 0x30002 to report version 3.2
         case "$soc_hwid" in
-            294|295|296|297|298|313)
+            294|295|296|297|298|313|353|354|363|364)
                 setprop ro.opengles.version 196610
                 ;;
             303|307|308|309|320)
@@ -242,6 +243,15 @@ case "$target" in
         case "$soc_hwplatform" in
             *)
                 setprop persist.graphics.vulkan.disable true
+                setprop ro.opengles.version 196608
+                ;;
+        esac
+        ;;
+    "msm8916")
+        case "$soc_hwplatform" in
+            *)
+                setprop persist.graphics.vulkan.disable true
+                setprop ro.opengles.version 196608
                 ;;
         esac
         ;;
@@ -278,10 +288,16 @@ case "$target" in
         esac
         ;;
     "msm8953")
-        cap_ver=`cat /sys/devices/soc/1d00000.qcom,vidc/capability_version` 2> /dev/null
-        if [ $cap_ver -eq 1 ]; then
-            setprop media.msm8953.version 1
-        fi
+        cap_ver = 1
+                if [ -e "/sys/devices/platform/soc/1d00000.qcom,vidc/capability_version" ]; then
+                    cap_ver=`cat /sys/devices/platform/soc/1d00000.qcom,vidc/capability_version` 2> /dev/null
+                else
+                    cap_ver=`cat /sys/devices/soc/1d00000.qcom,vidc/capability_version` 2> /dev/null
+                fi
+
+                if [ $cap_ver -eq 1 ]; then
+                    setprop media.msm8953.version 1
+                fi
         ;;
     "msm8952")
       case "$soc_hwid" in

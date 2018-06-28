@@ -97,7 +97,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.vendor.shutdown.waittime=500 \
     ro.build.shutdown_timeout=0 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
-    persist.radio.multisim.config=dsds
+    persist.radio.multisim.config=dsds \
+    sys.autosuspend.timeout=500000
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -245,8 +246,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.0-service \
-    android.hardware.broadcastradio@1.0-impl
+    android.hardware.configstore@1.0-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
@@ -357,6 +357,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    video.disable.ubwc=1
 
 # Net
 PRODUCT_PACKAGES += \

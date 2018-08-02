@@ -74,7 +74,7 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
 
     # Bluetooth
-    mkdir /persist/wlan_bt 0700 system system
+    mkdir /persist/wlan_bt 0770 system system
 
 on post-fs
     start qseecomd

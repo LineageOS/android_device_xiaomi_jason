@@ -60,8 +60,21 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
+DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
 sed -i \
     's/\/system\/etc\//\/vendor\/etc\//g' \
-    "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
+    "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
+
+#
+# Use 8.1 libicuuc.so and libminikin.so for camera.sdm660.so
+#
+CAMERA_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+ICUUC_V27="$DEVICE_BLOB_ROOT"/vendor/lib/libicuuc-v27.so
+MINIKIN_V27="$DEVICE_BLOB_ROOT"/vendor/lib/libminikin-v27.so
+patchelf --set-soname libicuuc-v27.so "$ICUUC_V27"
+patchelf --set-soname libminikin-v27.so "$MINIKIN_V27"
+patchelf --replace-needed libicuuc.so libicuuc-v27.so "$CAMERA_SDM660"
+patchelf --replace-needed libminikin.so libminikin-v27.so "$CAMERA_SDM660"
 
 "$MY_DIR"/setup-makefiles.sh

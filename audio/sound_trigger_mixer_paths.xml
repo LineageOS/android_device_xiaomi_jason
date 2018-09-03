@@ -150,7 +150,18 @@
 
     <path name="listen-ape-handset-mic">
         <ctl name="DEC1 Volume" value="84" />
-        <ctl name="DEC1 MUX" value="DMIC3" />
+        <ctl name="DEC1 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+    </path>
+
+    <path name="listen-ape-handset-dmic">
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="ADC1_INP1 Switch" value="1" />
+        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="DEC2 Volume" value="84" />
+        <ctl name="INT3_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="listen-ape-handset-mic-preproc">

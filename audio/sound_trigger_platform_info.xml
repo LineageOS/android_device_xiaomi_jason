@@ -32,9 +32,12 @@
         <param max_wdsp_sessions="2" />
         <param max_ape_sessions="8" />
         <param enable_failure_detection="false" />
+        <param support_device_switch="true" />
+        <!-- Transition will only occur if execution_type="DYNAMIC" -->
+        <param transit_to_adsp_on_playback="true" />
         <!-- Below backend params must match with port used in mixer path file -->
         <!-- param used to configure backend sample rate, format and channels -->
-        <param backend_port_name="SLIM_0_TX" />
+        <param backend_port_name="INT3_MI2S_TX" />
         <!-- Param used to match and obtain device backend index -->
         <param backend_dai_name="SLIMBUS_0_TX" />
     </common_config>
@@ -44,13 +47,14 @@
         <param DEVICE_HANDSET_MIC_ECPP_CPE="128" />
         <param DEVICE_HANDSET_MIC_PP_APE="137" />
         <param DEVICE_HANDSET_QMIC_APE="138" />
+        <param DEVICE_HANDSET_DMIC_APE="149" />
     </acdb_ids>
     <!-- Multiple sound_model_config tags can be listed, each with unique   -->
     <!-- vendor_uuid. The below tag represents QTI SVA engine sound model   -->
     <!-- configuration. ISV must use their own unique vendor_uuid.          -->
     <sound_model_config>
         <param vendor_uuid="68ab2d40-e860-11e3-95ef-0002a5d5c51b" />
-        <param execution_type="WDSP" /> <!-- value: "WDSP" "ADSP" "DYNAMIC" -->
+        <param execution_type="ADSP" /> <!-- value: "WDSP" "ADSP" "DYNAMIC" -->
         <param app_type="2" /> <!-- app type used in ACDB -->
         <param library="libsmwrapper.so" />
         <param max_cpe_phrases="6" />
@@ -66,7 +70,7 @@
         <param adm_cfg_profile="NONE" />
         <!-- fluence_type: "FLUENCE", FLUENCE_DMIC", FLUENCE_QMIC" -->
         <!-- param value is valid when adm_cfg_profile="FLUENCE" -->
-        <param fluence_type="FLUENCE_QMIC" />
+        <param fluence_type="FLUENCE" />
         <gcs_usecase>
             <param uid="0x1" />
             <!-- module_id, instance_id, param_id -->

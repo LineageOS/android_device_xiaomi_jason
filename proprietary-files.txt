@@ -71,10 +71,7 @@ vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
 # Bluetooth
-vendor/bin/btnvtool
-vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
-vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
 # Bluetooth - aptX - from OnePlus3Oxygen_16_OTA_041_all_1801122329_4d1ceb45301b4478

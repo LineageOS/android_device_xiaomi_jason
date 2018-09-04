@@ -218,6 +218,9 @@ on boot
     # load WIGIG platform driver
     insmod /vendor/lib/modules/msm_11ad_proxy.ko
 
+    # Create hvdcp_opti directory
+    mkdir /persist/hvdcp_opti 0770 root system
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -336,6 +339,9 @@ on post-fs-data
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
+    mkdir /dev/socket/location 0770 gps gps
+    mkdir /dev/socket/location/mq 0770 gps gps
+    mkdir /dev/socket/location/xtra 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755
@@ -837,7 +843,7 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     group system inet net_admin wifi
     capabilities NET_ADMIN
 
-on property:sys.shutdown.requested=*
+on property:sys.powerctl=*
     stop cnss-daemon
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
@@ -1159,6 +1165,13 @@ service vppservice /vendor/bin/vppservice
     class main
     user media
     group camera
+
+service chre /vendor/bin/chre
+    class late_start
+    user system
+    group system
+    socket chre seqpacket 0660 root system
+    shutdown critical
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*

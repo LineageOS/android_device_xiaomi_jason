@@ -1879,7 +1879,7 @@ case "$target" in
             echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
 
             echo 614400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-            echo 1094400 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
             # cpuset settings
             echo 0-3 > /dev/cpuset/background/cpus
@@ -1932,6 +1932,12 @@ case "$target" in
             echo 90 > /proc/sys/kernel/sched_group_upmigrate
             echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
+            # Enable min frequency adjustment for big cluster
+            if [ -f /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster ]; then
+                echo "4-7" > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster
+            fi
+            echo 1 > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_adjust
+
             ;;
         esac
     ;;
@@ -1956,7 +1962,7 @@ case "$target" in
         fi
 
         case "$soc_id" in
-           "303" | "307" | "308" | "309" | "320" | "353")
+           "303" | "307" | "308" | "309" | "320" )
 
                   # Start Host based Touch processing
                   case "$hw_platform" in
@@ -2188,10 +2194,13 @@ case "$target" in
                      echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
                      #set the hispeed_freq
                      echo 1497600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-                     #default value for hispeed_load is 90, for sdm439 it should be 85
-                     echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
-                     echo 1305600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-
+                     echo 80 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+                     echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+                     # sched_load_boost as -6 is equivalent to target load as 85.
+                     echo -6 > /sys/devices/system/cpu/cpu0/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu1/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu2/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu3/sched_load_boost
 
                      ## enable governor for power cluster
                      echo 1 > /sys/devices/system/cpu/cpu4/online
@@ -2199,16 +2208,19 @@ case "$target" in
                      echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
                      #set the hispeed_freq
                      echo 998400 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-                     #default value for hispeed_load is 90, for sdm439 it should be 85
-                     echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
+                     echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
                      echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-
+                     # sched_load_boost as -6 is equivalent to target load as 85.
+                     echo -6 > /sys/devices/system/cpu/cpu4/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu5/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
 
                      # EAS scheduler (big.Little cluster related) settings
                      echo 93 > /proc/sys/kernel/sched_upmigrate
                      echo 83 > /proc/sys/kernel/sched_downmigrate
-                     #echo 140 > /proc/sys/kernel/sched_group_upmigrate
-                     #echo 120 > /proc/sys/kernel/sched_group_downmigrate
+                     echo 140 > /proc/sys/kernel/sched_group_upmigrate
+                     echo 120 > /proc/sys/kernel/sched_group_downmigrate
 
                      # cpuset settings
                      #echo 0-3 > /dev/cpuset/background/cpus
@@ -2230,6 +2242,13 @@ case "$target" in
                      echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
                      echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
                      echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
+                     echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+
+                     # Big cluster min frequency adjust settings
+                     if [ -f /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster ]; then
+                         echo "0-3" > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster
+                     fi
+                     echo 1305600 > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_floor
                  ;;
                  *)
                      # Apply settings for sdm429/sda429
@@ -2239,10 +2258,13 @@ case "$target" in
                      echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
                      #set the hispeed_freq
                      echo 1305600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-                     #default value for hispeed_load is 90, for sdm429 it should be 85
-                     echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+                     echo 80 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
                      echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-
+                     # sched_load_boost as -6 is equivalent to target load as 85.
+                     echo -6 > /sys/devices/system/cpu/cpu0/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu1/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu2/sched_load_boost
+                     echo -6 > /sys/devices/system/cpu/cpu3/sched_load_boost
 
                      # Bring up all cores online
                      echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -2265,6 +2287,12 @@ case "$target" in
 
                 # Enable low power modes
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+
+                case "$soc_id" in
+                     "353" | "363" )
+                     echo 1 > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_adjust
+                     ;;
+                esac
             ;;
         esac
     ;;

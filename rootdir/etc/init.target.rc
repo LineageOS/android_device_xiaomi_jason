@@ -73,6 +73,9 @@ on fs
     restorecon_recursive /persist
     write /sys/kernel/boot_adsp/boot 1
 
+    # Bluetooth
+    mkdir /persist/wlan_bt 0700 system system
+
 on post-fs
     start qseecomd
     exec - system system -- /vendor/bin/init.qti.qseecomd.sh

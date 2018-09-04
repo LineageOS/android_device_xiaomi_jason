@@ -84,6 +84,7 @@ vendor/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/libtrueportrait.so
+vendor/bin/remosaic_daemon
 vendor/lib/hw/camera.sdm660.so
 vendor/lib/libMiCameraHal.so
 vendor/lib/libmmcamera_interface.so
@@ -104,6 +105,7 @@ vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmibokeh_660.so
 vendor/lib/libmmcamera_arcrtb_lib.so
 vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
@@ -189,6 +191,8 @@ vendor/lib/libubifocus.so
 vendor/lib/libVDClearShot.so
 vendor/lib/libvideorefiner.so
 vendor/lib/libXMFD_AgeGender.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaiclib.so
 
 # Camera actuators
 vendor/lib/libactuator_jason_imx386_ak7372_semco.so
@@ -872,6 +876,7 @@ vendor/radio/qcril_database/qcril.db
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/qti-vzw-ims-internal.xml
 framework/com.qualcomm.qti.imscmservice@1.1-java.jar
+lib64/com.qualcomm.qti.imscmservice@1.0.so
 lib64/com.qualcomm.qti.imscmservice@1.1.so
 lib64/lib-imscamera.so
 lib64/lib-imsvideocodec.so
@@ -887,6 +892,7 @@ vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/framework/qti-vzw-ims-internal.jar
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.1_vendor.so
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imscmservice.so

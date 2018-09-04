@@ -38,6 +38,7 @@ case "$baseband" in
     "apq" | "sda" )
     setprop ro.radio.noril yes
     stop ril-daemon
+    start ipacm
 esac
 
 case "$baseband" in

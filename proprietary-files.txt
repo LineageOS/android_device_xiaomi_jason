@@ -977,7 +977,11 @@ vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
 # Widevine
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
+vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Wifi
 vendor/bin/cnss_diag

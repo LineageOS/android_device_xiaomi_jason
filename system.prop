@@ -171,7 +171,7 @@ ro.vendor.sensors.multitap=true
 persist.sys.sensors.pug=true
 
 #Expose aux camera for below packages
-camera.aux.packagelist=org.codeaurora.snapcam
+vendor.camera.aux.packagelist=com.android.camera
 
 #disable UBWC for camera
 persist.camera.preview.ubwc=0

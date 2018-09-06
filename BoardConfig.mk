@@ -209,7 +209,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
 
 # Power
-TARGET_HAS_NO_WIFI_STATS := true
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/4-0020/input/input1/wake_gesture"
 TARGET_USES_INTERACTION_BOOST := true

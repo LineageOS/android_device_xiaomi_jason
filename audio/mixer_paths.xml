@@ -1905,14 +1905,6 @@
         <ctl name="DEC1 MUX" value="DMIC4" />
     </path>
 
-    <path name="main-mic">
-        <path name="adc1" />
-    </path>
-
-    <path name="top-mic">
-        <path name="adc3" />
-    </path>
-
     <path name="speaker">
         <ctl name="INT4_MI2S_RX Channels" value="Two" />
         <ctl name="RX4 MIX1 INP1" value="RX4" />
@@ -2053,12 +2045,6 @@
     <path name="handset">
         <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
         <path name="speaker-mono" />
-    </path>
-
-    <path name="va-enroll-mic">
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="ADC3 Volume" value="6" />
     </path>
 
     <path name="asr-mic">
@@ -2252,16 +2238,10 @@
     </path>
 
     <path name="voice-rec-mic">
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="ADC3 Volume" value="6" />
-    </path>
-
-    <path name="camcorder-mic">
         <path name="handset-mic" />
     </path>
 
-    <path name="camcorder-dmic">
+    <path name="camcorder-mic">
         <path name="handset-mic" />
     </path>
 
@@ -2300,22 +2280,6 @@
 
     <path name="speaker-dmic-endfire">
         <path name="asr-mic" />
-    </path>
-
-    <path name="handset-dmic-music">
-        <path name="handset-dmic-endfire" />
-    </path>
-
-    <path name="handset-dmic-voice">
-        <path name="handset-dmic-endfire" />
-    </path>
-
-    <path name="handset-dmic-interview">
-        <path name="handset-dmic-endfire" />
-    </path>
-
-    <path name="handset-dmic-hd">
-        <path name="handset-dmic-endfire" />
     </path>
 
     <path name="dmic-endfire">

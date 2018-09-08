@@ -60,4 +60,8 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
+sed -i \
+    's/\/system\/etc\//\/vendor\/etc\//g' \
+    "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
+
 "$MY_DIR"/setup-makefiles.sh

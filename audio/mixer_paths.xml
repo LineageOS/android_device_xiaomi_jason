@@ -2295,15 +2295,11 @@
 
     <!-- Dual MIC devices -->
     <path name="handset-dmic-endfire">
-        <ctl name="DEC1 MUX" value="DMIC3" />
-        <ctl name="DEC2 MUX" value="DMIC4" />
-        <ctl name="INT3_MI2S_TX Channels" value="Two" />
+        <path name="asr-mic" />
     </path>
 
     <path name="speaker-dmic-endfire">
-        <ctl name="DEC1 MUX" value="DMIC2" />
-        <ctl name="DEC2 MUX" value="DMIC4" />
-        <ctl name="INT3_MI2S_TX Channels" value="Two" />
+        <path name="asr-mic" />
     </path>
 
     <path name="handset-dmic-music">

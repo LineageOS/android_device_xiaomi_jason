@@ -691,6 +691,7 @@ vendor/firmware/libpn553_fw.so
 
 # Perf
 vendor/bin/energy-awareness
+vendor/bin/msm_irqbalance
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/etc/perf/perfboostsconfig.xml

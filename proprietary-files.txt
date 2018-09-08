@@ -168,7 +168,7 @@ vendor/lib/libmmcamera2_mct.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so|94e8f5bfa98c97e69a17d4f48bd0a075b2c08566
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
@@ -360,21 +360,21 @@ vendor/lib/libchromatix_jason_s5k3p8sp_sunny_snapshot.so
 vendor/lib/libchromatix_jason_s5k3p8sp_sunny_video.so
 
 # Camera configs
-etc/camera/camera_config.xml
-etc/camera/jason_imx386_ofilm_chromatix.xml
-etc/camera/jason_imx386_semco_chromatix.xml
-etc/camera/jason_s5k3m3_ofilm_chromatix.xml
-etc/camera/jason_s5k3m3_semco_chromatix.xml
-etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
+etc/camera/jason_imx386_ofilm_chromatix.xml:vendor/etc/camera/jason_imx386_ofilm_chromatix.xml
+etc/camera/jason_imx386_semco_chromatix.xml:vendor/etc/camera/jason_imx386_semco_chromatix.xml
+etc/camera/jason_s5k3m3_ofilm_chromatix.xml:vendor/etc/camera/jason_s5k3m3_ofilm_chromatix.xml
+etc/camera/jason_s5k3m3_semco_chromatix.xml:vendor/etc/camera/jason_s5k3m3_semco_chromatix.xml
+etc/camera/jason_s5k3p8sp_sunny_chromatix.xml:vendor/etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_12_0.fw
+etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera OIS firmware
-etc/firmware/jason_bu63169_ofilm.coeff
-etc/firmware/jason_bu63169_ofilm.prog
-etc/firmware/jason_bu63169_semco.coeff
-etc/firmware/jason_bu63169_semco.prog
+etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
+etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
+etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
+etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_abf48.so
@@ -714,7 +714,7 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
 # Power-off alarm
-etc/permissions/vendor-qti-hardware-alarm.xml
+etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc

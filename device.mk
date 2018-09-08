@@ -88,7 +88,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
@@ -178,6 +178,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.noisy.broadcast.delay=600 \
     persist.vendor.audio.hifi.int_codec=true \
     vendor.audio.offload.pstimeout.secs=3
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.adm.buffering.ms=6 \
+    persist.vendor.audio.spkr.cal.duration=100 \
+    persist.vendor.audio.speaker.prot.enable=true
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -476,6 +481,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \

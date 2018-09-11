@@ -98,7 +98,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.radio.schd.cache=3500 \
     sys.vendor.shutdown.waittime=500 \
-    ro.build.shutdown_timeout=0 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
     persist.radio.multisim.config=dsds \
     sys.autosuspend.timeout=500000

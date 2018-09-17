@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0908a6df_6855bac2",
+        "filename": "rootdir/etc/chargeonlymode",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-09-17T08:36:02Z",
+      "side": 0,
+      "message": "rootdir/sbin/chargeonlymode",
+      "revId": "d28715af033ffb0f6ffd213ad7bfae34e335b743",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

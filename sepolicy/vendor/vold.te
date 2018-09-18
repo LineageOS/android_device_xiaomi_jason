@@ -1,0 +1,2 @@
+# secdiscard
+allow vold system_data_file:file write; 

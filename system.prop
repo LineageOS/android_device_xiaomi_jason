@@ -31,6 +31,7 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.sf.recomputecrop=0
+ro.sf.lcd_density=480
 
 #ro.hdmi.enable=true
 #

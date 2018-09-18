@@ -1,0 +1,2 @@
+type sysfs_fps_proximity, sysfs_type, fs_type;
+type sysfs_tp_revkeys, sysfs_type, fs_type;

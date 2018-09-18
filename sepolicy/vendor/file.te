@@ -1,0 +1,21 @@
+# Fingerprint
+type fingerprint_data_file, file_type, data_file_type;
+type fingerprintd_device, dev_type, file_type;
+type sysfs_fingerprint, sysfs_type, fs_type;
+
+# Input files
+type idc_file, file_type, vendor_file_type;
+type keylayout_file, file_type, vendor_file_type;
+
+# IR
+type ir_spi_device, dev_type, file_type;
+
+# Power
+type debugfs_wlan, debugfs_type, fs_type;
+
+# Thermal engine
+type decrypt_file, file_type, data_file_type;
+type thermal_data_file, file_type, data_file_type;
+
+# Touchscreen
+type sysfs_touchpanel, sysfs_type, fs_type;

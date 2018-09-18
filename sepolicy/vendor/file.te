@@ -1,0 +1,10 @@
+# Fingerprint
+type fingerprint_data_file, file_type, data_file_type;
+type fingerprintd_device, dev_type, file_type;
+
+# IR
+type ir_spi_device, dev_type, file_type;
+
+# Thermal engine
+type decrypt_file, file_type, data_file_type;
+type thermal_data_file, file_type, data_file_type;

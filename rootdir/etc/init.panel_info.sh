@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 # Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,10 +31,10 @@ for i in $(seq 5); do
     # St
     color=`cat /sys/bus/i2c/devices/4-0049/panel_color`
     if [ -n "$color" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-0049 $color
+        log -p i -t panel-info-sh Get panel_color successfully from 4-0049 $color
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -42,10 +42,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0020/panel_color ]; then
     color=`cat /sys/bus/i2c/devices/4-0020/panel_color`
     if [ -n "$color" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-0020 $color
+        log -p i -t panel-info-sh Get panel_color successfully from 4-0020 $color
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -53,10 +53,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0038/panel_color ]; then
     color=`cat /sys/bus/i2c/devices/4-0038/panel_color`
     if [ -n "$color" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-0038 $color
+        log -p i -t panel-info-sh Get panel_color successfully from 4-0038 $color
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -64,10 +64,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-005d/panel_color ]; then
     color=`cat /sys/bus/i2c/devices/4-005d/panel_color`
     if [ -n "$color" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-005d $color
+        log -p i -t panel-info-sh Get panel_color successfully from 4-005d $color
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -75,16 +75,16 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0062/panel_color ]; then
     color=`cat /sys/bus/i2c/devices/4-0062/panel_color`
     if [ -n "$color" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-0062 $color
+        log -p i -t panel-info-sh Get panel_color successfully from 4-0062 $color
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
     else
     color="0"
-    /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+    log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
     sleep 1
     fi
 done
@@ -94,10 +94,10 @@ for i in $(seq 5); do
     # St
     panel_vendor=`cat /sys/bus/i2c/devices/4-0049/panel_vendor`
     if [ -n "$panel_vendor" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 4-0049 $panel_vendor
+        log -p i -t panel-info-sh Get panel_vendor successfully from 4-0049 $panel_vendor
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -105,10 +105,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0020/panel_vendor ]; then
     panel_vendor=`cat /sys/bus/i2c/devices/4-0020/panel_vendor`
     if [ -n "$panel_vendor" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 4-0020 $panel_vendor
+        log -p i -t panel-info-sh Get panel_vendor successfully from 4-0020 $panel_vendor
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -116,10 +116,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0038/panel_vendor ]; then
     panel_vendor=`cat /sys/bus/i2c/devices/4-0038/panel_vendor`
     if [ -n "$panel_vendor" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor successfully from 4-0038 $panel_vendor
+        log -p i -t panel-info-sh Get panel_vendor successfully from 4-0038 $panel_vendor
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -127,10 +127,10 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-005d/panel_vendor ]; then
     panel_vendor=`cat /sys/bus/i2c/devices/4-005d/panel_vendor`
     if [ -n "$panel_vendor" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-005d $panel_vendor
+        log -p i -t panel-info-sh Get panel_color successfully from 4-005d $panel_vendor
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
@@ -138,16 +138,16 @@ for i in $(seq 5); do
     elif [ -f /sys/bus/i2c/devices/4-0062/panel_vendor ]; then
     panel_vendor=`cat /sys/bus/i2c/devices/4-0062/panel_vendor`
     if [ -n "$panel_vendor" ]; then
-        /system/bin/log -p i -t panel-info-sh Get panel_color successfully from 4-0062 $panel_vendor
+        log -p i -t panel-info-sh Get panel_color successfully from 4-0062 $panel_vendor
         break
     else
-        /system/bin/log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
+        log -p i -t panel-info-sh Get panel_color unsuccessfully, try again...
         sleep 1
         continue
     fi
     else
     panel_vendor="0"
-    /system/bin/log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
+    log -p i -t panel-info-sh Get panel_vendor unsuccessfully, try again...
     sleep 1
     fi
 done

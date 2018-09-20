@@ -1,0 +1,6 @@
+# Fingerprint
+/sys/devices/soc/soc:fingerprint_fpc/proximity_state                        u:object_r:sysfs_fps_proximity:s0
+/sys/devices/soc/soc:fingerprint_goodix/proximity_state                     u:object_r:sysfs_fps_proximity:s0
+
+# Touchscreen
+/sys/devices/soc/c178000\.i2c/i2c-4/4-0020/input/input[0-9]+/reversed_keys  u:object_r:sysfs_tp_revkeys:s0

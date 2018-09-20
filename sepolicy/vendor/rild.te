@@ -1,1 +1,2 @@
 allow rild tombstone_data_file:dir search;
+set_prop(rild, system_radio_prop);

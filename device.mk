@@ -254,7 +254,8 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610
+    ro.opengles.version=196610 \
+    ro.sf.lcd_density=480
 
 # DRM
 PRODUCT_PACKAGES += \

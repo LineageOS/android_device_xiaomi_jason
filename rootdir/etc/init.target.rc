@@ -27,11 +27,6 @@
 #
 #
 
-on early-init
-    mkdir /firmware 0771 system system
-    mkdir /bt_firmware 0771 system system
-    mkdir /dsp 0771 media media
-
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
@@ -481,8 +476,10 @@ on charger
     wait /dev/block/bootdevice/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev noatime barrier=1
     mkdir /persist/subsys 0770 system system
+    restorecon_recursive /persist
 
     mount tmpfs tmpfs /data
+    restorecon_recursive /data
 
     start thermal-engine
 

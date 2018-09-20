@@ -539,6 +539,6 @@ service remosaic_daemon /vendor/bin/remosaic_daemon
 
 service readmac /vendor/bin/readmac
     class main
-    user root
-    group oem_2901
+    user system
+    group system net_raw
     oneshot

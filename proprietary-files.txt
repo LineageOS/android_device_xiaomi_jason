@@ -563,7 +563,10 @@ vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
+vendor/bin/xtwifi-client
+vendor/bin/xtwifi-inet-agent
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc
+vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib64/lib_drplugin_server.so
 vendor/lib64/libalarmservice_jni.so

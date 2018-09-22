@@ -183,9 +183,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.pstimeout.secs=3
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.adm.buffering.ms=6 \
-    persist.vendor.audio.spkr.cal.duration=100 \
-    persist.vendor.audio.speaker.prot.enable=true
+    audio.adm.buffering.ms=6
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \

@@ -1,8 +1,10 @@
 # Fingerprint
 persist.sys.fp.                     u:object_r:fingerprint_prop:s0
+ro.boot.fp.                         u:object_r:fingerprint_prop:s0
 
 # Radio
 sys.fake_bs_flag0                   u:object_r:system_radio_prop:s0
+sys.fake_bs_flag1                   u:object_r:system_radio_prop:s0
 
 # Thermal engine
 persist.sys.thermal.                u:object_r:thermal_prop:s0

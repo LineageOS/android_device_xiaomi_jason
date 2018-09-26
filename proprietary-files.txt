@@ -748,6 +748,9 @@ vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# Power-off charging daemon
+-sbin/charger:sbin/chargeonlymode;rootfs|9b12b1d169608a85aad3641d4cabc539a862f6ef
+
 # Postprocessing - from B2N_sprout PPR1.180610.011
 vendor/bin/hw/vendor.display.color@1.0-service|4186fc9f9c69897fe4d79bbf58025144df9c6387
 vendor/bin/mm-pp-dpps|b3533e99baa104e3528dbfb60937805fafcf5472

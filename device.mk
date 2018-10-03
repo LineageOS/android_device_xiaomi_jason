@@ -123,7 +123,13 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.soundtrigger@2.0-impl
+    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.audio@4.0 \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@4.0-util \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio.effect@4.0 \
+    android.hardware.audio.effect@4.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -177,10 +183,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.audio.hw.aac.encoder=true \
-    vendor.fm.a2dp.conc.disabled=true \
     vendor.audio.noisy.broadcast.delay=600 \
     persist.vendor.audio.hifi.int_codec=true \
-    vendor.audio.offload.pstimeout.secs=3
+    vendor.audio.offload.pstimeout.secs=3 \
+    ro.af.client_heap_size_kbyte=7168 \
+    persist.vendor.audio.hw.binder.size_kbyte=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.adm.buffering.ms=6

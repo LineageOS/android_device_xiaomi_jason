@@ -20,6 +20,10 @@
 
    <!-- Operating volatage for bluetooth controller. 0 by default-->
    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3300</integer>
+   <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->
+   <integer name="config_sms_authorization_timeout_ms">15000</integer>
+   <!-- Enable SMS authorization support -->
+   <bool name="config_sms_authorization_enabled">true</bool>
 
    <!-- List of regexpressions describing the interface (if any) that represent tetherable
           Wifi interfaces.  If the device doesn't want to support tethering over Wifi this

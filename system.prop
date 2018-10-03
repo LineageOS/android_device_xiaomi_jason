@@ -30,13 +30,21 @@ debug.gralloc.enable_fb_ubwc=1
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
-debug.sf.recomputecrop=0
+#Disable Skip Validate
+sdm.debug.disable_skip_validate=1
+
+#Property to enable display default color mode
+vendor.display.enable_default_color_mode=1
+
+# Display Properties as per treble compliance
+vendor.gralloc.enable_fb_ubwc=1
+vendor.display.disable_skip_validate=1
 
 #ro.hdmi.enable=true
 #
 # system props for the cne module
 #
-persist.cne.feature=1
+persist.vendor.cne.feature=1
 
 #system props for the MM modules
 media.stagefright.enable-player=true
@@ -47,7 +55,6 @@ media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
-#media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.mm.enable.prefetch=true
 
 #property to enable narrow search range for video encoding
@@ -67,9 +74,8 @@ ro.netflix.bsp_rev=Q660-13149-1
 #
 # system props for the data modules
 #
-ro.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
-persist.data.mode=concurrent
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
 #system props for time-services
 persist.timed.enable=true
 
@@ -80,6 +86,7 @@ persist.bt.a2dp.aac_disable=true
 
 # System property for cabl
 ro.qualcomm.cabl=0
+ro.vendor.display.cabl=0
 
 #
 # System props for telephony
@@ -98,15 +105,19 @@ ro.bluetooth.wipower=false
 #snapdragon value add features
 #
 
+#minimum duration for offload playback in secs
+audio.offload.min.duration.secs=30
+
+#enable offload audio video playback by default
+audio.offload.video=true
+
+#enable music through deep buffer
+audio.deep_buffer.media=true
+
+#set AudioFlinger client heap size
+ro.af.client_heap_size_kbyte=7168
+
 #system prop for RmNet Data
-persist.rmnet.data.enable=true
-persist.data.wda.enable=true
-persist.data.df.dl_mode=5
-persist.data.df.ul_mode=5
-persist.data.df.agg.dl_pkt=10
-persist.data.df.agg.dl_size=4096
-persist.data.df.mux_count=8
-persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
 #
@@ -147,7 +158,7 @@ ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
 #Bringup properties
-persist.radio.atfwd.start=true
+persist.vendor.radio.atfwd.start=true
 
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
@@ -175,26 +186,23 @@ persist.sys.sensors.pug=true
 vendor.camera.aux.packagelist=com.android.camera
 
 #disable UBWC for camera
-persist.camera.preview.ubwc=0
+persist.vendor.camera.preview.ubwc=0
 persist.camera.hist.high=20
 persist.camera.hist.drc=1.2
-
-# Create zram disk
-ro.vendor.qti.config.zram=false
 
 #set maximum supported adapter voltage
 persist.chg.max_volt_mv=9000
 
-#Property to enable display default color mode
-vendor.display.enable_default_color_mode=0
+#system prop for Bluetooth SOC type
+vendor.bluetooth.soc=cherokee
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 
 # Property for backup NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 # enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
-
-#Disable Skip Validate
-sdm.debug.disable_skip_validate=1
 
 #adjust voice call volume steps
 ro.config.vc_call_vol_steps=11

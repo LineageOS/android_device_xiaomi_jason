@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013-2018, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -36,15 +36,6 @@ on init
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
 
-# Add a cpuset for the camera daemon
-# We want all cores for camera
-    mkdir /dev/cpuset/camera-daemon
-    write /dev/cpuset/camera-daemon/cpus 0-7
-    write /dev/cpuset/camera-daemon/mems 0
-    chown cameraserver cameraserver /dev/cpuset/camera-daemon
-    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
-    chmod 0660 /dev/cpuset/camera-daemon/tasks
-
     # chmod node /dev/gpio_rf
     chmod 0644 /dev/gpio_rf
 
@@ -56,23 +47,18 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /vendor/etc/fstab.qcom
     swapon_all /vendor/etc/fstab.qcom
-
-    # Keeping following partitions outside fstab file. As user may not have
-    # these partition flashed on the device. Failure to mount any partition in fstab file
-    # results in failure to launch late-start class.
-
-    wait /dev/block/bootdevice/by-name/persist
-    mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev noatime barrier=1
-    mkdir /persist/data 0700 system system
-    mkdir /persist/bms 0700 root system
-    restorecon_recursive /persist
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/bms 0700 root system
+    restorecon_recursive /mnt/vendor/persist
     write /sys/kernel/boot_adsp/boot 1
 
     # Bluetooth
-    mkdir /persist/wlan_bt 0770 system system
+    mkdir /mnt/vendor/persist/wlan_bt 0770 system system
 
 on post-fs
-    start qseecomd
+    start vendor.qseecomd
     exec - system system -- /vendor/bin/init.qti.qseecomd.sh
     write /dev/ipa 1
 
@@ -86,7 +72,7 @@ on post-fs-data
     mkdir /data/tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/misc/seemp 0700 system system
-    mkdir /data/misc/tloc 0700 system drmrpc
+    mkdir /data/vendor/tloc 0700 system drmrpc
 
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
@@ -117,12 +103,22 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
-    # Wifi firmware reload path
-    chown wifi wifi /sys/module/wlan/parameters/fwpath
+#Create folder dump yuv images while debugging
+    mkdir /data/vendor/camera 0770 camera camera
 
 #Load WLAN driver
    insmod /vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko
-   setprop wlan.driver.status "ok"
+
+#USB controller configuration
+    setprop vendor.usb.rndis.func.name "rndis_bam"
+    setprop vendor.usb.rmnet.func.name "rmnet_bam"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    write /sys/module/usb_f_qcrndis/parameters/rndis_dl_max_xfer_size 15916
+    setprop sys.usb.configfs 1
+
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # LED full scale current is 8mA and limit it to 2mA
     write /sys/class/leds/button-backlight/max_brightness 64
@@ -160,23 +156,23 @@ on boot
     chown system system /sys/bus/i2c/devices/4-0020/input/input1/reversed_keys
 
 #Peripheral manager
-service per_mgr /system/vendor/bin/pm-service
+service vendor.per_mgr /system/vendor/bin/pm-service
     class core
     user system
     group system
     ioprio rt 4
 
-service per_proxy /system/vendor/bin/pm-proxy
+service vendor.per_proxy /system/vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
 
-on property:init.svc.per_mgr=running
-    start per_proxy
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
 
 on property:sys.shutdown.requested=*
-    stop per_proxy
+    stop vendor.per_proxy
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"
@@ -213,7 +209,7 @@ on property:sys.boot_completed=1
 #on property:sys.boot_completed=1
 #    start qrngp
 #
-service qseecomd /vendor/bin/qseecomd
+service vendor.qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
@@ -249,12 +245,12 @@ service time_daemon /system/vendor/bin/time_daemon
    user root
    group root
 
-service adsprpcd_root /system/bin/adsprpcd
+service adsprpcd_root /vendor/bin/adsprpcd
    class main
    user media
    group media
 
-service adsprpcd /system/vendor/bin/adsprpcd audiopd
+service adsprpcd /vendor/bin/adsprpcd audiopd
    class main
    user media
    group media
@@ -269,6 +265,13 @@ service audiod /system/vendor/bin/audiod
    class late_start
    user system
    group system
+
+service vendor.cdsprpcd /vendor/bin/cdsprpcd
+   class main
+   user system
+   group system
+   disabled
+
 #
 #service usf_tester /system/vendor/bin/usf_tester
 #    user system
@@ -331,13 +334,16 @@ service audiod /system/vendor/bin/audiod
 #    chown system drmrpc /sys/devices/f9966000.i2c/i2c-1/1-0020/secure_touch
 #
 #
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+#
+## imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
+# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -396,7 +402,7 @@ service mdtpd /system/vendor/bin/mdtpd
     user root
     group system radio drmrpc
 
-service pd_mapper /system/vendor/bin/pd-mapper
+service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
 
 #
@@ -413,23 +419,29 @@ service pd_mapper /system/vendor/bin/pd-mapper
 #   disabled
 
 on property:vendor.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
+    start vendor.imsdatadaemon
 
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+on property:vold.decrypt=trigger_restart_framework
+   start cnss_diag
+
+service cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+   class main
+   user system
+   group system wifi inet sdcard_rw media_rw diag
+   oneshot
+
+service vendor.ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
    class main
    user system
    group radio diag inet log
-   disabled
 
 service vendor.imsrcsservice /system/vendor/bin/imsrcsd
    class main
    user system
-   group radio diag inet log
-   disabled
+   group radio diag inet log wakelock
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-    start vendor.imsrcsservice
+    restart vendor.ims_rtp_daemon
 
 
 service ppd /system/vendor/bin/mm-pp-dpps
@@ -466,7 +478,7 @@ on property:vold.decrypt=trigger_restart_framework
 on charger
     load_system_props
     start qcom-post-boot
-    start hvdcp_opti
+    start vendor.hvdcp_opti
     setprop sys.usb.configfs 1
     start power_off_alarm
 
@@ -509,12 +521,12 @@ service seempd /system/bin/seempd
     group system sdcard_rw
     socket seempdw dgram 0666 system system
 
-service tlocd /system/bin/tloc_daemon
+service vendor.tlocd /vendor/bin/tloc_daemon
     class late_start
     user system
-    group drmrpc
+    group drmrpc gps net_raw
 
-service hvdcp_opti /system/vendor/bin/hvdcp_opti
+service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main
      user root
      group system wakelock

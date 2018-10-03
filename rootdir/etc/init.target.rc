@@ -470,10 +470,10 @@ on property:init.svc.zygote=restarting
     stop ppd
 
 on property:vold.decrypt=trigger_reset_main
-    stop audio-hal-2-0
+    stop vendor.audio-hal-2-0
 
 on property:vold.decrypt=trigger_restart_framework
-    start audio-hal-2-0
+    start vendor.audio-hal-2-0
 
 on charger
     load_system_props

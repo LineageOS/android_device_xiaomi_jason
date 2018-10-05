@@ -76,5 +76,6 @@ patchelf --set-soname libicuuc-v27.so "$ICUUC_V27"
 patchelf --set-soname libminikin-v27.so "$MINIKIN_V27"
 patchelf --replace-needed libicuuc.so libicuuc-v27.so "$CAMERA_SDM660"
 patchelf --replace-needed libminikin.so libminikin-v27.so "$CAMERA_SDM660"
+patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libvideorefiner.so
 
 "$MY_DIR"/setup-makefiles.sh

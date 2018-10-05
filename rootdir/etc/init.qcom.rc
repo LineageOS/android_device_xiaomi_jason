@@ -1219,3 +1219,9 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+
+on property:persist.vendor.data.mode=*
+    setprop persist.data.mode ${persist.vendor.data.mode}
+
+on property:vendor.bluetooth.soc=*
+    setprop qcom.bluetooth.soc ${vendor.bluetooth.soc}

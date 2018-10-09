@@ -859,7 +859,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 etc/modem/Diag.cfg
 
 # Sensors
-vendor/bin/sensors.qcom
+vendor/bin/sensors.qcom:vendor/bin/sensors.qti
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sensor_def_qcomdev.conf
 vendor/lib/hw/activity_recognition.sdm660.so

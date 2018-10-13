@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7e5a11c_e20dc292",
+        "filename": "system.prop",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-10-13T11:12:15Z",
+      "side": 1,
+      "message": "This is typically only used in vendor/bin/init.class_main.sh script.",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 28
+      },
+      "revId": "aac1b6eaf055e06fb9a9d5fae2e0f86edc3cb10a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}

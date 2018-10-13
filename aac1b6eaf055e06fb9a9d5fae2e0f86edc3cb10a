@@ -22,6 +22,30 @@
       "revId": "aac1b6eaf055e06fb9a9d5fae2e0f86edc3cb10a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40c98428_cfd0a192",
+        "filename": "system.prop",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2018-10-13T12:21:29Z",
+      "side": 1,
+      "message": "grep matched /vendor/bin/qti",
+      "parentUuid": "c7e5a11c_e20dc292",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 28
+      },
+      "revId": "aac1b6eaf055e06fb9a9d5fae2e0f86edc3cb10a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }

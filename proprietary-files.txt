@@ -170,8 +170,8 @@ vendor/lib/libmorpho_easy_hdr.so
 vendor/lib/libmorpho_hdr_checker.so
 vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
-vendor/lib/libois_jason_bu63169_ofilm.so
-vendor/lib/libois_jason_bu63169_semco.so
+vendor/lib/libois_jason_bu63169_ofilm.so|9f387d1c59fe62ef05e9b568a3c5035ac6f724da
+vendor/lib/libois_jason_bu63169_semco.so|21bcaae8584ef12baf92ae3bd818a3e601925cc5
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so

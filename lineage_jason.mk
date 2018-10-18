@@ -35,8 +35,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="jason" \
     PRODUCT_NAME="jason" \
-    PRIVATE_BUILD_DESC="jason-user 8.1.0 OPM1.171019.019 V10.0.2.0.OCHCNFH release-keys"
+    PRIVATE_BUILD_DESC="jason-user 8.1.0 OPM1.171019.019 V10.0.4.0.OCHCNFH release-keys"
 
-BUILD_FINGERPRINT := "Xiaomi/jason/jason:8.1.0/OPM1.171019.019/V10.0.2.0.OCHCNFH:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/jason/jason:8.1.0/OPM1.171019.019/V10.0.4.0.OCHCNFH:user/release-keys"
 
 TARGET_VENDOR := Xiaomi

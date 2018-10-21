@@ -311,12 +311,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service \
     chargeonlymode
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0_vendor \
-    android.hidl.manager@1.0-java
-
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml

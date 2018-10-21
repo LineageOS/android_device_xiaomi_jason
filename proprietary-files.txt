@@ -4,10 +4,12 @@ vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
 vendor/lib/libadsprpc.so
+vendor/lib/libcdsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 
@@ -35,7 +37,6 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # ANT+
-lib/com.qualcomm.qti.ant@1.0.so
 -lib/libantradio.so
 lib64/com.qualcomm.qti.ant@1.0.so
 -lib64/libantradio.so
@@ -71,7 +72,6 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/bin/wcnss_filter
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
@@ -90,7 +90,6 @@ vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_refocus.so
-vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
 vendor/lib/libedge_smooth_hvx_stub.so
 vendor/lib/libFaceGrade.so
@@ -129,7 +128,6 @@ vendor/lib/libmmcamera_jason_s5k3m3_semco_eeprom.so
 vendor/lib/libmmcamera_jason_s5k3m3_semco.so
 vendor/lib/libmmcamera_jason_s5k3p8sp_sunny_eeprom.so
 vendor/lib/libmmcamera_jason_s5k3p8sp_sunny.so
-vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
@@ -137,7 +135,6 @@ vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_quadracfa.so
-vendor/lib/libmmcamera_sac_lib.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libmmcamera_thread_services.so
@@ -179,7 +176,6 @@ vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libremosaiclib.so
-vendor/lib/libsac.so
 vendor/lib/libseemore.so
 vendor/lib/libSonyIMX386PdafLibrary.so
 vendor/lib/libStereoRectification.so
@@ -489,21 +485,8 @@ vendor/lib64/libdpmqmihal.so
 
 # DRM
 vendor/bin/qseecomd
-vendor/lib/libcppf.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libGPreqcancel_svc.so
-vendor/lib/libGPreqcancel.so
-vendor/lib/libqisl.so
 vendor/lib/libQSEEComAPI.so
-vendor/lib/librpmb.so
 vendor/lib/libsdedrm.so
-vendor/lib/libsecureui_svcsock.so
-vendor/lib/libsecureui.so
-vendor/lib/libSecureUILib.so
-vendor/lib/libssd.so
-vendor/lib/libStDrvInt.so
-vendor/lib/libtzdrmgenprov.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -559,7 +542,6 @@ vendor/etc/cacert_location.pem
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
-vendor/lib64/lib_drplugin_server.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libdrplugin_client.so
@@ -573,7 +555,6 @@ vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 -vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
-vendor/lib64/libloc_externalDr.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblowi_client.so
@@ -605,8 +586,6 @@ vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libllvm-qgl.so
-vendor/lib/libmm-disp-apis.so
-vendor/lib/libmm-qdcm.so
 vendor/lib/libOpenCL.so
 vendor/lib/libqseed3.so
 vendor/lib/librs_adreno_sha1.so
@@ -635,8 +614,6 @@ vendor/lib64/libhdr_tm.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
-vendor/lib64/libmm-disp-apis.so
-vendor/lib64/libmm-qdcm.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librs_adreno_sha1.so
@@ -671,6 +648,10 @@ lib/libmmosal.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal_proprietary.so
+vendor/lib/libmmsw_platform.so
+vendor/lib/libmmsw_opencl.so
+vendor/lib/libmmsw_detail_enhancement.so
+vendor/lib/libmmsw_math.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
@@ -732,7 +713,6 @@ lib/libdiag_system.so
 lib64/libdiag_system.so
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
@@ -748,7 +728,6 @@ vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 vendor/lib64/libdiag.so
-vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqcci_legacy.so
@@ -790,6 +769,7 @@ vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
+vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so

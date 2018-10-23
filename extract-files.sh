@@ -85,4 +85,6 @@ CAMERA_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
 patchelf --remove-needed libicuuc.so "$CAMERA_SDM660"
 patchelf --remove-needed libminikin.so "$CAMERA_SDM660"
 
+patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libvideorefiner.so
+
 "$MY_DIR"/setup-makefiles.sh

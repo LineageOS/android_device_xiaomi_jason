@@ -171,8 +171,13 @@ ro.vendor.sensors.multitap=true
 #xiaomi pick up gusture
 persist.sys.sensors.pug=true
 
+#Expose aux camera for below packages
+vendor.camera.aux.packagelist=com.android.camera
+
 #disable UBWC for camera
 persist.camera.preview.ubwc=0
+persist.camera.hist.high=20
+persist.camera.hist.drc=1.2
 
 # Create zram disk
 ro.vendor.qti.config.zram=false
@@ -193,6 +198,30 @@ sdm.debug.disable_skip_validate=1
 
 #adjust voice call volume steps
 ro.config.vc_call_vol_steps=11
+
+#For camera
+#enable dual cam low power mode
+persist.dualcam.lpm.enable=1
+#sat enable default
+persist.camera.sat.enable=1
+#defer cmd disable,
+#preview speed optimized
+#Re-enable defer mode,
+#since multiframe component set to master priority mode already
+persist.dualcam.defer.enable=1
+#enable aggressive aec
+persist.camera.instant.aec=1
+#big enough ae bound
+persist.camera.ae.instant.bound=20
+#set antibanding auto to 50Hz auto,
+#then 50Hz power country is priority
+persist.camera.set.afd=4
+#DXO branch enable DXO
+persist.camera.dxo=1
+#DXO enable cac
+persist.camera.feature.cac=1
+#DXO enable fovc for the video mode
+persist.camera.fovc.enable=1
 
 # AD and sensor config
 ro.qcom.ad=1

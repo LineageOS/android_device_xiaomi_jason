@@ -211,19 +211,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=1 \
-    persist.camera.hist.high=20 \
-    persist.camera.hist.drc=1.2 \
-    persist.camera.sat.enable=1 \
-    persist.camera.instant.aec=1 \
-    persist.camera.ae.instant.bound=20 \
-    persist.camera.set.afd=4 \
-    persist.camera.feature.cac=1 \
-    persist.camera.fovc.enable=1 \
-    persist.dualcam.lpm.enable=1 \
-    persist.dualcam.defer.enable=1
-
 # ConfigPanel
 PRODUCT_PACKAGES += \
     ConfigPanel

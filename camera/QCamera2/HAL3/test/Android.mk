@@ -13,9 +13,6 @@ else
     LOCAL_CFLAGS += -DCAMERA_CHIPSET_8937
 endif
 
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_C_INCLUDES+= $(kernel_includes)
-
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../ \
     $(LOCAL_PATH)/../../stack/mm-camera-interface/inc \
@@ -25,6 +22,7 @@ LOCAL_C_INCLUDES += \
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_HEADER_LIBRARIES += libbinder_headers
 LOCAL_HEADER_LIBRARIES += libandroid_sensor_headers
+LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 
 LOCAL_SRC_FILES := \
     QCameraHAL3Base.cpp \

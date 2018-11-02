@@ -784,7 +784,6 @@ framework/QtiTelephonyServicelibrary.jar
 framework/uimlpalibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
-vendor/bin/ipacm-diag
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/qti

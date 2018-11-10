@@ -227,6 +227,13 @@ TARGET_RIL_VARIANT := caf
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_jason
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Root
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware \
+    /vendor/bt_firmware:/bt_firmware \
+    /mnt/vendor/persist:/persist
+
 # SDK
 BOARD_SYSTEMSDK_VERSIONS := 28
 

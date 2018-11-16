@@ -661,8 +661,9 @@ vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
 -vendor/lib64/libgpustats.so
 
-# NFC firmware
+# NFC
 vendor/firmware/libpn553_fw.so
+vendor/bin/nqnfcinfo
 
 # Perf
 vendor/bin/energy-awareness
@@ -798,6 +799,7 @@ vendor/radio/qcril_database/qcril.db
 # Radio - IMS
 -app/ims/ims.apk
 -app/imssettings/imssettings.apk
+-app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/qti-vzw-ims-internal.xml
 framework/com.qualcomm.qti.imscmservice@1.1-java.jar

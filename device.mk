@@ -446,10 +446,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.ssr.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qti.ims.sh \
     init.target.rc \
     ueventd.qcom.rc \
     fstab.qcom

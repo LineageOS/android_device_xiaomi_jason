@@ -524,22 +524,11 @@ vendor/lib64/libqisl.so|18c594b80a3eb7e1435985411457ef9fdeae862b
 vendor/lib64/libQSEEComAPI.so|6ec762ad6105ca6b8a22f2878a6c8bb6d1bff0b9
 vendor/lib64/librpmb.so|15b5052a97a4952246a9f9d7fce98e1be50f86cc
 vendor/lib64/libsdedrm.so|973dde7d654c4f1ef46844011e6a2de3e6f7ee8c
-vendor/lib64/libsecureui_svcsock.so|faad5dad9fb6a33f1e2a404514c12f86b56cfdf6
-vendor/lib64/libsecureui.so|fc135234d87a4bf6194016e88fff9761773e6566
-vendor/lib64/libSecureUILib.so|8b77215ac12265599bf50bbcbc0ef0f3e623cfff
 vendor/lib64/libssd.so|e8a688dac8c3f5d74e18cf81b646de7469201055
-vendor/lib64/libStDrvInt.so|0bbd42639f835e6032235704d255c883a31ad7d0
-vendor/lib64/libtzdrmgenprov.so|3dc9eb29ca0ec753a6e8b62560d3f46abd75edf2
 
 # DRM - Clearkey - from B2N_sprout PPR1.180610.011
 vendor/bin/hw/android.hardware.drm@1.1-service.clearkey|d336aa613512ba06b694867258ad5ef0d7450aad
 vendor/etc/init/android.hardware.drm@1.1-service.clearkey.rc|acf0c3c835d4cf105b8832b9fd16046042aad629
-
-# DRM - TUI - from B2N_sprout PPR1.180610.011
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|c9d2461aec2f9b19aa1578f500c052d27451d204
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|7f5520afb4f509ea039752ed0955e4c98ecaf7d6
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|0d635aab70b7ca2d73755a22f16933e905dea093
 
 # DRM - Widevine - from B2N_sprout PPR1.180610.011
 bin/move_widevine_data.sh|dec5dc2ec4800e1bff5b442cf745ef37eaff9525

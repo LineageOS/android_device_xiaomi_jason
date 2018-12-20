@@ -213,6 +213,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
+    persist.camera.dxo=1 \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
     persist.camera.sat.enable=1 \

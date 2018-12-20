@@ -173,6 +173,7 @@ vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
 vendor/lib/libois_jason_bu63169_ofilm.so
 vendor/lib/libois_jason_bu63169_semco.so
+vendor/lib/liboisgyro.so
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
@@ -838,6 +839,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
+vendor/radio/qcril_database/upgrade/2_version_intro.sql
 
 # Radio - IMS
 -app/ims/ims.apk

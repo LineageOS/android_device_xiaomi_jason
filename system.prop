@@ -109,6 +109,9 @@ persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
+#allow update modem profile to satify single ip-type pdp request
+persist.data.profile_update=true
+
 #
 # system property determining camera HAL to be used for a Video call
 #

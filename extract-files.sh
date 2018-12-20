@@ -88,3 +88,11 @@ patchelf --remove-needed libminikin.so "$CAMERA_SDM660"
 patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libvideorefiner.so
 
 "$MY_DIR"/setup-makefiles.sh
+
+DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+CAMERA_HAL="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+
+sed -i \
+    -e 's/\xe0\x6d\x01\x28\x0b\xd0/\x00\xbf\x00\xbf\x1f\xe0/' \
+    "$CAMERA_HAL"

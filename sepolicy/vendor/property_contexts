@@ -1,6 +1,12 @@
+# Alipay
+persist.sys.ifaa                    u:object_r:ifaa_prop:s0
+persist.sys.pay.fido                u:object_r:fido_prop:s0
+sys.rpmb_state                      u:object_r:mtdservice_prop:s0
+
 # Fingerprint
 persist.sys.fp.                     u:object_r:fingerprint_prop:s0
 ro.boot.fp.                         u:object_r:fingerprint_prop:s0
+ro.boot.fpsensor                    u:object_r:fingerprint_prop:s0
 
 # Radio
 sys.fake_bs_flag0                   u:object_r:system_radio_prop:s0

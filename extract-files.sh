@@ -96,3 +96,6 @@ CAMERA_HAL="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
 sed -i \
     -e 's/\xe0\x6d\x01\x28\x0b\xd0/\x00\xbf\x00\xbf\x1f\xe0/' \
     "$CAMERA_HAL"
+
+patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/bin/mlipayd
+patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so

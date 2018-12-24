@@ -20,6 +20,9 @@
 # IR
 /dev/lirc0                                          u:object_r:ir_spi_device:s0
 
+# Mlipay
+/(vendor|system/vendor)/bin/mlipayd                 u:object_r:hal_mlipay_default_exec:s0
+
 # Readmac
 /(vendor|system/vendor)/bin/readmac                 u:object_r:readmac_exec:s0
 

@@ -1,0 +1,12 @@
+type hal_mfidoca_default, domain;
+
+type hal_mfidoca_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_mfidoca_default)
+
+hwbinder_use(hal_mfidoca_default)
+
+allow hal_mfidoca_default tee_device:chr_file rw_file_perms;
+allow hal_mfidoca_default ion_device:chr_file r_file_perms;
+
+r_dir_file(hal_mfidoca_default, firmware_file)
+set_prop(hal_mfidoca_default, fido_prop);

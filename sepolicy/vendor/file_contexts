@@ -1,3 +1,8 @@
+# Alipay
+/(vendor|system/vendor)/bin/fidoca                  u:object_r:hal_mfidoca_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd                 u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mtd                     u:object_r:hal_mtdservice_default_exec:s0
+
 # Camera
 /sys/devices(/platform)?/soc/[a-z0-9]+.qcom,jpeg/video4linux/video[0-33]/name(/.*)?             u:object_r:sysfs_graphics:s0
 /(vendor|system/vendor)/bin/remosaic_daemon         u:object_r:remosaic_daemon_exec:s0

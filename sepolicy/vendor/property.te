@@ -1,2 +1,7 @@
+# Alipay
+type fido_prop, property_type;
+type ifaa_prop, property_type, core_property_type;
+type mtdservice_prop, property_type;
+
 # Thermal engine
 type thermal_prop, property_type;

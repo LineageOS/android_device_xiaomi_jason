@@ -665,11 +665,6 @@ vendor/lib/libgcs-ipc.so|8a3c147f796e5565563baf1c9e77f3e62dbd45cc
 vendor/lib/libgcs-osal.so|29cf5f619296d18e3ce3c83f6797d45d190508ce
 vendor/lib/libgcs.so|63eba046fdf9359c4e4166d7772db404cf66db15
 vendor/lib/libsmwrapper.so|45be75b414f7a8bc3f4807dfab37a9ef9ce91426
-vendor/lib64/hw/sound_trigger.primary.sdm660.so|eccf860f30cf7e06e0eb39231765055a21451c42
-vendor/lib64/libgcs-calwrapper.so|c5e8358b41eefc6ae6617e528904d0843b0af6cb
-vendor/lib64/libgcs-ipc.so|d36d3ac4ecfa93903bca79c7510b403f155500b4
-vendor/lib64/libgcs-osal.so|b69700a82a0a4e56d43dcab2a9f2b65eeda79fa4
-vendor/lib64/libgcs.so|53b042cade4a2db8f2dbb22e52870c45a6799233
 
 # Media - from B2N_sprout PPR1.180610.011
 lib/libmmosal.so|54fb60b71faa40519bd5ce581f8d04c286654851

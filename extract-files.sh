@@ -99,3 +99,10 @@ sed -i \
 
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/bin/mlipayd
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so
+
+sed -i "s|\/data\/vendor\/radio\/modem_config\/mcfg_hw\/|\/data\/vendor\/modem_config\/mcfg_hw\/\x00\x00\x00\x00\x00\x00|g" \
+    "$DEVICE_BLOB_ROOT"/vendor/lib64/libril-qc-hal-qmi.so
+sed -i "s|\/data\/vendor\/radio\/modem_config\/mcfg_sw\/|\/data\/vendor\/modem_config\/mcfg_sw\/\x00\x00\x00\x00\x00\x00|g" \
+    "$DEVICE_BLOB_ROOT"/vendor/lib64/libril-qc-hal-qmi.so
+sed -i "s|\/data\/vendor\/radio\/modem_config\/|\/data\/vendor\/modem_config\/\x00\x00\x00\x00\x00\x00|g" \
+    "$DEVICE_BLOB_ROOT"/vendor/lib64/libril-qc-hal-qmi.so

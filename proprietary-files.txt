@@ -531,9 +531,7 @@ vendor/lib64/libssd.so|e8a688dac8c3f5d74e18cf81b646de7469201055
 bin/move_widevine_data.sh|dec5dc2ec4800e1bff5b442cf745ef37eaff9525
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|a18fb3b14337da6c2e5cf39984287961b90dd527
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
-vendor/lib/mediadrm/libwvdrmengine.so|19b3abc9b99557b65a4a25e3e5de2dcaea62b2a4
 vendor/lib64/libwvhidl.so|c43592cf9de090d74e37f438c071256c86f31f9c
-vendor/lib64/mediadrm/libwvdrmengine.so|ab2e9d29646ffb7ab6b61925a6281a9fe60e5c48
 
 # Fingerprint sensor
 vendor/lib64/com.fingerprints.extension@1.0.so

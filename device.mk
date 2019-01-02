@@ -481,6 +481,9 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \

@@ -444,6 +444,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.class_late.sh \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
     init.panel_info.sh \

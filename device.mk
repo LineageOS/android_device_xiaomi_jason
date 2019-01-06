@@ -426,9 +426,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/appboosts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/appboosts.xml
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson

@@ -107,7 +107,7 @@ on boot
     mkdir /data/vendor/camera 0770 camera camera
 
 #Load WLAN driver
-   insmod /vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko
+   insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "rndis_bam"
@@ -173,6 +173,7 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
+    stop vendor.ims_rtp_daemon
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"
@@ -474,7 +475,7 @@ on charger
     start qcom-post-boot
     start vendor.hvdcp_opti
     setprop sys.usb.configfs 1
-    start power_off_alarm
+    start vendor.power_off_alarm
 
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

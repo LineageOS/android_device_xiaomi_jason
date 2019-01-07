@@ -2,7 +2,6 @@
 type persist_subsys_file, file_type;
 
 # Fingerprint
-type fingerprint_data_file, file_type, data_file_type;
 type fingerprintd_device, dev_type, file_type;
 type persist_fingerprint_file, file_type;
 type sysfs_fingerprint, sysfs_type, fs_type;

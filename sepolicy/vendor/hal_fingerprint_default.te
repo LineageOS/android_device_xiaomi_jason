@@ -5,9 +5,6 @@ allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
 allow hal_fingerprint_default sysfs_fingerprint:dir r_dir_perms;
 allow hal_fingerprint_default sysfs_fingerprint:file rw_file_perms;
 
-allow hal_fingerprint_default fingerprint_data_file:dir rw_dir_perms;
-allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
-
 allow hal_fingerprint_default persist_file:dir r_dir_perms;
 allow hal_fingerprint_default persist_fingerprint_file:file r_file_perms;
 

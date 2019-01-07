@@ -29,5 +29,5 @@ sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0
 
 # Thermal engine
-persist.sys.thermal.                u:object_r:thermal_prop:s0
-sys.thermal.                        u:object_r:thermal_prop:s0
+persist.sys.thermal.                u:object_r:thermal_engine_prop:s0
+sys.thermal.                        u:object_r:thermal_engine_prop:s0

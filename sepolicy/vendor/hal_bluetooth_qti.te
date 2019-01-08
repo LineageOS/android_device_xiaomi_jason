@@ -1,3 +1,0 @@
-# HACK: steal drm hal's domain to avoid neverallow
-typeattribute hal_bluetooth_qti hal_drm;
-get_prop(hal_bluetooth_qti, serialno_prop)

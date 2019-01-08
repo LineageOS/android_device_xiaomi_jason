@@ -11,6 +11,7 @@ ro.boot.fpsensor                    u:object_r:vendor_fp_prop:s0
 persist.sys.ifaa                    u:object_r:ifaa_prop:s0
 
 # Radio
+persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0
 persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0

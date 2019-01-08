@@ -29,6 +29,9 @@ persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0
 
+# ss-services (PD)
+persist.pd_locater_debug            u:object_r:vendor_pd_locater_dbg_prop:s0
+
 # Thermal engine
 persist.sys.thermal.                u:object_r:thermal_prop:s0
 sys.thermal.                        u:object_r:thermal_prop:s0

@@ -33,6 +33,3 @@
 # Thermal-engine
 /data/decrypt\.txt                                  u:object_r:decrypt_file:s0
 /data/thermal(/.*)?                                 u:object_r:thermal_data_file:s0
-
-# Touchscreen
-/sys/devices/soc/c178000\.i2c/i2c-4/4-0020/input/input[0-9]+/wake_gesture                       u:object_r:sysfs_touchpanel:s0

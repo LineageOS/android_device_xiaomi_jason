@@ -32,6 +32,7 @@ video.disable.ubwc                  u:object_r:mm_video_prop:s0
 # Radio
 persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0
 persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0
+rild.libpath                        u:object_r:vendor_rild_libpath_prop:s0
 sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0
 

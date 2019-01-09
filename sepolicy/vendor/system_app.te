@@ -1,3 +1,7 @@
 # Allow ConfigPanel to work
 allow system_app sysfs_sectouch:dir search;
 allow system_app sysfs_sectouch:file rw_file_perms;
+
+# Allow PocketMode to work
+allow system_app sysfs_fingerprint:dir search;
+allow system_app sysfs_fingerprint:file rw_file_perms;

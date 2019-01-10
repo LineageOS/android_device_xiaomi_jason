@@ -196,7 +196,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.hw.binder.size_kbyte=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.adm.buffering.ms=6
+    vendor.audio.adm.buffering.ms=6
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \

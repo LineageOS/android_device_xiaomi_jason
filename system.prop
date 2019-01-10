@@ -221,3 +221,5 @@ ro.config.vc_call_vol_steps=11
 ro.qcom.ad=1
 ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
 ro.qcom.ad.sensortype=2
+
+vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner

@@ -53,3 +53,32 @@ persist.pd_locater_debug            u:object_r:vendor_pd_locater_dbg_prop:s0
 # Thermal engine
 persist.sys.thermal.                u:object_r:thermal_prop:s0
 sys.thermal.                        u:object_r:thermal_prop:s0
+
+# vendor_default_prop
+gpu.stats.debug.level               u:object_r:vendor_default_prop:s0
+persist.data_netmgrd_mtu            u:object_r:vendor_default_prop:s0
+persist.data.df.agg.dl_pad          u:object_r:vendor_default_prop:s0
+persist.data.df.agg.dl_pkt          u:object_r:vendor_default_prop:s0
+persist.data.df.agg.dl_size         u:object_r:vendor_default_prop:s0
+persist.data.df.dl_mode             u:object_r:vendor_default_prop:s0
+persist.data.df.iwlan_mux           u:object_r:vendor_default_prop:s0
+persist.data.df.mux_count           u:object_r:vendor_default_prop:s0
+persist.data.df.ul_mode             u:object_r:vendor_default_prop:s0
+persist.data.dont_use_epc           u:object_r:vendor_default_prop:s0
+persist.data.dont_use_npflag        u:object_r:vendor_default_prop:s0
+persist.data.dpm.enable             u:object_r:vendor_default_prop:s0
+persist.data.dropssdp               u:object_r:vendor_default_prop:s0
+persist.data.ibfc.enable            u:object_r:vendor_default_prop:s0
+persist.data.iwlan.enable           u:object_r:vendor_default_prop:s0
+persist.data.llf.enable             u:object_r:vendor_default_prop:s0
+persist.data.netmgr.wl.timeout      u:object_r:vendor_default_prop:s0
+persist.data.netmgrd.qos.enable     u:object_r:vendor_default_prop:s0
+persist.data.netmgrd.qos.hybrid     u:object_r:vendor_default_prop:s0
+persist.data.profile_update         u:object_r:vendor_default_prop:s0
+persist.data.target.msm8998         u:object_r:vendor_default_prop:s0
+persist.data.tcpackprio.enable      u:object_r:vendor_default_prop:s0
+persist.data.wda.enable             u:object_r:vendor_default_prop:s0
+persist.net.logmask                 u:object_r:vendor_default_prop:s0
+persist.rmnet.data.enable           u:object_r:vendor_default_prop:s0
+remosaic.debug.loglevel             u:object_r:vendor_default_prop:s0
+ro.build.software.version           u:object_r:vendor_default_prop:s0

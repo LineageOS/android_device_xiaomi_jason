@@ -170,7 +170,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.tunnel.encode=false \
     persist.vendor.audio.ras.enabled=false \
     vendor.audio.offload.buffer.size.kb=64 \
-    audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
     vendor.audio.offload.track.enable=true \
     audio.deep_buffer.media=true \

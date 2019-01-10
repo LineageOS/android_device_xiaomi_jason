@@ -236,7 +236,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.fovc.enable=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
+    persist.vendor.dualcam.defer.enable=1 \
+    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner
 
 # ConfigPanel
 PRODUCT_PACKAGES += \

@@ -45,6 +45,9 @@ persist.sys.ifaa                    u:object_r:ifaa_prop:s0
 # mm-video
 video.disable.ubwc                  u:object_r:mm_video_prop:s0
 
+# NFC
+persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
+
 # Radio
 persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0
 persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0

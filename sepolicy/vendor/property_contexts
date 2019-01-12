@@ -10,6 +10,8 @@ wc_transport.                       u:object_r:vendor_bluetooth_prop:s0
 # Camera
 camera.                             u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot          u:object_r:camera_prop:s0
+cpp.set.clock                       u:object_r:camera_prop:s0
+disable.cpp.power.collapse          u:object_r:camera_prop:s0
 persist.cam.pp.feat.mask            u:object_r:camera_prop:s0
 persist.camera.                     u:object_r:camera_prop:s0
 persist.capture.burst.exposures     u:object_r:camera_prop:s0
@@ -62,6 +64,7 @@ persist.sys.thermal.                u:object_r:thermal_prop:s0
 sys.thermal.                        u:object_r:thermal_prop:s0
 
 # vendor_default_prop
+fpc_kpi                             u:object_r:vendor_default_prop:s0
 gpu.stats.debug.level               u:object_r:vendor_default_prop:s0
 persist.data_netmgrd_mtu            u:object_r:vendor_default_prop:s0
 persist.data.df.agg.dl_pad          u:object_r:vendor_default_prop:s0
@@ -87,5 +90,6 @@ persist.data.tcpackprio.enable      u:object_r:vendor_default_prop:s0
 persist.data.wda.enable             u:object_r:vendor_default_prop:s0
 persist.net.logmask                 u:object_r:vendor_default_prop:s0
 persist.rmnet.data.enable           u:object_r:vendor_default_prop:s0
+remosaic.debug.dump                 u:object_r:vendor_default_prop:s0
 remosaic.debug.loglevel             u:object_r:vendor_default_prop:s0
 ro.build.software.version           u:object_r:vendor_default_prop:s0

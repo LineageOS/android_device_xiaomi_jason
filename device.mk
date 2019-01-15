@@ -360,6 +360,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.sdm660
 
+# Lineage hardware
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.jason
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm

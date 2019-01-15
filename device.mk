@@ -515,6 +515,10 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
+# Touch HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.jason
+
 # USB
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-service

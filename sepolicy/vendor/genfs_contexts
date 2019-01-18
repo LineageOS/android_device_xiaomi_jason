@@ -2,8 +2,10 @@
 genfscon sysfs /devices/soc/c176000.i2c/i2c-2/2-001d            u:object_r:sysfs_battery_supply:s0
 
 # Fingerprint
-genfscon sysfs /devices/soc/soc:fingerprint_fpc                 u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/soc/soc:fingerprint_goodix              u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/device_prepare  u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/fingerdown_wait u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/irq_enable      u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/wakeup_enable   u:object_r:sysfs_fingerprint:s0
 
 # LED
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d000/leds   u:object_r:sysfs_leds:s0

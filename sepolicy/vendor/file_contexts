@@ -1,5 +1,4 @@
 # Camera
-/sys/devices(/platform)?/soc/[a-z0-9]+.qcom,jpeg/video4linux/video[0-33]/name(/.*)?             u:object_r:sysfs_graphics:s0
 /(vendor|system/vendor)/bin/remosaic_daemon         u:object_r:remosaic_daemon_exec:s0
 
 # Charger

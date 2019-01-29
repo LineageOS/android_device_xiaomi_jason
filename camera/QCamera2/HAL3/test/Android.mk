@@ -23,8 +23,8 @@ LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../ \
     $(LOCAL_PATH)/../../stack/mm-camera-interface/inc \
     hardware/libhardware/include/hardware \
-    hardware/qcom/media/libstagefrighthw \
-    hardware/qcom/media/mm-core/inc \
+    $(call project-path-for,qcom-media)/libstagefrighthw \
+    $(call project-path-for,qcom-media)/mm-core/inc \
     system/core/include/cutils \
     system/core/include/system \
     system/media/camera/include/system

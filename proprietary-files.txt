@@ -86,7 +86,6 @@ lib/libminikin.so:vendor/lib/libminikin-v27.so
 lib/libskia.so:vendor/lib/libskia.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 vendor/bin/remosaic_daemon
-vendor/lib/hw/camera.sdm660.so
 vendor/lib/lib_lowlight_dxo.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libarcsoft_beauty_shot.so
@@ -121,7 +120,6 @@ vendor/lib/libmmcamera_hvx_add_constant.so
 vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_jason_imx386_ofilm_eeprom.so
 vendor/lib/libmmcamera_jason_imx386_ofilm.so
 vendor/lib/libmmcamera_jason_imx386_semco_eeprom.so
@@ -163,7 +161,6 @@ vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
@@ -175,7 +172,6 @@ vendor/lib/libois_jason_bu63169_ofilm.so
 vendor/lib/libois_jason_bu63169_semco.so
 vendor/lib/liboisgyro.so
 vendor/lib/liboptizoom.so
-vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
@@ -184,8 +180,8 @@ vendor/lib/libremosaiclib.so
 vendor/lib/libseemore.so
 vendor/lib/libSonyIMX386PdafLibrary.so
 vendor/lib/libStereoRectification.so
-vendor/lib/libts_detected_face_hal.so
-vendor/lib/libts_face_beautify_hal.so
+-vendor/lib/libts_detected_face_hal.so
+-vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libubifocus.so
 vendor/lib/libVDClearShot.so
 vendor/lib/libvideorefiner.so

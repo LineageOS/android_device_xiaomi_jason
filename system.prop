@@ -185,7 +185,7 @@ ro.vendor.sensors.multitap=true
 persist.sys.sensors.pug=true
 
 #disable UBWC for camera
-persist.camera.preview.ubwc=0
+persist.vendor.camera.preview.ubwc=0
 
 #set maximum supported adapter voltage
 persist.chg.max_volt_mv=9000

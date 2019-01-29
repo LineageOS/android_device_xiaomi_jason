@@ -66,29 +66,6 @@ sed -i \
     's/\/system\/etc\//\/vendor\/etc\//g' \
     "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
 
-#
-# Use 8.1 libicuuc.so and libminikin.so for libMiCameraHal.so
-#
-ICUUC_V27="$DEVICE_BLOB_ROOT"/vendor/lib/libicuuc-v27.so
-MINIKIN_V27="$DEVICE_BLOB_ROOT"/vendor/lib/libminikin-v27.so
-patchelf --set-soname libicuuc-v27.so "$ICUUC_V27"
-patchelf --set-soname libminikin-v27.so "$MINIKIN_V27"
-
-MI_CAMERA_HAL="$DEVICE_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
-patchelf --replace-needed libicuuc.so libicuuc-v27.so "$MI_CAMERA_HAL"
-patchelf --replace-needed libminikin.so libminikin-v27.so "$MI_CAMERA_HAL"
-
-#
-# Remove unused linkage from camera.sdm660.so to avoid conflicts
-#
-CAMERA_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
-patchelf --remove-needed libicuuc.so "$CAMERA_SDM660"
-patchelf --remove-needed libminikin.so "$CAMERA_SDM660"
-
-patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libvideorefiner.so
-
-sed -i 's/\xe0\x6d\x01\x28\x0b\xd0/\x00\xbf\x00\xbf\x1f\xe0/' "$CAMERA_SDM660"
-
 sed -i 's/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x10/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x01/' \
     "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_jason_s5k3p8sp_sunny.so
 

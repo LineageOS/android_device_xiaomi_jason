@@ -14,11 +14,6 @@ cpp.set.clock                       u:object_r:camera_prop:s0
 disable.cpp.power.collapse          u:object_r:camera_prop:s0
 persist.cam.pp.feat.mask            u:object_r:camera_prop:s0
 persist.camera.                     u:object_r:camera_prop:s0
-persist.capture.burst.exposures     u:object_r:camera_prop:s0
-persist.debug.sf.showfps            u:object_r:camera_prop:s0
-persist.debug.set.fixedfps          u:object_r:camera_prop:s0
-persist.denoise.process.plates      u:object_r:camera_prop:s0
-persist.dualcam.                    u:object_r:camera_prop:s0
 persist.enable.max.pending.buf      u:object_r:camera_prop:s0
 persist.partial.skip                u:object_r:camera_prop:s0
 
@@ -41,9 +36,6 @@ perist.vendor.ims.enable_rateadapt  u:object_r:qcom_ims_prop:s0
 
 # Mlipay
 persist.sys.ifaa                    u:object_r:ifaa_prop:s0
-
-# mm-video
-video.disable.ubwc                  u:object_r:mm_video_prop:s0
 
 # Radio
 persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0

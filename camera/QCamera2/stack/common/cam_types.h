@@ -1673,6 +1673,7 @@ typedef struct {
     int32_t est_snap_iso_value;
     uint32_t est_snap_luma;
     uint32_t est_snap_target;
+    uint32_t xiaomi_reversed;
 } cam_3a_params_t;
 
 typedef struct {
@@ -2090,6 +2091,10 @@ typedef enum {
     CAM_INTF_META_FACE_DETECTION,
     /* Whether optical image stabilization is enabled. */
     CAM_INTF_META_LENS_OPT_STAB_MODE,
+    XIAOMI_01,
+    XIAOMI_02,
+    XIAOMI_03,
+    XIAOMI_04,
     /* specific to HAl1 */
     CAM_INTF_META_AUTOFOCUS_DATA,
     CAM_INTF_PARM_QUERY_FLASH4SNAP, /* 20 */

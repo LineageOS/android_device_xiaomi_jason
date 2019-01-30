@@ -5097,10 +5097,12 @@ int QCamera3HardwareInterface::processCaptureRequest(
                 }
             }
 
+#if 0
             if (m_halPPType == CAM_HAL_PP_TYPE_BOKEH) {
                 LOGI("setting bokeh mode" );
                 ADD_SET_PARAM_ENTRY_TO_BATCH(mParameters, CAM_INTF_PARM_BOKEH_MODE, 1);
             }
+#endif
             //Set feature masks based on dual cam feature enabled
             for (uint32_t i = 0; i < mStreamConfigInfo.num_streams; i++) {
                 setDCFeature(mStreamConfigInfo.postprocess_mask[i],

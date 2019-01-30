@@ -277,6 +277,8 @@ typedef struct cam_capability{
     size_t zoom_ratio_tbl_cnt;                              /* table size for zoom ratios */
     uint32_t zoom_ratio_tbl[MAX_ZOOMS_CNT];                 /* zoom ratios table */
 
+    volatile char xiaomi_reserved1[436];
+
     /* supported effect modes */
     size_t supported_effects_cnt;
     cam_effect_mode_type supported_effects[CAM_EFFECT_MODE_MAX];
@@ -581,6 +583,8 @@ typedef struct cam_capability{
 
     /* true Portrait info */
     cam_true_portrait_t  true_portrait_settings_need;
+
+    volatile char xiaomi_reversed2[64];
 
     /* Sensor type information */
     cam_sensor_type_t sensor_type;
@@ -1002,6 +1006,10 @@ typedef struct {
     INCLUDE(CAM_INTF_META_LENS_FOCUS_RANGE,             float,                       2);
     INCLUDE(CAM_INTF_META_LENS_STATE,                   cam_af_lens_state_t,         1);
     INCLUDE(CAM_INTF_META_LENS_OPT_STAB_MODE,           cam_ois_mode_t,              1);
+    INCLUDE(XIAOMI_01,                                  uint32_t,                    1);
+    INCLUDE(XIAOMI_02,                                  uint32_t,                    1);
+    INCLUDE(XIAOMI_03,                                  uint32_t,                    1);
+    INCLUDE(XIAOMI_04,                                  uint32_t,                    1);
     INCLUDE(CAM_INTF_META_VIDEO_STAB_MODE,              uint32_t,                    1);
     INCLUDE(CAM_INTF_META_LENS_FOCUS_STATE,             uint32_t,                    1);
     INCLUDE(CAM_INTF_META_NOISE_REDUCTION_MODE,         uint32_t,                    1);

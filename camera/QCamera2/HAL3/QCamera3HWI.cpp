@@ -571,10 +571,12 @@ QCamera3HardwareInterface::QCamera3HardwareInterface(uint32_t cameraId,
          dlclose(lib_surface_utils);
     }
 
+#if 0
     if (gCamCapability[cameraId]->is_quadracfa_sensor) {
         LOGI("Sensor support Quadra CFA mode");
         m_bQuadraCfaSensor = true;
     }
+#endif
 
     m_bQuadraCfaRequest = false;
     m_bQuadraSizeConfigured = false;
@@ -8817,6 +8819,7 @@ int QCamera3HardwareInterface::initCapabilities(uint32_t cameraId)
                 sizeof(cam_capability_t));
     }
 
+#if 0
     if (gCamCapability[cameraId]->is_remosaic_lib_present) {
         gCamCapability[cameraId]->is_quadracfa_sensor = TRUE;
     }
@@ -8877,6 +8880,7 @@ int QCamera3HardwareInterface::initCapabilities(uint32_t cameraId)
 
         LOGD("override active array size to (%d, %d).", raw_dim.width, raw_dim.height);
     }
+#endif
 
 failed_op:
     cameraHandle->ops->close_camera(cameraHandle->camera_handle);
@@ -9020,6 +9024,7 @@ size_t QCamera3HardwareInterface::calcMaxJpegSize(uint32_t camera_id)
         }
     }
 
+#if 0
     // adjust for quadra cfa
     if (gCamCapability[camera_id]->is_quadracfa_sensor &&
             gCamCapability[camera_id]->supported_quadra_cfa_dim_cnt > 0) {
@@ -9028,6 +9033,7 @@ size_t QCamera3HardwareInterface::calcMaxJpegSize(uint32_t camera_id)
             max_jpeg_size = curr_jpeg_dim.width * curr_jpeg_dim.height;
         }
     }
+#endif
 
     max_jpeg_size = max_jpeg_size * 3/2 + sizeof(camera3_jpeg_blob_t);
 
@@ -10510,6 +10516,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
         staticInfo.update(ANDROID_DEPTH_DEPTH_IS_EXCLUSIVE, &isDepthOnly, 1);
     }
 
+#if 0
     if (gCamCapability[cameraId]->is_quadracfa_sensor) {
         uint8_t is_qcfa_sensor = 1;
         int32_t dim[2];
@@ -10519,6 +10526,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
         staticInfo.update(QCAMERA3_IS_QUADRA_CFA_SENSOR, &is_qcfa_sensor, 1);
         staticInfo.update(QCAMERA3_SUPPORT_QUADRA_CFA_DIM, dim, 2);
     }
+#endif
 
     //HFR configs for 60 and 90
     Vector<int32_t> custom_hfr_configs;

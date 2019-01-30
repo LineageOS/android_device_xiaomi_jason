@@ -5030,23 +5030,6 @@ int QCamera3HardwareInterface::processCaptureRequest(
         isTypePreview = static_cast<cam_is_type_t>(atoi(is_type_value));
         LOGD("isTypeVideo: %d isTypePreview: %d", isTypeVideo, isTypePreview);
 
-        int32_t vfe1_reserved_rdi = -1;
-        if (meta.exists(QCAMERA3_SIMULTANEOUS_CAMERA_VFE1_RESERVED_RDI)) {
-            vfe1_reserved_rdi =
-                meta.find(QCAMERA3_SIMULTANEOUS_CAMERA_VFE1_RESERVED_RDI).data.i32[0];
-        } else {
-            char value[PROPERTY_VALUE_MAX];
-            property_get("persist.vendor.camera.vfe1.reservedrdi", value, "-1");
-            vfe1_reserved_rdi = atoi(value);
-        }
-        if (vfe1_reserved_rdi < -1 && vfe1_reserved_rdi > 3)
-            vfe1_reserved_rdi = -1;
-        ADD_SET_PARAM_ENTRY_TO_BATCH(mParameters,
-                CAM_INTF_PARM_VFE1_RESERVED_RDI, vfe1_reserved_rdi);
-        rc = mCameraHandle->ops->set_parms(
-                get_main_camera_handle(mCameraHandle->camera_handle),
-                mParameters);
-
         if (meta.exists(ANDROID_CONTROL_CAPTURE_INTENT)) {
             int32_t hal_version = CAM_HAL_V3;
             uint8_t captureIntent =

@@ -60,7 +60,6 @@ enum qcamera3_ext_section {
     QCAMERA3_HISTOGRAM,
     QCAMERA3_BINNING_CORRECTION,
     QCAMERA3_STATS,
-    QCAMERA3_SIMULTANEOUS_CAMERA,
     QCAMERA3_QUADRA_CFA_DATA,
     QCAMERA3_HFR,
     QCAMERA3_BOKEH,
@@ -94,7 +93,6 @@ enum qcamera3_ext_section_ranges {
     QCAMERA3_HISTOGRAM_START = QCAMERA3_HISTOGRAM << 16,
     QCAMERA3_BINNING_CORRECTION_START = QCAMERA3_BINNING_CORRECTION << 16,
     QCAMERA3_STATS_START = QCAMERA3_STATS << 16,
-    QCAMERA3_SIMULTANEOUS_CAMERA_START = QCAMERA3_SIMULTANEOUS_CAMERA << 16,
     QCAMERA3_QUADRA_CFA_DATA_START = QCAMERA3_QUADRA_CFA_DATA << 16,
     QCAMERA3_HFR_START = QCAMERA3_HFR << 16,
     QCAMERA3_BOKEH_START = QCAMERA3_BOKEH << 16,
@@ -348,17 +346,6 @@ enum qcamera3_ext_tags {
     */
     QCAMERA3_STATS_GAZE_DEGREE,
     QCAMERA3_STATS_END,
-
-    QCAMERA3_SIMULTANEOUS_CAMERA_VFE1_RESERVED_RDI = QCAMERA3_SIMULTANEOUS_CAMERA_START,
-    /* Property Name:  org.codeaurora.qcamera3.simultaneous_camera.vfe1_reserved_rdi
-       Type: int32
-       Description: number of RDI interface reserved on VFE1(the smaller VFE)
-       Details: It will guarantee the available RDI interfaces for RDI streams,
-                and any RDI stream requests that exceed the reserved number will
-                be allocated  to the other VFE.
-                Range from -1 to 3, -1 means the feature is disabled.
-    */
-    QCAMERA3_SIMULTANEOUS_CAMERA_END,
 
     QCAMERA3_IS_QUADRA_CFA_SENSOR = QCAMERA3_QUADRA_CFA_DATA_START,
     QCAMERA3_SUPPORT_QUADRA_CFA_DIM,

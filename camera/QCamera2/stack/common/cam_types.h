@@ -3131,7 +3131,6 @@ typedef enum {
     CAM_HAL3_JPEG_TYPE_BOKEH,           // BOKEH image
     CAM_HAL3_JPEG_TYPE_AUX,             // AUX image
     CAM_HAL3_JPEG_TYPE_DEPTH,           // DEPTH image
-    CAM_HAL3_JPEG_TYPE_FUSION,
     CAM_HAL3_JPEG_TYPE_MAX
 } cam_hal3_JPEG_type_t;
 

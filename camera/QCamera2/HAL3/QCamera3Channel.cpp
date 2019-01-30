@@ -1641,6 +1641,7 @@ int32_t QCamera3ProcessingChannel::translateStreamTypeAndFormat(camera3_stream_t
             streamType = CAM_STREAM_TYPE_RAW;
             streamFormat = CAM_FORMAT_BAYER_MIPI_RAW_8BPP_GBRG;
             break;
+#if 0
         case HAL_PIXEL_FORMAT_BLOB:
             if (stream->data_space == HAL_DATASPACE_DEPTH) {
                 streamType = CAM_STREAM_TYPE_DEPTH;
@@ -1659,6 +1660,7 @@ int32_t QCamera3ProcessingChannel::translateStreamTypeAndFormat(camera3_stream_t
                 streamFormat = CAM_FORMAT_DEPTH8;
             }
             break;
+#endif
         default:
             return -EINVAL;
     }
@@ -2371,6 +2373,7 @@ void QCamera3MetadataChannel::putStreamBufs()
     mMemory = NULL;
 }
 
+#if 0
 /*************************************************************************************/
 // DEPTH Channel related functions
 QCamera3DepthChannel::QCamera3DepthChannel(uint32_t cam_handle,
@@ -2439,6 +2442,7 @@ reprocess_type_t QCamera3DepthChannel::getReprocessType()
 {
     return REPROCESS_TYPE_NONE;
 }
+#endif
 
 /*************************************************************************************/
 // RAW Channel related functions

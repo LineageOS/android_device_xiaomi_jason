@@ -505,7 +505,9 @@ typedef struct cam_capability{
     /* Maximum number of supported points in the tonemap
        curve */
     int32_t max_tone_map_curve_points;
+#if 0
     int32_t max_depth_points;
+#endif
     /* supported formats */
     size_t supported_scalar_format_cnt;
     cam_format_t supported_scalar_fmts[CAM_FORMAT_MAX];
@@ -680,7 +682,9 @@ typedef struct cam_capability{
 
     /*Mono Stats support*/
     uint8_t is_mono_stats_suport;
+#if 0
     uint8_t is_depth_sensor;
+#endif
 } cam_capability_t;
 
 typedef enum {

@@ -369,6 +369,7 @@ private:
     QCamera3StreamMem *mMemory;
 };
 
+#if 0
 /* QCamera3DepthChannel is for depth stream containing
  * depth data from a depth sensor */
 class QCamera3DepthChannel : public QCamera3RegularChannel
@@ -397,6 +398,7 @@ public:
     virtual reprocess_type_t getReprocessType();
 
 };
+#endif
 
 /* QCamera3RawChannel is for opaqueu/cross-platform raw stream containing
  * vendor specific bayer data or 16-bit unpacked bayer data */

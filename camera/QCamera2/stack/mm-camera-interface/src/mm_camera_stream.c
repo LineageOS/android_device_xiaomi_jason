@@ -109,10 +109,12 @@ int32_t mm_stream_calc_offset_video(cam_stream_info_t *stream_info,
 int32_t mm_stream_calc_offset_metadata(cam_dimension_t *dim,
                                        cam_padding_info_t *padding,
                                        cam_stream_buf_plane_info_t *buf_planes);
+#if 0
 int32_t mm_stream_calc_offset_depth(cam_format_t fmt,
                                     cam_dimension_t *dim,
                                     cam_padding_info_t *padding,
                                     cam_stream_buf_plane_info_t *buf_planes);
+#endif
 int32_t mm_stream_calc_offset_postproc(cam_stream_info_t *stream_info,
                                        cam_padding_info_t *padding,
                                        cam_stream_buf_plane_info_t *plns);
@@ -2632,9 +2634,11 @@ uint32_t mm_stream_get_v4l2_fmt(cam_format_t fmt)
         val = 0;
         LOGE("Unknown fmt=%d", fmt);
         break;
+#if 0
     case CAM_FORMAT_DEPTH16:
     case CAM_FORMAT_DEPTH8:
     case CAM_FORMAT_DEPTH_POINT_CLOUD:
+#endif
     case CAM_FORMAT_MAX:
         /* CAM_STREAM_TYPE_DEFAULT,
          * CAM_STREAM_TYPE_OFFLINE_PROC,
@@ -4220,6 +4224,7 @@ int32_t mm_stream_calc_offset_video(cam_stream_info_t *stream_info,
     return rc;
 }
 
+#if 0
 /*===========================================================================
  * FUNCTION   : mm_stream_calc_offset_depth
  *
@@ -4301,6 +4306,7 @@ int32_t mm_stream_calc_offset_depth(cam_format_t fmt,
     }
     return rc;
 }
+#endif
 /*===========================================================================
  * FUNCTION   : mm_stream_calc_offset_metadata
  *
@@ -4854,12 +4860,14 @@ int32_t mm_stream_calc_offset(mm_stream_t *my_obj)
                                             &my_obj->padding_info,
                                             &my_obj->stream_info->buf_planes);
         break;
+#if 0
     case CAM_STREAM_TYPE_DEPTH:
         rc = mm_stream_calc_offset_depth(my_obj->stream_info->fmt,
                                          &dim,
                                          &my_obj->padding_info,
                                          &my_obj->stream_info->buf_planes);
         break;
+#endif
     default:
         LOGE("not supported for stream type %d",
                     my_obj->stream_info->stream_type);

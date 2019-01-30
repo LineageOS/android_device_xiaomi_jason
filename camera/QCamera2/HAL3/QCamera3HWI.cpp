@@ -1275,7 +1275,9 @@ int QCamera3HardwareInterface::validateStreamDimensions(
             }
             break;
         case HAL_PIXEL_FORMAT_BLOB:
+#if 0
             if (newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#endif
                 count = MIN(gCamCapability[mCameraId]->picture_sizes_tbl_cnt, MAX_SIZES_CNT);
                 /* Verify set size against generated sizes table */
                 for (size_t i = 0; i < count; i++) {
@@ -1287,9 +1289,11 @@ int QCamera3HardwareInterface::validateStreamDimensions(
                         break;
                     }
                 }
+#if 0
             } else {
                 sizeFound = true;
             }
+#endif
             if (m_bQuadraCfaSensor && !sizeFound) {
                 if ((int32_t)rotatedWidth  <= gCamCapability[mCameraId]->quadra_cfa_dim[0].width &&
                     (int32_t)rotatedHeight <= gCamCapability[mCameraId]->quadra_cfa_dim[0].height) {
@@ -1299,10 +1303,12 @@ int QCamera3HardwareInterface::validateStreamDimensions(
                 }
             }
             break;
+#if 0
         case HAL_PIXEL_FORMAT_Y16:
         case HAL_PIXEL_FORMAT_Y8:
             sizeFound = true;
             break;
+#endif
         case HAL_PIXEL_FORMAT_YCbCr_420_888:
         case HAL_PIXEL_FORMAT_IMPLEMENTATION_DEFINED:
         default:
@@ -1368,12 +1374,14 @@ bool QCamera3HardwareInterface::isSupportChannelNeeded(
 {
     uint32_t i;
     bool pprocRequested = false;
+#if 0
     /* Check for conditions where PProc pipeline does not have any streams*/
     for (i = 0; i < streamList->num_streams; i++) {
         if (streamList->streams[i]->data_space == HAL_DATASPACE_DEPTH) {
             return false;
         }
     }
+#endif
     for (i = 0; i < stream_config_info.num_streams; i++) {
         if (stream_config_info.type[i] != CAM_STREAM_TYPE_ANALYSIS &&
                 stream_config_info.postprocess_mask[i] != CAM_QCOM_FEATURE_NONE) {
@@ -1877,8 +1885,12 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
             inputStream = newStream;
         }
 
+#if 0
         if (newStream->format == HAL_PIXEL_FORMAT_BLOB &&
                 newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#else
+        if (newStream->format == HAL_PIXEL_FORMAT_BLOB) {
+#endif
             isJpeg = true;
             jpegSize.width = newStream->width;
             jpegSize.height = newStream->height;
@@ -1909,7 +1921,9 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                 newStream->stream_type == CAMERA3_STREAM_OUTPUT) {
             switch (newStream->format) {
             case HAL_PIXEL_FORMAT_BLOB:
+#if 0
                 if (newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#endif
                     stallStreamCnt++;
                     if (isOnEncoder(maxViewfinderSize, newStream->width,
                              newStream->height)) {
@@ -1927,16 +1941,20 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                         LOGH("Setting small jpeg size flag to true");
                         bSmallJpegSize = true;
                     }
+#if 0
                 } else {
                     rawStreamCnt++;
                 }
+#endif
                 break;
             case HAL_PIXEL_FORMAT_RAW8:
             case HAL_PIXEL_FORMAT_RAW10:
             case HAL_PIXEL_FORMAT_RAW_OPAQUE:
             case HAL_PIXEL_FORMAT_RAW16:
+#if 0
             case HAL_PIXEL_FORMAT_Y16:
             case HAL_PIXEL_FORMAT_Y8:
+#endif
                 rawStreamCnt++;
                 break;
             case HAL_PIXEL_FORMAT_IMPLEMENTATION_DEFINED:
@@ -2304,7 +2322,9 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                 }
             break;
             case HAL_PIXEL_FORMAT_BLOB:
+#if 0
                 if (newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#endif
                     mStreamConfigInfo.type[mStreamConfigInfo.num_streams] = CAM_STREAM_TYPE_SNAPSHOT;
                     // No need to check bSmallJpegSize if ZSL is present since JPEG uses ZSL stream
                     if ((m_bIs4KVideo && !isZsl) || (bSmallJpegSize && !isZsl)) {
@@ -2368,30 +2388,36 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                         mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].height =
                                 (int32_t)largeYuv888Size.height;
                     }
+#if 0
                 } else {
                     mStreamConfigInfo.type[mStreamConfigInfo.num_streams] = CAM_STREAM_TYPE_DEPTH;
                     mStreamConfigInfo.postprocess_mask[mStreamConfigInfo.num_streams] =
                             CAM_QTI_FEATURE_DEPTH_MAP;
                     isDepth = true;
                 }
+#endif
                 break;
             case HAL_PIXEL_FORMAT_RAW_OPAQUE:
             case HAL_PIXEL_FORMAT_RAW16:
             case HAL_PIXEL_FORMAT_RAW10:
             case HAL_PIXEL_FORMAT_RAW8:
+#if 0
             case HAL_PIXEL_FORMAT_Y16:
             case HAL_PIXEL_FORMAT_Y8:
                 if (newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#endif
                     mStreamConfigInfo.type[mStreamConfigInfo.num_streams] = CAM_STREAM_TYPE_RAW;
                     mStreamConfigInfo.postprocess_mask[mStreamConfigInfo.num_streams] =
                             CAM_QCOM_FEATURE_NONE;
                     isRawStreamRequested = true;
+#if 0
                 } else {
                     mStreamConfigInfo.type[mStreamConfigInfo.num_streams] = CAM_STREAM_TYPE_DEPTH;
                     mStreamConfigInfo.postprocess_mask[mStreamConfigInfo.num_streams] =
                             CAM_QTI_FEATURE_DEPTH_MAP;
                     isDepth = true;
                 }
+#endif
                 break;
             default:
                 mStreamConfigInfo.type[mStreamConfigInfo.num_streams] = CAM_STREAM_TYPE_DEFAULT;
@@ -2554,7 +2580,9 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                     newStream->priv = (QCamera3ProcessingChannel*)mRawChannel;
                     break;
                 case HAL_PIXEL_FORMAT_BLOB:
+#if 0
                     if (newStream->data_space !=  HAL_DATASPACE_DEPTH) {
+#endif
                         // Max live snapshot inflight buffer is 1. This is to mitigate
                         // frame drop issues for video snapshot. The more buffers being
                         // allocated, the more frame drops there are.
@@ -2575,6 +2603,7 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                         mPictureChannel->overrideYuvSize(
                                 mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].width,
                                 mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].height);
+#if 0
                     } else {
                         mDepthChannel = new QCamera3DepthChannel(
                                 mCameraHandle->camera_handle, mChannelHandle,
@@ -2608,6 +2637,7 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                     }
                     newStream->max_buffers = mDepthChannel->getNumBuffers();
                     newStream->priv = (QCamera3ProcessingChannel*)mDepthChannel;
+#endif
                     break;
                 default:
                     LOGE("not a supported format 0x%x", newStream->format);
@@ -3060,15 +3090,23 @@ void QCamera3HardwareInterface::deriveMinFrameDuration()
             continue;
 
         int32_t dimension = (int32_t)((*it)->stream->width * (*it)->stream->height);
+#if 0
         if ((*it)->stream->format == HAL_PIXEL_FORMAT_BLOB &&
                 (*it)->stream->data_space != HAL_DATASPACE_DEPTH) {
+#else
+        if ((*it)->stream->format == HAL_PIXEL_FORMAT_BLOB) {
+#endif
             if (dimension > maxJpegDim)
                 maxJpegDim = dimension;
         } else if ((*it)->stream->format == HAL_PIXEL_FORMAT_RAW_OPAQUE ||
                 (*it)->stream->format == HAL_PIXEL_FORMAT_RAW10 ||
                 (*it)->stream->format == HAL_PIXEL_FORMAT_RAW16 ||
+#if 0
                 (*it)->stream->format == HAL_PIXEL_FORMAT_RAW8  ||
                 (*it)->stream->data_space == HAL_DATASPACE_DEPTH) {
+#else
+                (*it)->stream->format == HAL_PIXEL_FORMAT_RAW8) {
+#endif
             if (dimension > maxRawDim)
                 maxRawDim = dimension;
         } else {
@@ -3133,13 +3171,21 @@ int64_t QCamera3HardwareInterface::getMinFrameDuration(const camera3_capture_req
     int64_t mMinFrameDuration = mMinProcessedFrameDuration;
     for (uint32_t i = 0; i < request->num_output_buffers; i ++) {
         const camera3_stream_t *stream = request->output_buffers[i].stream;
+#if 0
         if (stream->format == HAL_PIXEL_FORMAT_BLOB && stream->data_space != HAL_DATASPACE_DEPTH)
+#else
+        if (stream->format == HAL_PIXEL_FORMAT_BLOB)
+#endif
             hasJpegStream = true;
         else if (stream->format == HAL_PIXEL_FORMAT_RAW_OPAQUE ||
                 stream->format == HAL_PIXEL_FORMAT_RAW8 ||
                 stream->format == HAL_PIXEL_FORMAT_RAW10 ||
+#if 0
                 stream->format == HAL_PIXEL_FORMAT_RAW16 ||
                 stream->data_space == HAL_DATASPACE_DEPTH)
+#else
+                stream->format == HAL_PIXEL_FORMAT_RAW16)
+#endif
             hasRawStream = true;
     }
 
@@ -5927,7 +5973,11 @@ no_error:
         }
 
         if (output.stream->format == HAL_PIXEL_FORMAT_BLOB
+#if 0
                 && output.stream->data_space != HAL_DATASPACE_DEPTH) {
+#else
+        ) {
+#endif
             LOGD("snapshot request with output buffer %p, input buffer %p, frame_number %d",
                       output.buffer, request->input_buffer, frameNumber);
             if(request->input_buffer != NULL){
@@ -8411,8 +8461,12 @@ void QCamera3HardwareInterface::cleanAndSortStreamInfo()
         if ((*it)->stream->format != HAL_PIXEL_FORMAT_RAW_OPAQUE &&
                 (*it)->stream->format != HAL_PIXEL_FORMAT_RAW8 &&
                 (*it)->stream->format != HAL_PIXEL_FORMAT_RAW10 &&
+#if 0
                 (*it)->stream->format != HAL_PIXEL_FORMAT_RAW16 &&
                 (*it)->stream->data_space != HAL_DATASPACE_DEPTH) {
+#else
+                (*it)->stream->format != HAL_PIXEL_FORMAT_RAW16) {
+#endif
             newStreamInfo.push_back(*it);
             it = mStreamInfo.erase(it);
         } else
@@ -9356,6 +9410,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
             HAL_PIXEL_FORMAT_IMPLEMENTATION_DEFINED
             };
     size_t bayer_formats_count = sizeof(bayer_formats) / sizeof(int32_t);
+#if 0
     int32_t depth_formats[] = {
             ANDROID_SCALER_AVAILABLE_FORMATS_BLOB,
             HAL_PIXEL_FORMAT_Y16,
@@ -9363,15 +9418,20 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
             HAL_PIXEL_FORMAT_IMPLEMENTATION_DEFINED
             };
     size_t depth_formats_count = sizeof(depth_formats) / sizeof(int32_t);
+#endif
     int32_t* scalar_formats = NULL;
     size_t scalar_formats_count = 0;
+#if 0
     if (gCamCapability[cameraId]->is_depth_sensor) {
         scalar_formats = depth_formats;
         scalar_formats_count = depth_formats_count;
     } else {
+#endif
         scalar_formats = bayer_formats;
         scalar_formats_count = bayer_formats_count;
+#if 0
     }
+#endif
     staticInfo.update(ANDROID_SCALER_AVAILABLE_FORMATS,
               scalar_formats,
               scalar_formats_count);
@@ -9537,6 +9597,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
                         ANDROID_SCALER_AVAILABLE_STREAM_CONFIGURATIONS_OUTPUT);
             }
             break;
+#if 0
         case HAL_PIXEL_FORMAT_Y16:
         case HAL_PIXEL_FORMAT_Y8:
             for (size_t i = 0; i < MIN(MAX_SIZES_CNT,
@@ -9546,14 +9607,18 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
                         ANDROID_SCALER_AVAILABLE_STREAM_CONFIGURATIONS_OUTPUT);
             }
             break;
+#endif
         case HAL_PIXEL_FORMAT_BLOB:
+#if 0
             if (!gCamCapability[cameraId]->is_depth_sensor) {
+#endif
                 for (size_t i = 0; i < MIN(MAX_SIZES_CNT,
                         gCamCapability[cameraId]->picture_sizes_tbl_cnt); i++) {
                     addStreamConfig(available_stream_configs, scalar_formats[j],
                             gCamCapability[cameraId]->picture_sizes_tbl[i],
                             ANDROID_SCALER_AVAILABLE_STREAM_CONFIGURATIONS_OUTPUT);
                 }
+#if 0
             } else {
                 for (size_t i = 0; i < MIN(MAX_SIZES_CNT,
                         gCamCapability[cameraId]->supported_raw_dim_cnt); i++) {
@@ -9562,6 +9627,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
                             ANDROID_SCALER_AVAILABLE_STREAM_CONFIGURATIONS_OUTPUT);
                 }
             }
+#endif
             break;
         case HAL_PIXEL_FORMAT_YCbCr_420_888:
         case HAL_PIXEL_FORMAT_IMPLEMENTATION_DEFINED:
@@ -9605,8 +9671,10 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
         case ANDROID_SCALER_AVAILABLE_FORMATS_RAW16:
         case ANDROID_SCALER_AVAILABLE_FORMATS_RAW_OPAQUE:
         case HAL_PIXEL_FORMAT_RAW10:
+#if 0
         case HAL_PIXEL_FORMAT_Y16:
         case HAL_PIXEL_FORMAT_Y8:
+#endif
             for (size_t i = 0; i < MIN(MAX_SIZES_CNT,
                     gCamCapability[cameraId]->supported_raw_dim_cnt); i++) {
                 available_min_durations.add(scalar_formats[j]);
@@ -9954,9 +10022,11 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
         available_capabilities.add(
                 ANDROID_REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO);
     }
+#if 0
     if (gCamCapability[cameraId]->is_depth_sensor) {
         available_capabilities.add(ANDROID_REQUEST_AVAILABLE_CAPABILITIES_DEPTH_OUTPUT);
     }
+#endif
 
     if (CAM_SENSOR_YUV != gCamCapability[cameraId]->sensor_type.sens_type) {
         available_capabilities.add(ANDROID_REQUEST_AVAILABLE_CAPABILITIES_RAW);
@@ -10502,6 +10572,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
     is_hdr_confidence_range[1] = 1.0;
     staticInfo.update(QCAMERA3_STATS_IS_HDR_SCENE_CONFIDENCE_RANGE,
             is_hdr_confidence_range, 2);
+#if 0
     if (gCamCapability[cameraId]->is_depth_sensor) {
         staticInfo.update(ANDROID_DEPTH_MAX_DEPTH_SAMPLES,
                 &gCamCapability[cameraId]->max_depth_points,1);
@@ -10515,6 +10586,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
         uint8_t isDepthOnly = ANDROID_DEPTH_DEPTH_IS_EXCLUSIVE_TRUE;
         staticInfo.update(ANDROID_DEPTH_DEPTH_IS_EXCLUSIVE, &isDepthOnly, 1);
     }
+#endif
 
 #if 0
     if (gCamCapability[cameraId]->is_quadracfa_sensor) {

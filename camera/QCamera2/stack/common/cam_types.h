@@ -2497,7 +2497,6 @@ typedef enum {
     CAM_INTF_META_DC_CAPTURE,
     /* Enable/Disable AF fine scan */
     CAM_INTF_PARM_SKIP_FINE_SCAN,
-    CAM_INTF_PARM_BOKEH_MODE,
     CAM_INTF_PARM_MAX
 } cam_intf_parm_type_t;
 

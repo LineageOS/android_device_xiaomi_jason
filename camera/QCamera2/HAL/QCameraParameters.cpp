@@ -3247,10 +3247,6 @@ int32_t QCameraParameters::setBokehMode(const QCameraParameters& params)
     if (bRequestedBokehMode != m_bBokehMode) {
          m_bBokehMode = bRequestedBokehMode;
          m_bNeedRestart = true;
-        if (ADD_SET_PARAM_ENTRY_TO_BATCH
-                (m_pParamBuf, CAM_INTF_PARM_BOKEH_MODE, m_bBokehMode)) {
-            return BAD_VALUE;
-        }
         if (m_bBokehMode) {
            char val[32];
            int depthW = 0;

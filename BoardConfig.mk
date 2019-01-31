@@ -223,6 +223,8 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 
 # RIL
+DISABLE_RILD_OEM_HOOK := true
+ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
 
 # Releasetools

@@ -2246,7 +2246,9 @@ int32_t QCamera3PostProcessor::encodeData(qcamera_hal3_jpeg_data_t *jpeg_job_dat
     uint32_t jobId = 0;
     QCamera3Stream *main_stream = NULL;
     mm_camera_buf_def_t *main_frame = NULL;
+#if 0
     cam_stream_parm_buffer_t param;
+#endif
     QCamera3Channel *srcChannel = NULL;
     mm_camera_super_buf_t *recvd_frame = NULL;
     metadata_buffer_t *metadata = NULL;
@@ -2475,6 +2477,7 @@ int32_t QCamera3PostProcessor::encodeData(qcamera_hal3_jpeg_data_t *jpeg_job_dat
         crop.width = src_dim.width;
     }
 
+#if 0
     if (jpeg_settings->hdr_snapshot) {
        memset(&param, 0, sizeof(cam_stream_parm_buffer_t));
        param.type = CAM_STREAM_PARAM_TYPE_GET_OUTPUT_CROP;
@@ -2491,6 +2494,7 @@ int32_t QCamera3PostProcessor::encodeData(qcamera_hal3_jpeg_data_t *jpeg_job_dat
            }
          }
     }
+#endif
     // Set main dim job parameters and handle rotation
     if (!needJpegExifRotation && (jpeg_settings->jpeg_orientation == 90 ||
             jpeg_settings->jpeg_orientation == 270)) {

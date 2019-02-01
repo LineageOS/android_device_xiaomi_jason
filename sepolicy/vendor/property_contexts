@@ -34,6 +34,9 @@ ro.product.mod_device               u:object_r:exported_default_prop:s0
 # Mlipay
 persist.sys.ifaa                    u:object_r:ifaa_prop:s0
 
+# NFC
+persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
+
 # Sensors
 persist.sys.sensors.                u:object_r:sensors_prop:s0
 sys.panel.color                     u:object_r:sensors_prop:s0

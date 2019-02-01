@@ -43,6 +43,9 @@ persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0
 
+# NFC
+persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
+
 # Sensors
 persist.sys.sensors.                u:object_r:sensors_prop:s0
 sys.panel.color                     u:object_r:sensors_prop:s0

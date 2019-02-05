@@ -225,6 +225,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
     persist.camera.sat.enable=1 \
+    persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.sat.enable=1 \
     persist.camera.instant.aec=1 \
     persist.vendor.camera.instant.aec=1 \

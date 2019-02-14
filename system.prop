@@ -191,7 +191,6 @@ persist.vendor.camera.preview.ubwc=0
 persist.chg.max_volt_mv=9000
 
 #system prop for Bluetooth SOC type
-qcom.bluetooth.soc=cherokee
 vendor.bluetooth.soc=cherokee
 
 # Property for backup NTP Server

@@ -3,7 +3,7 @@ fastrpc.                            u:object_r:adsprpc_prop:s0
 
 # Bluetooth
 persist.set.rx_delay                u:object_r:vendor_bluetooth_prop:s0
-qcom.bluetooth.soc                  u:object_r:vendor_bluetooth_prop:s0
+qcom.bluetooth.soc                  u:object_r:vendor_default_prop:s0
 ro.bluetooth.emb_wp_mode            u:object_r:vendor_bluetooth_prop:s0
 wc_transport.                       u:object_r:vendor_bluetooth_prop:s0
 

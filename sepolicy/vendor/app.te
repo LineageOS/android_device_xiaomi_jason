@@ -1,0 +1,2 @@
+get_prop(appdomain, ifaa_prop)
+get_prop(appdomain, vendor_fp_prop)

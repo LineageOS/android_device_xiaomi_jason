@@ -3,7 +3,9 @@ type_transition thermal-engine system_data_file:file decrypt_file "decrypt.txt";
 allow thermal-engine decrypt_file:file create_file_perms;
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
-allow thermal-engine self:capability { chown fowner dac_override };
+allow thermal-engine self:capability { chown fowner };
+
+typeattribute thermal-engine data_between_core_and_vendor_violators;
 allow thermal-engine system_data_file:dir w_dir_perms;
 
 set_prop(thermal-engine, thermal_prop);

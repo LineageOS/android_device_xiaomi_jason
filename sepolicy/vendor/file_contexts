@@ -5,8 +5,9 @@
 /persist/subsys(/.*)?                               u:object_r:persist_subsys_file:s0
 
 # Fingerprint
-/data/misc/goodix(/.*)?                             u:object_r:fingerprint_vendor_data_file:s0
+/data/misc/goodix(/.*)?                             u:object_r:fingerprintd_data_file:s0
 /data/vendor/fpc(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/gf_data(/.*)?                          u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/goodix(/.*)?                           u:object_r:fingerprint_vendor_data_file:s0
 /dev/goodix_fp                                      u:object_r:fingerprintd_device:s0
 /persist/fpc(/.*)?                                  u:object_r:persist_fingerprint_file:s0

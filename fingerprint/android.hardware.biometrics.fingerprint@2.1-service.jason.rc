@@ -7,15 +7,6 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     group system input
     writepid /dev/cpuset/system-background/tasks
 
-on property:init.svc.zygote=stopped
-    stop fps_hal
-
-on property:init.svc.zygote=running
-    start fps_hal
-
-on property:init.svc.zygote=restarting
-    stop fps_hal
-
 on init
     # Goodix fingerprint
     chown system system /dev/goodix_fp
@@ -41,4 +32,3 @@ on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/misc/goodix 0770 system system
     mkdir /data/vendor/gf_data 0770 system system
-    chown system system /data/vendor

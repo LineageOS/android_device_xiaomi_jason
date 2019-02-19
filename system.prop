@@ -221,4 +221,5 @@ ro.qcom.ad=1
 ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
 ro.qcom.ad.sensortype=2
 
+vendor.camera.aux.packageblacklist=com.tencent.mm
 vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner

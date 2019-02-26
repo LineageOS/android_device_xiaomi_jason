@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fba6c4cd_870718ab",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 18
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2019-02-26T11:56:25Z",
+      "side": 1,
+      "message": "it\u0027s already 2 lines above ^^",
+      "range": {
+        "startLine": 641,
+        "startChar": 0,
+        "endLine": 641,
+        "endChar": 57
+      },
+      "revId": "9450c3e54074d0a32bc9e6c47d841ff014b70ad7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

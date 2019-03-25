@@ -1,1 +1,1 @@
-require version-modem=2019-03-22 20:24:45
+require version-modem=2019-03-22 20:24:45|MIUI V10.3.1.0.OCHCNXM

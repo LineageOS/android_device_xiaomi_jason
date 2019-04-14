@@ -889,8 +889,8 @@ vendor/etc/thermal-engine.conf
 vendor/bin/time_daemon|f7237151ee490c1775dbf0a8729589662c8190b4
 vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
 
-# Wifi - from nitrogen - PKQ1.181007.001
-vendor/bin/cnss-daemon|8c16a0601a50a89e26a48046316e906444908ce7
+# Wifi
+vendor/bin/cnss-daemon
 
 # WiFi Display - from nitrogen - PKQ1.181007.001
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c

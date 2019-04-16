@@ -32,3 +32,50 @@ on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/misc/goodix 0770 system system
     mkdir /data/vendor/gf_data 0770 system system
+
+    copy /data/misc/goodix/finger_0_0.so /data/vendor/goodix/finger_0_0.so
+    copy /data/misc/goodix/finger_0_0_bak.so /data/vendor/goodix/finger_0_0_bak.so
+    copy /data/misc/goodix/finger_0_1.so /data/vendor/goodix/finger_0_1.so
+    copy /data/misc/goodix/finger_0_1_bak.so /data/vendor/goodix/finger_0_1_bak.so
+    copy /data/misc/goodix/finger_0_2.so /data/vendor/goodix/finger_0_2.so
+    copy /data/misc/goodix/finger_0_2_bak.so /data/vendor/goodix/finger_0_2_bak.so
+    copy /data/misc/goodix/finger_0_3.so /data/vendor/goodix/finger_0_3.so
+    copy /data/misc/goodix/finger_0_3_bak.so /data/vendor/goodix/finger_0_3_bak.so
+    copy /data/misc/goodix/finger_0_4.so /data/vendor/goodix/finger_0_4.so
+    copy /data/misc/goodix/finger_0_4_bak.so /data/vendor/goodix/finger_0_4_bak.so
+    copy /data/misc/goodix/auth_token_0.so /data/vendor/goodix/auth_token_0.so
+    copy /data/misc/goodix/gf_calibration.so /data/vendor/goodix/gf_calibration.so
+    copy /data/misc/goodix/gf_fdt_base.so /data/vendor/goodix/gf_fdt_base.so
+    copy /data/misc/goodix/gf_nav_base.so /data/vendor/goodix/gf_nav_base.so
+    copy /data/misc/goodix/gf_otp_info.so /data/vendor/goodix/gf_otp_info.so
+
+    chown system system /data/vendor/goodix/finger_0_0.so
+    chown system system /data/vendor/goodix/finger_0_0_bak.so
+    chown system system /data/vendor/goodix/finger_0_1.so
+    chown system system /data/vendor/goodix/finger_0_1_bak.so
+    chown system system /data/vendor/goodix/finger_0_2.so
+    chown system system /data/vendor/goodix/finger_0_2_bak.so
+    chown system system /data/vendor/goodix/finger_0_3.so
+    chown system system /data/vendor/goodix/finger_0_3_bak.so
+    chown system system /data/vendor/goodix/finger_0_4.so
+    chown system system /data/vendor/goodix/finger_0_4_bak.so
+    chown system system /data/vendor/goodix/auth_token_0.so
+    chown system system /data/vendor/goodix/gf_calibration.so
+    chown system system /data/vendor/goodix/gf_fdt_base.so
+    chown system system /data/vendor/goodix/gf_nav_base.so
+    chown system system /data/vendor/goodix/gf_otp_info.so
+    chmod 0700 /data/vendor/goodix/finger_0_0.so
+    chmod 0700 /data/vendor/goodix/finger_0_1.so
+    chmod 0700 /data/vendor/goodix/finger_0_2.so
+    chmod 0700 /data/vendor/goodix/finger_0_3.so
+    chmod 0700 /data/vendor/goodix/finger_0_4.so
+    chmod 0700 /data/vendor/goodix/finger_0_0_bak.so
+    chmod 0700 /data/vendor/goodix/finger_0_1_bak.so
+    chmod 0700 /data/vendor/goodix/finger_0_2_bak.so
+    chmod 0700 /data/vendor/goodix/finger_0_3_bak.so
+    chmod 0700 /data/vendor/goodix/finger_0_4_bak.so
+    chmod 0700 /data/vendor/goodix/auth_token_0.so
+    chmod 0700 /data/vendor/goodix/gf_calibration.so
+    chmod 0700 /data/vendor/goodix/gf_fdt_base.so
+    chmod 0700 /data/vendor/goodix/gf_nav_base.so
+    chmod 0700 /data/vendor/goodix/gf_otp_info.so

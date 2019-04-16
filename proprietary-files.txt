@@ -797,7 +797,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
-vendor/radio/qcril_database/upgrade/2_version_intro.sql
+vendor/radio/qcril_database/upgrade/3_version_intro.sql
 
 # Radio - from nitrogen - PKQ1.181007.001
 vendor/bin/tftp_server|55034bc977f8803c5a50132be8e39c9e72548727

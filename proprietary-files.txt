@@ -76,6 +76,10 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
+# Bluetooth - A2DP - from LA.UM.7.2.r1-06900-sdm660.0
+vendor/lib64/hw/android.hardware.bluetooth.a2dp@1.0-impl-qti.so
+vendor/lib64/libbthost_if.so
+
 # Bluetooth - aptX - from B2N_sprout PPR1.180610.011
 lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
 lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1

@@ -47,7 +47,7 @@ vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 
 # Audio - from LA.UM.7.2.r1-06900-sdm660.0
 vendor/lib/libacdb-fts.so|29b7902df5cd6b510a8918f41b93e50e9ebf7914
-vendor/lib/libacdbloader.so|5b9e633b103581d41837245fb6dc3e78554cd4f6
+vendor/lib/libacdbloader.so|36c7faecc66e42bc164c26cb09bc4821914104d6
 vendor/lib/libacdbrtac.so|ffbacf7b6b4ddc8ad92c67a88a7bfa3eb502a9fe
 vendor/lib/libadiertac.so|849b65d13192ee78156c81da854660943b8920e1
 vendor/lib/libadm.so|d46260844e083581ba1f18e85a9cfb4bbb258159

@@ -889,6 +889,7 @@ vendor/etc/thermal-engine.conf
 # Time services - from LA.UM.7.2.r1-06900-sdm660.0
 -vendor/app/TimeService/TimeService.apk|693a68e35a2cbc40d23b291fcc836c8567f90b14
 vendor/bin/time_daemon|ac244644735005d4c4322168001dcd3ae757007f
+vendor/etc/init/init.time_daemon.rc|edb18291351eb7efcb597d33c2c7f2d9bb7328a9
 vendor/lib64/libtime_genoff.so|9de68b1aa139b06b0e455bd1c24ed0c527492c3b
 
 # Wifi

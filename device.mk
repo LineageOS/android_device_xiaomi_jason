@@ -215,7 +215,6 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=cherokee \
     vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
@@ -229,16 +228,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
-    persist.camera.sat.enable=1 \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.sat.enable=1 \
-    persist.camera.instant.aec=1 \
     persist.vendor.camera.instant.aec=1 \
     persist.vendor.camera.ae.instant.bound=20 \
     persist.vendor.camera.set.afd=4 \
-    persist.camera.feature.cac=1 \
     persist.vendor.camera.feature.cac=1 \
-    persist.camera.fovc.enable=1 \
     persist.vendor.camera.fovc.enable=1 \
     persist.vendor.dualcam.lpm.enable=1 \
     persist.vendor.dualcam.defer.enable=1

@@ -17,5 +17,4 @@ type ir_spi_device, dev_type, file_type;
 type debugfs_wlan, debugfs_type, fs_type;
 
 # Thermal engine
-type decrypt_file, file_type, data_file_type, core_data_file_type;
-type thermal_data_file, file_type, data_file_type, core_data_file_type;
+type thermal_data_file, file_type, data_file_type;

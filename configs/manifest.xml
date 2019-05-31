@@ -222,7 +222,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
@@ -234,15 +234,25 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.radio.deprecated</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOemHook</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
+    <!-- RADIO CONFIG -->
+   <hal format="hidl">
+       <name>android.hardware.radio.config</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IRadioConfig</name>
+           <instance>default</instance>
+       </interface>
+    </hal>
+    <!--UICC secure element -->
+   <hal format="hidl">
+       <name>android.hardware.secure_element</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>ISecureElement</name>
+           <instance>SIM1</instance>
+       </interface>
     </hal>
     <!-- RIL UIM REMOTE CLIENT -->
     <hal format="hidl">
@@ -291,7 +301,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IUim</name>
             <instance>Uim0</instance>
@@ -481,7 +491,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
            <transport>hwbinder</transport>
-           <version>1.0</version>
+           <version>1.4</version>
            <interface>
                <name>IImsRadio</name>
                <instance>imsradio0</instance>
@@ -541,7 +551,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
@@ -562,7 +572,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>com.qualcomm.qti.imscmservice</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.1</version>
         <interface>
             <name>IImsCmService</name>
             <instance>qti.ims.connectionmanagerservice</instance>
@@ -798,11 +808,38 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.mlipay</name>
+        <name>vendor.xiaomi.hardware.mfidoca</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
+            <name>IFidoService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.mlipay</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
             <name>IMlipayService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.mtdservice</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IMTService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.tidaservice</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ITidaService</name>
             <instance>default</instance>
         </interface>
     </hal>

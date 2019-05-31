@@ -30,5 +30,8 @@ on boot
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/goodix 0770 system system
-    mkdir /data/misc/goodix 0770 system system
-    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /data/vendor/calibration 0770 system system
+    chmod 0600 /persist/fpc/calibration_image.pndat
+    copy  /persist/fpc/calibration_image.pndat /data/vendor/calibration/calibration_image.pndat
+    chown system /data/vendor/fpc/calibration_image.pndat
+    chown system /data/vendor/calibration/calibration_image.pndat

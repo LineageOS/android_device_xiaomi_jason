@@ -62,21 +62,12 @@ extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
 DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-sed -i \
-    's/\/system\/etc\//\/vendor\/etc\//g' \
-    "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
-
 sed -i 's/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x10/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x01/' \
     "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_jason_s5k3p8sp_sunny.so
 
 patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
 patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmpbase.so
-patchelf --remove-needed libandroid_runtime.so "$DEVICE_BLOB_ROOT"/vendor/bin/mlipayd
-patchelf --remove-needed libandroid_runtime.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so
 patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera_ppeiscore.so
 patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
-patchelf --remove-needed libmedia.so "$DEVICE_BLOB_ROOT"/vendor/lib64/lib-dplmedia.so
-patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/bin/mlipayd
-patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so
 
 "$MY_DIR"/setup-makefiles.sh

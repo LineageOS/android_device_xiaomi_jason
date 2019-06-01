@@ -3,3 +3,4 @@ allow rild vendor_file:file ioctl;
 
 typeattribute rild data_between_core_and_vendor_violators;
 allow rild tombstone_data_file:dir search;
+allow rild tombstone_data_file:file rw_file_perms;

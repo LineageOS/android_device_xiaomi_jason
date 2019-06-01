@@ -1,25 +1,14 @@
-# adsprpc
-fastrpc.                            u:object_r:adsprpc_prop:s0
-
-# Bluetooth
-persist.set.rx_delay                u:object_r:vendor_bluetooth_prop:s0
-qcom.bluetooth.soc                  u:object_r:vendor_default_prop:s0
-ro.bluetooth.emb_wp_mode            u:object_r:vendor_bluetooth_prop:s0
-wc_transport.                       u:object_r:vendor_bluetooth_prop:s0
-
 # Camera
 camera.                             u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot          u:object_r:camera_prop:s0
 cpp.set.clock                       u:object_r:camera_prop:s0
 disable.cpp.power.collapse          u:object_r:camera_prop:s0
-persist.cam.pp.feat.mask            u:object_r:camera_prop:s0
 persist.camera.                     u:object_r:camera_prop:s0
-persist.enable.max.pending.buf      u:object_r:camera_prop:s0
-persist.partial.skip                u:object_r:camera_prop:s0
+persist.vendor.camera.debug.logfile u:object_r:camera_prop:s0
 
 # Fingerprint
 gf.debug.dump_data                  u:object_r:vendor_fp_prop:s0
-persist.sys.fp.                     u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.              u:object_r:vendor_fp_prop:s0
 ro.boot.fp.                         u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                    u:object_r:vendor_fp_prop:s0
 
@@ -29,59 +18,27 @@ ro.boot.hwversion                   u:object_r:exported_default_prop:s0
 ro.carrier.name                     u:object_r:exported_default_prop:s0
 ro.cust.test                        u:object_r:exported_default_prop:s0
 ro.miui.cust_variant                u:object_r:exported_default_prop:s0
+ro.miui.region                      u:object_r:exported_default_prop:s0
 ro.product.mod_device               u:object_r:exported_default_prop:s0
 
-# IMS
-perist.vendor.ims.enable_rateadapt  u:object_r:qcom_ims_prop:s0
-
 # Mlipay
-persist.sys.ifaa                    u:object_r:ifaa_prop:s0
-
-# Radio
-persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0
-persist.radio.schd.cache            u:object_r:vendor_radio_prop:s0
-sys.fake_bs_flag0                   u:object_r:vendor_radio_prop:s0
-sys.fake_bs_flag1                   u:object_r:vendor_radio_prop:s0
+ro.boot.cpuid                       u:object_r:vendor_system_prop:s0
+vendor.sys.rpmb_state               u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.fido         u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.ifaa         u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.soter        u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.provision.status u:object_r:vendor_tee_listener_prop:s0
 
 # Sensors
 persist.sys.sensors.                u:object_r:sensors_prop:s0
+ro.xiaomi.sar_fusion                u:object_r:sensors_prop:s0
 sys.panel.color                     u:object_r:sensors_prop:s0
 sys.panel.vendor                    u:object_r:sensors_prop:s0
 
-# ss-services (PD)
-persist.pd_locater_debug            u:object_r:vendor_pd_locater_dbg_prop:s0
-
 # Thermal engine
-persist.sys.thermal.                u:object_r:thermal_prop:s0
-sys.thermal.                        u:object_r:thermal_prop:s0
+persist.sys.thermal.                u:object_r:thermal_engine_prop:s0
+sys.thermal.                        u:object_r:thermal_engine_prop:s0
 
 # vendor_default_prop
 fpc_kpi                             u:object_r:vendor_default_prop:s0
 gpu.stats.debug.level               u:object_r:vendor_default_prop:s0
-persist.data_netmgrd_mtu            u:object_r:vendor_default_prop:s0
-persist.data.df.agg.dl_pad          u:object_r:vendor_default_prop:s0
-persist.data.df.agg.dl_pkt          u:object_r:vendor_default_prop:s0
-persist.data.df.agg.dl_size         u:object_r:vendor_default_prop:s0
-persist.data.df.dl_mode             u:object_r:vendor_default_prop:s0
-persist.data.df.iwlan_mux           u:object_r:vendor_default_prop:s0
-persist.data.df.mux_count           u:object_r:vendor_default_prop:s0
-persist.data.df.ul_mode             u:object_r:vendor_default_prop:s0
-persist.data.dont_use_epc           u:object_r:vendor_default_prop:s0
-persist.data.dont_use_npflag        u:object_r:vendor_default_prop:s0
-persist.data.dpm.enable             u:object_r:vendor_default_prop:s0
-persist.data.dropssdp               u:object_r:vendor_default_prop:s0
-persist.data.ibfc.enable            u:object_r:vendor_default_prop:s0
-persist.data.iwlan.enable           u:object_r:vendor_default_prop:s0
-persist.data.llf.enable             u:object_r:vendor_default_prop:s0
-persist.data.netmgr.wl.timeout      u:object_r:vendor_default_prop:s0
-persist.data.netmgrd.qos.enable     u:object_r:vendor_default_prop:s0
-persist.data.netmgrd.qos.hybrid     u:object_r:vendor_default_prop:s0
-persist.data.profile_update         u:object_r:vendor_default_prop:s0
-persist.data.target.msm8998         u:object_r:vendor_default_prop:s0
-persist.data.tcpackprio.enable      u:object_r:vendor_default_prop:s0
-persist.data.wda.enable             u:object_r:vendor_default_prop:s0
-persist.net.logmask                 u:object_r:vendor_default_prop:s0
-persist.rmnet.data.enable           u:object_r:vendor_default_prop:s0
-remosaic.debug.dump                 u:object_r:vendor_default_prop:s0
-remosaic.debug.loglevel             u:object_r:vendor_default_prop:s0
-ro.build.software.version           u:object_r:vendor_default_prop:s0

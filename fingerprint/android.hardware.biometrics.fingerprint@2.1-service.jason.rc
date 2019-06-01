@@ -35,3 +35,11 @@ on post-fs-data
     copy  /persist/fpc/calibration_image.pndat /data/vendor/calibration/calibration_image.pndat
     chown system /data/vendor/fpc/calibration_image.pndat
     chown system /data/vendor/calibration/calibration_image.pndat
+    start vendor.move_goodix_data
+
+service vendor.move_goodix_data /system/bin/move_goodix_data.sh
+    class main
+    user system
+    group system
+    disabled
+    oneshot

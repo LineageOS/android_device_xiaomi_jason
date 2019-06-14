@@ -517,8 +517,7 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.force_on_dc=true \
-    persist.vendor.qti.telephony.vt_cam_interface=1
+    persist.vendor.radio.force_on_dc=true
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \

@@ -10,7 +10,7 @@
 /data/vendor/fpc(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/goodix(/.*)?                           u:object_r:fingerprint_vendor_data_file:s0
 /dev/goodix_fp                                      u:object_r:fingerprintd_device:s0
-/persist/fpc(/.*)?                                  u:object_r:persist_fingerprint_file:s0
+/mnt/vendor/persist/fpc(/.*)?                       u:object_r:persist_fingerprint_file:s0
 /system/bin/move_goodix_data\.sh                    u:object_r:move-goofix-data-sh_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.jason   u:object_r:hal_fingerprint_default_exec:s0
 
@@ -32,7 +32,7 @@
 
 # Sensors
 /(vendor|system/vendor)/bin/init\.panel_info\.sh    u:object_r:qti_init_shell_exec:s0
-/persist/PRSensorData\.txt                          u:object_r:sensors_persist_file:s0
+/mnt/vendor/persist/PRSensorData\.txt               u:object_r:sensors_persist_file:s0
 
 # Thermal-engine
 /data/vendor/thermal(/.*)?                          u:object_r:thermal_data_file:s0

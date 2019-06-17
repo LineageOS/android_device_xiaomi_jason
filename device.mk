@@ -380,6 +380,22 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
+# LMKD
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.use_minfree_levels=true
+
+TARGET_LMKD_STATS_LOG := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lmk.log_stats=true
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \

@@ -95,7 +95,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
-    persist.radio.schd.cache=3500 \
     sys.vendor.shutdown.waittime=500 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
     persist.radio.multisim.config=dsds \

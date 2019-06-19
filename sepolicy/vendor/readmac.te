@@ -7,6 +7,10 @@ init_daemon_domain(readmac)
 # Allow readmac to communicate with qmuxd via qmux_radio socket
 qmux_socket(readmac)
 
+# Allow readmac to fully access bt.mac data file
+allow readmac vendor_bt_data_file:dir rw_dir_perms;
+allow readmac vendor_bt_data_file:file create_file_perms;
+
 # Allow readmac to fully access wlan_mac.bin persist file
 allow readmac mnt_vendor_file:dir rw_dir_perms;
 allow readmac mnt_vendor_file:file create_file_perms;

@@ -1,3 +1,6 @@
+# Bluetooth
+/data/vendor/mac_addr(/.*)?                         u:object_r:vendor_bt_data_file:s0
+
 # Camera
 /(vendor|system/vendor)/bin/remosaic_daemon         u:object_r:remosaic_daemon_exec:s0
 
@@ -39,6 +42,3 @@
 
 # Thermal-engine
 /data/vendor/thermal(/.*)?                          u:object_r:thermal_data_file:s0
-
-# Wi-Fi
-/data/vendor/mac_addr(/.*)?                         u:object_r:wifi_vendor_data_file:s0

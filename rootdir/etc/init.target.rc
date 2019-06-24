@@ -421,6 +421,7 @@ on property:vendor.ims.QMI_DAEMON_STATUS=1
 
 on property:vold.decrypt=trigger_restart_framework
    start cnss_diag
+   restart vendor.camera-provider-2-4
 
 service cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main

@@ -543,3 +543,9 @@ service readmac /vendor/bin/readmac
     user system
     group system net_raw
     oneshot
+
+service vendor.mtdservice-1-2 /vendor/bin/mtd@1.2
+    override
+    class hal
+    user system
+    group system drmrpc

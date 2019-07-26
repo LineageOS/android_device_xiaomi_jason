@@ -198,6 +198,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.hw.binder.size_kbyte=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.spkr.cal.duration=100 \
+    persist.vendor.audio.speaker.prot.enable=true \
+    persist.vendor.audio.spv3.enable=true \
+    persist.vendor.audio.avs.afe_api_version=2 \
     vendor.audio.adm.buffering.ms=6
 
 # Additional native libraries

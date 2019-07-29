@@ -215,10 +215,5 @@ ro.location.osnlp.region.package=
 #adjust voice call volume steps
 ro.config.vc_call_vol_steps=11
 
-# AD and sensor config
-ro.qcom.ad=1
-ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
-ro.qcom.ad.sensortype=2
-
 vendor.camera.aux.packageblacklist=com.tencent.mm
 vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android

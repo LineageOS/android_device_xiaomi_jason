@@ -52,7 +52,7 @@
 #define CEILING4(X)  (((X) + 0x0003) & 0xFFFC)
 #define CEILING2(X)  (((X) + 0x0001) & 0xFFFE)
 
-#define MAX_ZOOMS_CNT 91
+#define MAX_ZOOMS_CNT 200
 #define ZOOM_MIN 4096        // min zoom value: 1x
 #define ZOOM_MAX 4096 * 8 // max zoom value: 8x
 #define MAX_SIZES_CNT 40

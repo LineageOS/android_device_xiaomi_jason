@@ -277,8 +277,6 @@ typedef struct cam_capability{
     size_t zoom_ratio_tbl_cnt;                              /* table size for zoom ratios */
     uint32_t zoom_ratio_tbl[MAX_ZOOMS_CNT];                 /* zoom ratios table */
 
-    volatile char xiaomi_reserved1[436];
-
     /* supported effect modes */
     size_t supported_effects_cnt;
     cam_effect_mode_type supported_effects[CAM_EFFECT_MODE_MAX];
@@ -584,7 +582,7 @@ typedef struct cam_capability{
     /* true Portrait info */
     cam_true_portrait_t  true_portrait_settings_need;
 
-    volatile char xiaomi_reversed2[64];
+    volatile char xiaomi_reversed1[64];
 
     /* Sensor type information */
     cam_sensor_type_t sensor_type;

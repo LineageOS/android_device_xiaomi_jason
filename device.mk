@@ -131,8 +131,10 @@ PRODUCT_PACKAGES += \
     nqnfcse_access.xml \
     Tag \
     com.android.nfc_extras \
-    vendor.nxp.hardware.nfc@1.1-service \
+    vendor.nxp.hardware.nfc@1.2-service \
     nfc_nci.nqx.default.hw
+
+PRODUCT_SOONG_NAMESPACES += vendor/nxp/opensource/pn5xx
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \

@@ -27,7 +27,7 @@
 #include <android-base/logging.h>
 #include <android-base/stringprintf.h>
 #include <android-base/strings.h>
-#include <private/android_filesystem_config.h> /* for AID_SYSTEM */
+#include <cutils/android_filesystem_config.h> /* for AID_SYSTEM */
 
 #define ARRAY_SIZE(x) (sizeof((x)) / sizeof((x)[0]))
 

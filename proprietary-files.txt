@@ -9,14 +9,6 @@ vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
-# Bluetooth
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
-
-# Bluetooth - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|514226960669db32e44a9457e6de7c07ac70ec1b
-
 # Camera
 vendor/bin/remosaic_daemon
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so

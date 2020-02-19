@@ -14,8 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import hashlib
-import common
 import re
 
 
@@ -29,7 +27,7 @@ def IncrementalOTA_Assertions(info):
 
 def AddModemAssertion(info, input_zip):
     android_info = input_zip.read("OTA/android-info.txt")
-    m = re.search(r'require\s+version-modem\s*=\s*(.+)$', android_info)
+    m = re.search(r'require\s+date-modem\s*=\s*(.+)$', android_info)
     if m:
         modem_version, build_version = m.group(1).split('|')
         if modem_version and '*' not in modem_version:

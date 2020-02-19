@@ -1,1 +1,1 @@
-require version-modem=2019-06-26 01:31:24|MIUI 9.6.27 China Beta
+require date-modem=2019-06-26 01:31:24|MIUI 9.6.27 China Beta

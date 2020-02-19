@@ -1,44 +1,15 @@
-# Bluetooth
-/data/vendor/mac_addr(/.*)?                         u:object_r:vendor_bt_data_file:s0
-
 # Camera
 /(vendor|system/vendor)/bin/remosaic_daemon         u:object_r:remosaic_daemon_exec:s0
 
-# Charger
-/persist/subsys(/.*)?                               u:object_r:persist_subsys_file:s0
-
 # Fingerprint
-/data/misc/goodix(/.*)?                             u:object_r:fingerprintd_data_file:s0
 /data/vendor/calibration(/.*)?                      u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/fpc(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/goodix(/.*)?                           u:object_r:fingerprint_vendor_data_file:s0
-/dev/goodix_fp                                      u:object_r:fingerprintd_device:s0
-/mnt/vendor/persist/fpc(/.*)?                       u:object_r:persist_fingerprint_file:s0
 /system/bin/move_goodix_data\.sh                    u:object_r:move-goofix-data-sh_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.jason   u:object_r:hal_fingerprint_default_exec:s0
-
-# Input files
-/vendor/usr/idc(/.*)?                               u:object_r:idc_file:s0
-/vendor/usr/keylayout(/.*)?                         u:object_r:keylayout_file:s0
-
-# IR
-/dev/lirc0                                          u:object_r:ir_spi_device:s0
 
 # Lineage hardware
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.jason                       u:object_r:hal_lineage_touch_default_exec:s0
-
-# Mlipay
-/(vendor|system/vendor)/bin/fidoca                  u:object_r:hal_mfidoca_default_exec:s0
-/(vendor|system/vendor)/bin/mlipayd@1.1             u:object_r:hal_mlipay_default_exec:s0
-/(vendor|system/vendor)/bin/mtd@1.2                 u:object_r:hal_mtdservice_default_exec:s0
-/(vendor|system/vendor)/bin/tidad@1.1               u:object_r:hal_tidaservice_default_exec:s0
 
 # Readmac
 /(vendor|system/vendor)/bin/readmac                 u:object_r:readmac_exec:s0
 
 # Sensors
 /(vendor|system/vendor)/bin/init\.panel_info\.sh    u:object_r:qti_init_shell_exec:s0
-/mnt/vendor/persist/PRSensorData\.txt               u:object_r:sensors_persist_file:s0
-
-# Thermal-engine
-/data/vendor/thermal(/.*)?                          u:object_r:thermal_data_file:s0

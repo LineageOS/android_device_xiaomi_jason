@@ -1,6 +1,0 @@
-# qcril.so needs access to /vendor/radio/qcril_database/qcril.db
-allow rild vendor_file:file ioctl;
-
-typeattribute rild data_between_core_and_vendor_violators;
-allow rild tombstone_data_file:dir rw_dir_perms;
-allow rild tombstone_data_file:file rw_file_perms;

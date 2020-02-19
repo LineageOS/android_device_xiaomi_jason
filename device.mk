@@ -96,10 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.hdr_calib_data=/system/vendor/etc/hdr_config.cfg \
     ro.vendor.display.sensortype=2
 
-# Fingerprint feature
-PRODUCT_PACKAGES += \
-    move_goodix_data.sh
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl

@@ -27,8 +27,7 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/jason
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
-TARGET_KERNEL_CONFIG := lineageos_jason_defconfig
+TARGET_KERNEL_CONFIG := jason_defconfig
 TARGET_KERNEL_VERSION := 4.4
 
 # Camera

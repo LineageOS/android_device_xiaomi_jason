@@ -4,10 +4,6 @@
     "target_path": "device/xiaomi/sdm660-common"
   },
   {
-    "repository": "android_kernel_xiaomi_jason",
-    "target_path": "kernel/xiaomi/jason"
-  },
-  {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
   }

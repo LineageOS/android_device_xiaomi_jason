@@ -27,7 +27,7 @@ public class Constants {
     public static final String FP_POCKETMODE_KEY = "fp_pocketmode";
 
     // Nodes
-    public static final String BUTTON_SWAP_NODE = "/sys/bus/i2c/devices/4-0020/input/input1/reversed_keys";
+    public static final String BUTTON_SWAP_NODE = "/sys/touchpanel/reversed_keys";
 
     // Intents
     public static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";

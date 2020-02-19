@@ -49,9 +49,6 @@ TARGET_USES_NQ_NFC := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5368709120
 BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/4-0020/input/input1/wake_gesture"
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 

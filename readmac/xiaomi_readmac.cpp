@@ -34,7 +34,6 @@
 #define LOAD_NV_FUNCTION(name) fn_##name = LoadFunction(handle.get(), "qmi_nv_" #name);
 #define CLOSE_NV_FUNCTION(name) fn_##name = nullptr;
 #define FOR_EACH_FUNCTION(MACRO) \
-    MACRO(read_bd_addr)          \
     MACRO(read_wlan_mac)
 
 using android::base::ReadFileToString;
@@ -47,13 +46,11 @@ constexpr size_t kMacSize = 6;
 typedef std::array<uint8_t, kMacSize> mac_t;
 
 constexpr char kFilename[] = "libqminvapi.so";
-constexpr char kBtMacFile[] = "/data/vendor/mac_addr/bt.mac";
 constexpr char kWlanMacFile[] = "/mnt/vendor/persist/wlan_mac.bin";
 constexpr uint8_t kXiaomiMacPrefix[] = {0xf4, 0xf5, 0xdb};
 
 // NV apis from libqminvapi.so
 typedef int (*qmi_nv_read_mac_t)(uint8_t** mac);
-qmi_nv_read_mac_t fn_read_bd_addr = nullptr;
 qmi_nv_read_mac_t fn_read_wlan_mac = nullptr;
 
 qmi_nv_read_mac_t LoadFunction(void* handle, const char* name) {
@@ -109,31 +106,6 @@ mac_t ReadMac(qmi_nv_read_mac_t fn_read_mac) {
 
 inline bool WriteMacToFile(const std::string& content, const std::string& path) {
     return WriteStringToFile(content, path, 0644, AID_SYSTEM, AID_SYSTEM);
-}
-
-bool ValidateBtMacFile() {
-    struct stat st;
-    stat(kBtMacFile, &st);
-    return st.st_size == kMacSize;
-}
-
-void SetBtMac() {
-    if (ValidateBtMacFile()) {
-        LOG(VERBOSE) << kBtMacFile << " is valid";
-        return;
-    }
-
-    auto bt_mac = ReadMac(fn_read_bd_addr);
-
-    /*
-     * Convert to std::string to make use of the helper functions provided by libbase.
-     * The retrieved BT MAC is in reversed order, so reverse copy it.
-     */
-    std::string content(bt_mac.rbegin(), bt_mac.rend());
-
-    if (!WriteMacToFile(content, kBtMacFile)) {
-        LOG(ERROR) << "Failed to write " << kWlanMacFile;
-    }
 }
 
 bool ValidateWlanMacFile() {
@@ -196,7 +168,6 @@ int main() {
         FOR_EACH_FUNCTION(LOAD_NV_FUNCTION)
     }
 
-    SetBtMac();
     SetWlanMac();
 
     return 0;

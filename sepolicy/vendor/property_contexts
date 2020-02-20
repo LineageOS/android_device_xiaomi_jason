@@ -1,32 +1,14 @@
 # Camera
 camera.                             u:object_r:camera_prop:s0
-cameradaemon.SaveMemAtBoot          u:object_r:camera_prop:s0
-cpp.set.clock                       u:object_r:camera_prop:s0
-disable.cpp.power.collapse          u:object_r:camera_prop:s0
+persist.camera.dxoaf.sc             u:object_r:camera_prop:s0
+persist.camera.module.info          u:object_r:camera_prop:s0
 
-# Fingerprint
-gf.debug.dump_data                  u:object_r:hal_fingerprint_prop:s0
-ro.boot.fp.                         u:object_r:hal_fingerprint_prop:s0
-
-# Global
-ro.boot.factorybuild                u:object_r:exported_default_prop:s0
-ro.boot.hwversion                   u:object_r:exported_default_prop:s0
-ro.carrier.name                     u:object_r:exported_default_prop:s0
-ro.cust.test                        u:object_r:exported_default_prop:s0
-ro.miui.cust_variant                u:object_r:exported_default_prop:s0
-ro.miui.region                      u:object_r:exported_default_prop:s0
-ro.product.mod_device               u:object_r:exported_default_prop:s0
-
-# Mlipay
-ro.boot.cpuid                       u:object_r:vendor_system_prop:s0
-vendor.sys.rpmb_state               u:object_r:vendor_tee_listener_prop:s0
+# NFC
+persist.nfc.core_reset_debug_info   u:object_r:nfc_nq_prop:s0
+persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
 
 # Sensors
-persist.sys.sensors.                u:object_r:sensors_prop:s0
-ro.xiaomi.sar_fusion                u:object_r:sensors_prop:s0
+persist.sys.sensors.                u:object_r:vendor_default_prop:s0
+ro.xiaomi.sar_fusion                u:object_r:vendor_default_prop:s0
 sys.panel.color                     u:object_r:sensors_prop:s0
 sys.panel.vendor                    u:object_r:sensors_prop:s0
-
-# vendor_default_prop
-fpc_kpi                             u:object_r:vendor_default_prop:s0
-gpu.stats.debug.level               u:object_r:vendor_default_prop:s0

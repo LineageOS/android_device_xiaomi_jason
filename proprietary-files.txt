@@ -322,16 +322,16 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so
 
-# Gatekeeper - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/lib/hw/gatekeeper.sdm660.so|bb56ae8a8fcc13148d1723044b8c617e6cf0b7ae
-vendor/lib64/hw/gatekeeper.sdm660.so|e8f32651e4bfff88fcc02c34eca6cd5f04a444aa
+# Gatekeeper
+vendor/lib/hw/gatekeeper.sdm660.so
+vendor/lib64/hw/gatekeeper.sdm660.so
 
-# Keystore - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/lib/hw/keystore.sdm660.so|ad49563962736752cd094b113e46658e1b5e6d39
-vendor/lib64/hw/keystore.sdm660.so|645881b7a2709dfce5d6b9be9df4659ec2ab0eac
+# Keystore
+vendor/lib/hw/keystore.sdm660.so
+vendor/lib64/hw/keystore.sdm660.so
 
-# NFC - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/bin/nqnfcinfo|cab8da1ddfa0fb10210f28127de4e5da6c423b69
+# NFC
+vendor/bin/nqnfcinfo
 
 # NFC firmware
 vendor/lib/libpn553_fw.so

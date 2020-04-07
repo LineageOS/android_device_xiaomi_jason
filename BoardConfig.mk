@@ -39,7 +39,6 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x00002000U
 
 # Mainfest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vendor_framework_compatibility_matrix.xml
 
 # NFC
 TARGET_USES_NQ_NFC := true

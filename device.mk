@@ -175,4 +175,5 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    JasonWifiOverlay \
     readmac

@@ -60,6 +60,8 @@ on post-fs-data
     chown system /data/vendor/calibration/calibration_image.pndat
     start vendor.move_goodix_data
 
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
 on charger
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

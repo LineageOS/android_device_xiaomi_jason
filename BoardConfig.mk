@@ -32,7 +32,6 @@ TARGET_KERNEL_VERSION := 4.4
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
-$(call project-set-path,qcom-camera,$(DEVICE_PATH)/camera)
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -64,6 +63,9 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-03-01
+
+# VNDK
+BOARD_VNDK_RUNTIME_DISABLE := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/jason/BoardConfigVendor.mk

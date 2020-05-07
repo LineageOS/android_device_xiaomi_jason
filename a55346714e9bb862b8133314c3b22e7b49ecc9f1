@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58d9e7c6_d01ef491",
+        "filename": "extract-files.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 15038
+      },
+      "writtenOn": "2020-05-07T19:31:52Z",
+      "side": 1,
+      "message": "libicuuc.so is not dependency of camera.sdm660.so",
+      "revId": "a55346714e9bb862b8133314c3b22e7b49ecc9f1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

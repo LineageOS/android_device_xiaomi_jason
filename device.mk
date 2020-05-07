@@ -64,22 +64,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.avs.afe_api_version=2
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
-
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.hist.high=20 \
     persist.camera.hist.drc=1.2 \
-    persist.vendor.camera.expose.aux=1 \
-    persist.vendor.camera.sat.enable=1 \
-    persist.vendor.camera.instant.aec=1 \
+    persist.camera.hist.high=20 \
+    persist.camera.stats.test=5 \
+    persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.ae.instant.bound=20 \
-    persist.vendor.camera.set.afd=4 \
+    persist.vendor.camera.dxo=1 \
+    persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.feature.cac=1 \
     persist.vendor.camera.fovc.enable=1 \
+    persist.vendor.camera.instant.aec=1 \
+    persist.vendor.camera.sat.enable=1 \
+    persist.vendor.camera.set.afd=4 \
     persist.vendor.dualcam.lpm.enable=1 \
-    persist.vendor.dualcam.defer.enable=1
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,com.qualcomm.qti.qmmi
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packageblacklist=com.tencent.mm \

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *           (C) 2017-2018 The LineageOS Project
+ *           (C) 2017-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.text.TextUtils;
@@ -41,22 +40,11 @@ public class ButtonSettingsFragment extends PreferenceFragment
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        updatePreferencesBasedOnDependencies();
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String node = Constants.sBooleanNodePreferenceMap.get(preference.getKey());
         if (!TextUtils.isEmpty(node) && FileUtils.isFileWritable(node)) {
             Boolean value = (Boolean) newValue;
             FileUtils.writeLine(node, value ? "1" : "0");
-            return true;
-        }
-        node = Constants.sStringNodePreferenceMap.get(preference.getKey());
-        if (!TextUtils.isEmpty(node) && FileUtils.isFileWritable(node)) {
-            FileUtils.writeLine(node, (String) newValue);
             return true;
         }
 
@@ -84,17 +72,6 @@ public class ButtonSettingsFragment extends PreferenceFragment
                 b.setEnabled(false);
             }
         }
-        for (String pref : Constants.sStringNodePreferenceMap.keySet()) {
-            ListPreference l = (ListPreference) findPreference(pref);
-            if (l == null) continue;
-            l.setOnPreferenceChangeListener(this);
-            String node = Constants.sStringNodePreferenceMap.get(pref);
-            if (FileUtils.isFileReadable(node)) {
-                l.setValue(FileUtils.readOneLine(node));
-            } else {
-                l.setEnabled(false);
-            }
-        }
 
         // Initialize other preferences whose keys are not associated with nodes
         SwitchPreference b = (SwitchPreference) findPreference(Constants.FP_POCKETMODE_KEY);
@@ -112,19 +89,5 @@ public class ButtonSettingsFragment extends PreferenceFragment
             return true;
         }
         return false;
-    }
-
-    private void updatePreferencesBasedOnDependencies() {
-        for (String pref : Constants.sNodeDependencyMap.keySet()) {
-            SwitchPreference b = (SwitchPreference) findPreference(pref);
-            if (b == null) continue;
-            String dependencyNode = Constants.sNodeDependencyMap.get(pref)[0];
-            if (FileUtils.isFileReadable(dependencyNode)) {
-                String dependencyNodeValue = FileUtils.readOneLine(dependencyNode);
-                boolean shouldSetEnabled = dependencyNodeValue.equals(
-                        Constants.sNodeDependencyMap.get(pref)[1]);
-                Utils.updateDependentPreference(getContext(), b, pref, shouldSetEnabled);
-            }
-        }
     }
 }

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *           (C) 2017-2018 The LineageOS Project
+ *           (C) 2017-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,16 +35,12 @@ public class Constants {
 
     // Holds <preference_key> -> <proc_node> mapping
     public static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
-    public static final Map<String, String> sStringNodePreferenceMap = new HashMap<>();
 
     // Holds <preference_key> -> <default_values> mapping
     public static final Map<String, Object> sNodeDefaultMap = new HashMap<>();
 
     // Holds <preference_key> -> <user_set_values> mapping
     public static final Map<String, Object[]> sNodeUserSetValuesMap = new HashMap<>();
-
-    // Holds <preference_key> -> <dependency_check> mapping
-    public static final Map<String, String[]> sNodeDependencyMap = new HashMap<>();
 
     public static final String[] sButtonPrefKeys = {
         BUTTON_SWAP_KEY

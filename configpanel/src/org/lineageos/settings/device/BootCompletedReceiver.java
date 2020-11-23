@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *           (C) 2017-2019 The LineageOS Project
+ *           (C) 2017-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,14 +44,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
             // Restore nodes to saved preference values
             for (String pref : Constants.sButtonPrefKeys) {
-                String node, value;
-                if (Constants.sStringNodePreferenceMap.containsKey(pref)) {
-                    node = Constants.sStringNodePreferenceMap.get(pref);
-                    value = Utils.getPreferenceString(context, pref);
-                } else {
-                    node = Constants.sBooleanNodePreferenceMap.get(pref);
-                    value = Utils.isPreferenceEnabled(context, pref) ? "1" : "0";
-                }
+                String node = Constants.sBooleanNodePreferenceMap.get(pref);
+                String value = Utils.isPreferenceEnabled(context, pref) ? "1" : "0";
                 if (!FileUtils.writeLine(node, value)) {
                     Log.w(TAG, "Write to node " + node +
                         " failed while restoring saved preference values");

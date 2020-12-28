@@ -16,6 +16,24 @@
       "revId": "b70877296371049f2baec3cd75b2c9d67e7a67f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e87a90d3_b14ecb9d",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2020-12-28T22:58:25Z",
+      "side": 1,
+      "message": "Fixed, my bad",
+      "parentUuid": "7190771b_965e0bea",
+      "revId": "b70877296371049f2baec3cd75b2c9d67e7a67f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }

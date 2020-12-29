@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29307f83_f2570113",
+        "filename": "overlay-lineage/lineage-sdk/lineage/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 15038
+      },
+      "writtenOn": "2020-12-29T19:35:03Z",
+      "side": 1,
+      "message": "bool \u003d\u003e integer",
+      "revId": "219962678632f6a78c4b4305f63e908b3b2d6759",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

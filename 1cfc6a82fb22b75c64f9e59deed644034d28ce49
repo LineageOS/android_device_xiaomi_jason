@@ -22,6 +22,53 @@
       "revId": "1cfc6a82fb22b75c64f9e59deed644034d28ce49",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf7be029_8cc0c5af",
+        "filename": "extract-files.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2020-12-30T13:25:20Z",
+      "side": 1,
+      "message": "It does, the common script sources device specific script before extract for this reason",
+      "parentUuid": "9525bba3_31bd827a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "1cfc6a82fb22b75c64f9e59deed644034d28ce49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "239128a0_c8e6d6fb",
+        "filename": "extract-files.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2020-12-30T13:25:20Z",
+      "side": 1,
+      "message": "...this is why this is getting added",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 2
+      },
+      "revId": "1cfc6a82fb22b75c64f9e59deed644034d28ce49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }

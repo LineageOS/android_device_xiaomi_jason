@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "3d6614a7_8ef18737",
+        "filename": "extract-files.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2020-12-30T13:40:21Z",
+      "side": 1,
+      "message": "oh the feature is nice to have",
+      "parentUuid": "bf7be029_8cc0c5af",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "1cfc6a82fb22b75c64f9e59deed644034d28ce49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "239128a0_c8e6d6fb",
         "filename": "extract-files.sh",
         "patchSetId": 6

@@ -36,9 +36,6 @@ ifneq (,$(filter msm8996 sdm660 msm8998 apq8098_latv,$(TARGET_BOARD_PLATFORM)))
 endif
 
 LOCAL_CFLAGS += -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
-LOCAL_COPY_HEADERS_TO := mm-camera-interface
-LOCAL_COPY_HEADERS += ../common/cam_intf.h
-LOCAL_COPY_HEADERS += ../common/cam_types.h
 LOCAL_CFLAGS  += -DFDLEAK_FLAG
 LOCAL_CFLAGS  += -DMEMLEAK_FLAG
 LOCAL_LDFLAGS += -Wl,--wrap=open -Wl,--wrap=close -Wl,--wrap=socket -Wl,--wrap=pipe -Wl,--wrap=mmap -Wl,--wrap=__open_2

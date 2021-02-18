@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2019-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,43 +20,35 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "KeyDisabler.h"
+#include "KeySwapper.h"
 
-using android::OK;
-using android::sp;
-using android::status_t;
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
+using ::android::OK;
+using ::android::sp;
 
 using ::vendor::lineage::touch::V1_0::IKeyDisabler;
+using ::vendor::lineage::touch::V1_0::IKeySwapper;
 using ::vendor::lineage::touch::V1_0::implementation::KeyDisabler;
+using ::vendor::lineage::touch::V1_0::implementation::KeySwapper;
 
 int main() {
-    sp<IKeyDisabler> keyDisabler;
-    status_t status;
+    android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    LOG(INFO) << "Touch HAL service is starting.";
-
-    keyDisabler = new KeyDisabler();
-    if (keyDisabler == nullptr) {
-        LOG(ERROR) << "Can not create an instance of Touch HAL KeyDisabler Iface, exiting.";
-        goto shutdown;
+    sp<IKeyDisabler> key_disabler = new KeyDisabler();
+    if (key_disabler->registerAsService() != OK) {
+        LOG(ERROR) << "Cannot register keydisabler HAL service.";
+        return 1;
     }
 
-    configureRpcThreadpool(1, true /*callerWillJoin*/);
-
-    status = keyDisabler->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Could not register service for Touch HAL KeyDisabler Iface ("
-                   << status << ")";
-        goto shutdown;
+    sp<IKeySwapper> key_swapper = new KeySwapper();
+    if (key_swapper->registerAsService() != OK) {
+        LOG(ERROR) << "Cannot register keyswapper HAL service.";
+        return 1;
     }
 
-    LOG(INFO) << "Touch HAL service is ready.";
-    joinRpcThreadpool();
-    // Should not pass this line
+    LOG(INFO) << "Touchscreen HAL service ready.";
 
-shutdown:
-    // In normal operation, we don't expect the thread pool to shutdown
-    LOG(ERROR) << "Touch HAL service is shutting down.";
+    android::hardware::joinRpcThreadpool();
+
+    LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
     return 1;
 }

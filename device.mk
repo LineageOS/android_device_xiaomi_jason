@@ -80,10 +80,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packageblacklist=com.tencent.mm \
     vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
 
-# ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel
-
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -153,6 +149,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.nfc_nci=nqx.default
+
+# Pocket mode
+PRODUCT_PACKAGES += \
+    XiaomiPocketMode
 
 # Ramdisk
 PRODUCT_PACKAGES += \

@@ -30,7 +30,7 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-KeySwapper::KeySwapper() : has_key_swapper_(!access(kControlPath, F_OK)) {}
+KeySwapper::KeySwapper() : has_key_swapper_(!access(kControlPath, R_OK | W_OK)) {}
 
 // Methods from ::vendor::lineage::touch::V1_0::IKeySwapper follow.
 Return<bool> KeySwapper::isEnabled() {

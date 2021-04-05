@@ -30,7 +30,7 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-KeyDisabler::KeyDisabler() : has_key_disabler_(!access(kControlPath, F_OK)) {}
+KeyDisabler::KeyDisabler() : has_key_disabler_(!access(kControlPath, R_OK | W_OK)) {}
 
 // Methods from ::vendor::lineage::touch::V1_0::IKeyDisabler follow.
 Return<bool> KeyDisabler::isEnabled() {

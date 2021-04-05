@@ -1,3 +1,7 @@
+on early-boot
+    chown system system /sys/touchpanel/capacitive_keys
+    chown system system /sys/touchpanel/reversed_keys
+
 service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.jason
     class hal
     user system

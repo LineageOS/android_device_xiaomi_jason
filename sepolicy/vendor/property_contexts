@@ -2,10 +2,6 @@
 persist.camera.dxoaf.sc             u:object_r:camera_prop:s0
 persist.camera.module.info          u:object_r:camera_prop:s0
 
-# NFC
-persist.nfc.core_reset_debug_info   u:object_r:nfc_nq_prop:s0
-persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
-
 # Sensors
 persist.sys.sensors.                u:object_r:vendor_default_prop:s0
 ro.xiaomi.sar_fusion                u:object_r:vendor_default_prop:s0

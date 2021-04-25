@@ -9,5 +9,5 @@ persist.nfc.hci_network_reset_req   u:object_r:nfc_nq_prop:s0
 # Sensors
 persist.sys.sensors.                u:object_r:vendor_default_prop:s0
 ro.xiaomi.sar_fusion                u:object_r:vendor_default_prop:s0
-sys.panel.color                     u:object_r:sensors_prop:s0
-sys.panel.vendor                    u:object_r:sensors_prop:s0
+sys.panel.color                     u:object_r:vendor_sensors_prop:s0
+sys.panel.vendor                    u:object_r:vendor_sensors_prop:s0

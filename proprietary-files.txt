@@ -305,9 +305,6 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
-# Consumerir
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
-
 # Display calibration data
 vendor/etc/hdr_config.cfg
 vendor/etc/qdcm_calib_data_jdi_fhd_cmd_incell_dsi_panel.xml
